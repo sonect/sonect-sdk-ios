@@ -12,7 +12,7 @@ Email Sonect to obtain your API_KEY
 
 Sonect SDK is written from ground up in Objective - C, and doesn’t have any external dependencies, so that it plays well with older code bases. 
 
-The main entry point to the SDK is SNCSonect object. To present the Sonect view controller, do the following
+The main entry point to the SDK is `SNCSonect` object. To present the Sonect view controller, do the following
 
 ## Obj-C
 
@@ -20,7 +20,7 @@ The main entry point to the SDK is SNCSonect object. To present the Sonect view 
 ```
 SNCToken *token = [SNCToken tokenWithValue:@“YOUR_TOKEN_HERE”];
 SNCConfiguration *configuration = [SNCConfiguration configurationWithToken:token theme:nil];
-SNCSonectViewController *viewController = [SNCSonect makeViewControllerIWithConfiguration:configuration paymentDataSource:self]; 
+SNCSonectViewController *viewController = [SNCSonect makeViewControllerWithConfiguration:configuration paymentDataSource:self]; 
 
 //present view controller 
 ```
