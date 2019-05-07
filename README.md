@@ -10,7 +10,7 @@ Via dependency managers:
 
 Email Sonect to obtain your API_KEY
 
-Sonect SDK is written from ground up in Objective - C, so that it plays well with older code bases, and doesn’t have any external dependencies. 
+Sonect SDK is written from ground up in Objective - C, and doesn’t have any external dependencies, so that it plays well with older code bases. 
 
 The main entry point to the SDK is SNCSonect object. To present the Sonect view controller, do the following
 
