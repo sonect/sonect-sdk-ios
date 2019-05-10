@@ -1,4 +1,4 @@
-# Sonect SDK for iOS
+# Sonect SDK for iOS [PRELIMINARY]
 
 In this document we will go through the necessary steps to integrate
 Sonect SDK in your iOS app. 
@@ -6,7 +6,9 @@ Sonect SDK in your iOS app.
 ## Installation: 
 
 Via dependency managers:
-- Cocoapods, Carthage TBA. 
+- Cocoapods 
+- Carthage
+- Manual
 
 Email Sonect to obtain your API_KEY
 
