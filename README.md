@@ -24,10 +24,9 @@ SNCCredentials *credentials = [[SNCCredentials alloc] initWithSdkToken:sdkTokenV
                                                                     userId:userIdValue
                                                                  signature:signatureValue];
 
-SNCConfiguration *configuration = [[SNCConfiguration alloc] initWithConfigurationType:@"DEV"
-                                                                        alpha2CountryCode:@"CH"
-                                                                                 currency:@"CHF"
-                                                                      allowedCountryCodes:@[@41]];
+SNCConfiguration *configuration = [[SNCConfiguration alloc] initWithAlpha2CountryCode:@"CH"
+                                                                             currency:@"CHF"
+                                                                  allowedCountryCodes:@[@41]];
 
 [SNCSonect presentWithCredentials:credentials
                     configuration:configuration
