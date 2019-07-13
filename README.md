@@ -21,8 +21,8 @@ The main entry point to the SDK is `SNCSonect` object. To present the Sonect vie
 ### Simple SDK Integration 
 ```
 SNCCredentials *credentials = [[SNCCredentials alloc] initWithSdkToken:sdkTokenValue
-                                                                    userId:userIdValue
-                                                                 signature:signatureValue];
+                                                                userId:userIdValue
+                                                             signature:signatureValue];
 
 SNCConfiguration *configuration = [[SNCConfiguration alloc] initWithAlpha2CountryCode:@"CH"
                                                                              currency:@"CHF"
@@ -35,7 +35,7 @@ SNCConfiguration *configuration = [[SNCConfiguration alloc] initWithAlpha2Countr
 
 ### Payment Processing: 
 
-In order to show available payment methods with your bank’s logo, you should assign an object that implements `SNCSonectPaymentDataSource` to the `SNCSonect.paymentDataSource`. 
+In order to show available payment methods with your bank’s preferred details like name, details and logo, you should assign an object that implements `SNCSonectPaymentDataSource` to the `SNCSonect.paymentDataSource`. 
 
 You must then implement the following method in your class implementing `SNCSonectPaymentDataSource`
 ```
@@ -44,14 +44,14 @@ You must then implement the following method in your class implementing `SNCSone
 
 and return an array of objects that implement `SNCPaymentMethod` protocol, which will represent the available payment methods from your bank, i.e. different accounts. 
 
-In order to check if your bank can authorize a certain amount to be paid, the object implementing `SNCPaymentMethod` will have to implement 
+In order to check if your bank can authorize a certain amount to be paid, the object implementing `SNCPaymentMethod` protocol will have to implement 
 
 `- (void)canPayAmount:(SNCTransactionAmount *)amount withHandler:(SNCPaymentMethodAvailabilityHandler)paymentAvailabilityHandler;
 ` 
 
-check for balance, and then return the permission to proceed with payment, or an error if one occured while checking for the balance. 
+check for the account balance, and then return the permission to proceed with payment, or an error if one occured while checking for the balance. 
 
-In order to process the payment, your object implementing `SNCPaymentMethod` will need to create an `SNCTransactionMetadata` object and pass it back to the SDK for processing. The SDK will call `-payAmount:withHandler:` for you, and you will pass back the necessary info via `SNCPaymentMethodHandler`. This can happen asynchronously. 
+In order to process the payment, your object implementing `SNCPaymentMethod` protocol will need to create an `SNCTransactionMetadata` object and pass it back to the SDK for processing. The SDK will call `-payAmount:withHandler:` for you, and you will pass back the necessary info via `SNCPaymentMethodHandler`. This can happen asynchronously. 
 
 ```
 -(void)payAmount:(SNCTransactionAmount *)amount withHandler:(SNCPaymentMethodHandler)handler;
