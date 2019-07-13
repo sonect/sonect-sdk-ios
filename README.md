@@ -20,9 +20,9 @@ The main entry point to the SDK is `SNCSonect` object. To present the Sonect vie
 
 ### Simple SDK Integration 
 ```
-SNCCredentials *credentials = [[SNCCredentials alloc] initWithSdkToken:sdkTokenValue
-                                                                userId:userIdValue
-                                                             signature:signatureValue];
+SNCCredentials *credentials = [[SNCCredentials alloc] initWithSdkToken:_SDK_TOKEN_
+                                                                userId:_BANK_USER_ID_
+                                                             signature:_BANK_SIGNATURE_];
 
 SNCConfiguration *configuration = [[SNCConfiguration alloc] initWithAlpha2CountryCode:@"CH"
                                                                              currency:@"CHF"
