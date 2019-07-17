@@ -47,7 +47,8 @@ and return an array of objects that implement `SNCPaymentMethod` protocol, which
 
 In order to check if your bank can authorize a certain amount to be paid, the object implementing `SNCPaymentMethod` protocol will have to implement 
 
-`- (void)canPayAmount:(SNCTransactionAmount *)amount withHandler:(SNCPaymentMethodAvailabilityHandler)paymentAvailabilityHandler
+`- (void)canPayAmount:(SNCTransactionAmount *)amount 
+          withHandler:(SNCPaymentMethodAvailabilityHandler)paymentAvailabilityHandler
 ` 
 
 check for the account balance, and then return the permission to proceed with payment, or an error if one occured while checking for the balance. 
@@ -55,7 +56,8 @@ check for the account balance, and then return the permission to proceed with pa
 In order to process the payment, your object implementing `SNCPaymentMethod` protocol will need to create an `SNCTransactionMetadata` object and pass it back to the SDK for processing. The SDK will call `-payAmount:withHandler:` for you, and you will pass back the necessary info via `SNCPaymentMethodHandler`. This can happen asynchronously. 
 
 ```
--(void)payAmount:(SNCTransactionAmount *)amount withHandler:(SNCPaymentMethodHandler)handler;
+-(void)payAmount:(SNCTransactionAmount *)amount 
+     withHandler:(SNCPaymentMethodHandler)handler;
 ```
 
 If your bank supports Open Bank API-s, the transaction will be fully processed by the SDK. However, is your bank doesn’t support the Open Bank API-s, you should process the transaction, and pass the payment reference in the `SNCTransactionMetadata` object. The `transactionMetadata` object should then be passed back to the SDK via the `SNCPaymentMethodHandler` callback. 
