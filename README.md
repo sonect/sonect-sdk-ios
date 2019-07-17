@@ -47,9 +47,10 @@ and return an array of objects that implement `SNCPaymentMethod` protocol, which
 
 In order to check if your bank can authorize a certain amount to be paid, the object implementing `SNCPaymentMethod` protocol will have to implement 
 
-`- (void)canPayAmount:(SNCTransactionAmount *)amount 
-          withHandler:(SNCPaymentMethodAvailabilityHandler)paymentAvailabilityHandler
-` 
+```
+- (void)canPayAmount:(SNCTransactionAmount *)amount 
+         withHandler:(SNCPaymentMethodAvailabilityHandler)paymentAvailabilityHandler
+``` 
 
 check for the account balance, and then return the permission to proceed with payment, or an error if one occured while checking for the balance. 
 
