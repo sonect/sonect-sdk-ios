@@ -39,7 +39,8 @@ In order to show available payment methods with your bank’s preferred details 
 
 You must then implement the following method in your class implementing `SNCSonectPaymentDataSource`
 ```
-- (void)sonect:(SNCSonect *)sonect loadAvailablePaymentMethodsForContext:(SNCPaymentContext)context handler:(SNCPaymentMethodsHandler)handler
+- (void)sonect:(SNCSonect *)sonect loadAvailablePaymentMethodsForContext:(SNCPaymentContext)context 
+       handler:(SNCPaymentMethodsHandler)handler
 ```
 
 and return an array of objects that implement `SNCPaymentMethod` protocol, which will represent the available payment methods from your bank, i.e. different accounts. 
