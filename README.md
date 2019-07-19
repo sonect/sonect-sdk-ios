@@ -10,11 +10,9 @@ Via dependency managers:
 - Carthage
 - Manual
 
-Email Sonect to obtain your SDK token.
-
 Sonect SDK is written from ground up in Objective - C, and doesn’t have any external dependencies, so that it plays well with older code bases. 
 
-The main entry point to the SDK is `SNCSonect` object. To present the Sonect view controller, do the following
+The main entry point to the SDK is `SNCSonect` object. To present the Sonect view controller, you have to obtain the SDK token, the user ID and the signature, which **must** be calculated on your bank's serverside for security reasons.  
 
 ## Obj-C
 
