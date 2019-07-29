@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
                }
   spec.author             = { "sonect" => "marko.hlebar@sonect.ch" }
   spec.platform     = :ios, "10.0"
-  spec.source       = { :http => "https://github.com/sonect/sonect-sdk-ios/releases/latest/download/SonectSDK_Cocoapods.framework.zip" }
+  spec.source       = { :http => "https://github.com/sonect/sonect-sdk-ios/releases/download/#{spec.version}/SonectSDK_Cocoapods.framework.zip" }
   spec.ios.vendored_frameworks = 'Sonect.framework'
 
 end
