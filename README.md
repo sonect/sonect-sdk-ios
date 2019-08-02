@@ -91,3 +91,22 @@ If your bank supports Open Bank API-s, the transaction will be fully processed b
     handler(transactionMetadata, nil, SNCPaymentStatusPending); 
 }
 ```
+
+### Themes
+
+Sonect SDK supports theming colors and fonts to allow you to customize the SDK, so that it looks and feels right when embedded in your app. To apply a theme, you need to create a new `SNCTheme` object and apply a theme like in the following example. 
+
+```
+SNCTheme *theme = [SNCTheme new];
+theme.type = SNCThemeTypeLight;
+theme.fontName = "Futura-Medium";
+theme.boldFontName = "Futura-CondensedExtraBold";
+theme.detailColor1 = UIColor.yellowColor;
+theme.detailColor2 = UIColor.yellowColor;
+theme.detailColor3 = UIColor.yellowColor;
+theme.detailColor4 = UIColor.yellowColor;
+theme.detailColor5 = UIColor.yellowColor;
+theme.navigationBarTintColor = UIColor.yellowColor;
+theme.navigationBarTitleImage = [UIImage imageNamed:@"rba"];
+[theme set];
+```
