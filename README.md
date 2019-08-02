@@ -110,3 +110,9 @@ theme.navigationBarTintColor = UIColor.yellowColor;
 theme.navigationBarTitleImage = [UIImage imageNamed:@"rba"];
 [theme set];
 ```
+
+Following are samples of dark and light theme with different detail color and font settings.
+
+
+
+![theme_samples.png](/theme_samples.png)
