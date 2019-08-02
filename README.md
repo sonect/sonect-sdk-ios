@@ -111,8 +111,6 @@ theme.navigationBarTitleImage = [UIImage imageNamed:@"rba"];
 [theme set];
 ```
 
-Following are samples of dark and light theme with different detail color and font settings.
-
-
+Following are samples of dark and light theme with different detail color and font settings, as displayed on the Withdraw function inside Sonect SDK. 
 
 ![theme_samples.png](/theme_samples.png)
