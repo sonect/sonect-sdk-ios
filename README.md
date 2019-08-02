@@ -6,11 +6,13 @@ Sonect SDK in your iOS app.
 ## Installation: 
 
 Via dependency managers:
-- Cocoapods 
-- Carthage
+- Cocoapods: `pod 'sonect-sdk-ios'`
+- Carthage: `github "sonect/sonect-sdk-ios"`
 - Manual
 
 Sonect SDK is written from ground up in Objective - C, and doesn’t have any external dependencies, so that it plays well with older code bases. 
+
+Minimum version: iOS 10.0+ 
 
 The main entry point to the SDK is `SNCSonect` object. To present the Sonect view controller, you have to obtain the SDK token, the user ID and the signature, which **must** be calculated on your bank's serverside for security reasons.  
 
@@ -22,16 +24,36 @@ SNCCredentials *credentials = [[SNCCredentials alloc] initWithSdkToken:_SDK_TOKE
                                                                 userId:_BANK_USER_ID_
                                                              signature:_BANK_SIGNATURE_];
 
-SNCConfiguration *configuration = [[SNCConfiguration alloc] initWithAlpha2CountryCode:@"CH"
-                                                                             currency:@"CHF"
-                                                                  allowedCountryCodes:@[@41]];
+//Create a SonectConfiguration.plist, alternatively use initWithContentsOfFile:
+SNCConfiguration *configuration = [SNCConfiguration defaultConfiguration];
 
 [SNCSonect presentWithCredentials:credentials
                     configuration:configuration
          presentingViewController:self.viewController];
 ```
 
-### Payment Processing: 
+### Configuration file
+
+In order to configure the SDK, create a `SonectConfiguration.plist` file, and fill out the mandatory fields. You can load the configuration by using the `SNCConfiguration` object. A sample plist file might look like this, for more info consult the `SNCConfiguration` interface documentation. 
+
+Sample `SonectConfiguration.plist` values: 
+```
+<dict>
+	<key>SonectAlpha2CountryCode</key>
+	<string>ch</string>
+	<key>SonectCurrency</key>
+	<string>CHF</string>
+	<key>SonectDefaultWithdrawAmountIndex</key>
+	<integer>2</integer>
+	<key>SonectAllowedCountryCodes</key>
+	<array>
+		<integer>41</integer>
+		<integer>1</integer>
+	</array>
+</dict>
+```
+
+### Payment Processing
 
 In order to show available payment methods with your bank’s preferred details like name, details and logo, you should assign an object that implements `SNCSonectPaymentDataSource` to the `SNCSonect.paymentDataSource`. 
 
@@ -52,25 +74,20 @@ In order to check if your bank can authorize a certain amount to be paid, the ob
 
 check for the account balance, and then return the permission to proceed with payment, or an error if one occured while checking for the balance. 
 
-In order to process the payment, your object implementing `SNCPaymentMethod` protocol will need to create an `SNCTransactionMetadata` object and pass it back to the SDK for processing. The SDK will call `-payAmount:withHandler:` for you, and you will pass back the necessary info via `SNCPaymentMethodHandler`. This can happen asynchronously. 
+In order to process the payment, your object implementing `SNCPaymentMethod` protocol will need to create an `SNCTransactionMetadata` object and pass it back to the SDK for processing. The SDK will call `-payAmount:withHandler:` for you, and you will pass back the necessary info via `SNCPaymentMethodHandler`, this can happen asynchronously. 
+
+If your bank supports Open Bank API-s, the transaction will be fully processed by the SDK. However, if your bank doesn’t support the Open Bank API-s, you should process the transaction, and pass the payment reference in the `SNCBankTransactionMetadata` object. The transactionMetadata object should then be passed back to the SDK via the `SNCPaymentMethodHandler` callback.
 
 ```
--(void)payAmount:(SNCTransactionAmount *)amount 
-     withHandler:(SNCPaymentMethodHandler)handler;
-```
+- (void)payAmount:(SNCTransactionAmount *)amount 
+     withHandler:(SNCPaymentMethodHandler)handler {
+    //Obtain a payment reference by resolving the payment on your server. This can happen asynchronously
+    NSString *paymentReference = @"_YOUR_PAYMENT_REFERENCE_";
 
-If your bank supports Open Bank API-s, the transaction will be fully processed by the SDK. However, is your bank doesn’t support the Open Bank API-s, you should process the transaction, and pass the payment reference in the `SNCTransactionMetadata` object. The `transactionMetadata` object should then be passed back to the SDK via the `SNCPaymentMethodHandler` callback. 
+    //Create a transactionMetadata object by passing the amount and the payment reference
+    SNCBankTransactionMetadata *transactionMetadata = [SNCBankTransactionMetadata transactionMetadataWithAmount:amount paymentReference:paymentReference];
 
-```
-@implementation SNCBankTransactionMetadata
-
-- (NSDictionary <SNCTransactionMetadataKey, NSString *> *)serialized {
-    return @{
-             SNCTransactionMetadataKeyCurrency: @"CHF",
-             SNCTransactionMetadataKeyAmount: @"20",
-             SNCTransactionMetadataPaymentReference: @"YOUR_BANK_PAYMENT_REFERENCE"
-             };
+    //Passing the transaction metadata back to SDK will start the payment resolution on Sonect and show a successful transaction with a barcode. 
+    handler(transactionMetadata, nil, SNCPaymentStatusPending); 
 }
-
-@end
 ```
