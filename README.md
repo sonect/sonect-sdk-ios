@@ -83,9 +83,10 @@ If your bank supports Open Bank API-s, the transaction will be fully processed b
      withHandler:(SNCPaymentMethodHandler)handler {
     //Obtain a payment reference by resolving the payment on your server. This can happen asynchronously
     NSString *paymentReference = @"_YOUR_PAYMENT_REFERENCE_";
+    NSString *signature = @"_YOUR_SIGNATURE_";
 
     //Create a transactionMetadata object by passing the amount and the payment reference
-    SNCBankTransactionMetadata *transactionMetadata = [SNCBankTransactionMetadata transactionMetadataWithAmount:amount paymentReference:paymentReference];
+    SNCBankTransactionMetadata *transactionMetadata = [SNCBankTransactionMetadata transactionMetadataWithAmount:amount paymentReference:paymentReference signature:signature];
 
     //Passing the transaction metadata back to SDK will start the payment resolution on Sonect and show a successful transaction with a barcode. 
     handler(transactionMetadata, nil, SNCPaymentStatusPending); 
