@@ -21,7 +21,7 @@ The main entry point to the SDK is `SNCSonect` object. To present the Sonect vie
 ## Obj-C
 
 ### Simple SDK Integration 
-```
+```objc
 SNCCredentials *credentials = [[SNCCredentials alloc] initWithSdkToken:_SDK_TOKEN_
                                                                 userId:_BANK_USER_ID_
                                                              signature:_BANK_SIGNATURE_];
@@ -39,7 +39,7 @@ SNCConfiguration *configuration = [SNCConfiguration defaultConfiguration];
 In order to configure the SDK, create a `SonectConfiguration.plist` file, and fill out the mandatory fields. You can load the configuration by using the `SNCConfiguration` object. A sample plist file might look like this, for more info consult the `SNCConfiguration` interface documentation. 
 
 Sample `SonectConfiguration.plist` values: 
-```
+```xml
 <dict>
 	<key>SonectAlpha2CountryCode</key>
 	<string>ch</string>
@@ -60,7 +60,7 @@ Sample `SonectConfiguration.plist` values:
 In order to show available payment methods with your bank’s preferred details like name, details and logo, you should assign an object that implements `SNCSonectPaymentDataSource` to the `SNCSonect.paymentDataSource`. 
 
 You must then implement the following method in your class implementing `SNCSonectPaymentDataSource`
-```
+```objc
 - (void)sonect:(SNCSonect *)sonect loadAvailablePaymentMethodsForContext:(SNCPaymentContext)context 
        handler:(SNCPaymentMethodsHandler)handler
 ```
@@ -69,7 +69,7 @@ and return an array of objects that implement `SNCPaymentMethod` protocol, which
 
 In order to check if your bank can authorize a certain amount to be paid, the object implementing `SNCPaymentMethod` protocol will have to implement 
 
-```
+```objc
 - (void)canPayAmount:(SNCTransactionAmount *)amount 
          withHandler:(SNCPaymentMethodAvailabilityHandler)paymentAvailabilityHandler
 ``` 
@@ -80,7 +80,7 @@ In order to process the payment, your object implementing `SNCPaymentMethod` pro
 
 If your bank supports Open Bank API-s, the transaction will be fully processed by the SDK. However, if your bank doesn’t support the Open Bank API-s, you should process the transaction, and pass the payment reference in the `SNCBankTransactionMetadata` object. The transactionMetadata object should then be passed back to the SDK via the `SNCPaymentMethodHandler` callback.
 
-```
+```objc
 - (void)payAmount:(SNCTransactionAmount *)amount 
      withHandler:(SNCPaymentMethodHandler)handler {
     //Obtain a payment reference by resolving the payment on your server. This can happen asynchronously
@@ -99,7 +99,7 @@ If your bank supports Open Bank API-s, the transaction will be fully processed b
 
 Sonect SDK supports theming colors and fonts to allow you to customize the SDK, so that it looks and feels right when embedded in your app. To apply a theme, you need to create a new `SNCTheme` object and apply a theme like in the following example. 
 
-```
+```objc
 SNCTheme *theme = [SNCTheme new];
 theme.type = SNCThemeTypeLight;
 theme.fontName = "Futura-Medium";
