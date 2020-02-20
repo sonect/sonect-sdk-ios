@@ -3,6 +3,8 @@
 In this document we will go through the necessary steps to integrate
 Sonect SDK in your iOS app. 
 
+Contact support@sonect.ch if additional info is needed.
+
 ## Installation: 
 
 Via dependency managers:
