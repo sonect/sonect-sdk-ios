@@ -9,6 +9,12 @@
 import UIKit
 import Sonect
 
+typealias PaymentReferenceHandler = (String, String) -> Void
+
+protocol PaymentMethodDelegate: class {
+    func paymentMethod(_ paymentMethod: PaymentMethod, wantsToPay amount:SNCTransactionAmount, handler: @escaping PaymentReferenceHandler)
+}
+
 class PaymentMethod: NSObject, SNCPaymentMethod {
     
     var shortDescription: String? = "Bank Account"
@@ -16,15 +22,16 @@ class PaymentMethod: NSObject, SNCPaymentMethod {
     var name: String? = "Bank ACME"
     var uniqueIdentifier: String = "BANK_IBAN"
     var image: UIImage? = UIImage(named: "Bank")!
+    weak var delegate: PaymentMethodDelegate?
     
     func pay(_ amount: SNCTransactionAmount, withHandler handler: @escaping SNCPaymentMethodHandler) {
         //Process your payment and pass the payment reference & signature, this can be asynchronous
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        self.delegate?.paymentMethod(self, wantsToPay: amount, handler: { (paymentReference, signature) in
             let transactionMetadata = SNCBankTransactionMetadata(amount: amount,
-                                                                 paymentReference: "_YOUR_PAYMENT_REFERENCE_",
-                                                                 signature: "_YOUR_SIGNATURE_")
+                                                                 paymentReference: paymentReference,
+                                                                 signature: signature)
             handler(transactionMetadata, nil, .pending)
-        }
+        })
     }
     
     func canPay(_ amount: SNCTransactionAmount, withHandler paymentAvailabilityHandler: @escaping SNCPaymentMethodAvailabilityHandler) {
@@ -38,7 +45,11 @@ class ViewController: UIViewController {
     let userId = "_YOUR_USER_ID_"
     let signature = "_YOUR_SIGNATURE_"
 
-    let paymentMethod = PaymentMethod()
+    lazy var paymentMethod: PaymentMethod = {
+        let paymentMethod = PaymentMethod()
+        paymentMethod.delegate = self
+        return paymentMethod
+    }()
     
     @IBAction func presentSdk(_ sender: Any) {
         let credentials = SNCCredentials(sdkToken: sdkToken,
@@ -56,5 +67,14 @@ extension ViewController: SNCSonectPaymentDataSource {
     func sonect(_ sonect: SNCSonect, loadAvailablePaymentMethodsFor context: SNCPaymentContext, handler: @escaping SNCPaymentMethodsHandler) {
         //Create your payment method, this can be asynchronous
         handler([paymentMethod], nil)
+    }
+}
+
+extension ViewController: PaymentMethodDelegate {
+    
+    func paymentMethod(_ paymentMethod: PaymentMethod, wantsToPay amount: SNCTransactionAmount, handler: @escaping PaymentReferenceHandler) {
+        let viewController = BankConfirmationViewController()
+        viewController.processPayment(amount: amount, handler: handler)
+        self.present(viewController, animated: true, completion: nil)
     }
 }

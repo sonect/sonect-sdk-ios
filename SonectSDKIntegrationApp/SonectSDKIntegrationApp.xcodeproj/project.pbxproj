@@ -16,6 +16,8 @@
 		043372F423FD6B4600034D01 /* Sonect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043372F223FD6B3C00034D01 /* Sonect.framework */; };
 		043372F523FD6B4600034D01 /* Sonect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 043372F223FD6B3C00034D01 /* Sonect.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		043372F823FD6C1800034D01 /* SonectConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043372F723FD6C1800034D01 /* SonectConfiguration.plist */; };
+		048992EF240CF98F00D43F13 /* BankConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */; };
+		048992F0240CF98F00D43F13 /* BankConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,8 @@
 		043372EB23FD692D00034D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043372F223FD6B3C00034D01 /* Sonect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sonect.framework; path = Carthage/Build/iOS/Sonect.framework; sourceTree = SOURCE_ROOT; };
 		043372F723FD6C1800034D01 /* SonectConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = SonectConfiguration.plist; sourceTree = SOURCE_ROOT; };
+		048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankConfirmationViewController.swift; sourceTree = "<group>"; };
+		048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankConfirmationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		043372DC23FD692C00034D01 /* SonectSDKIntegrationApp */ = {
 			isa = PBXGroup;
 			children = (
+				048992EC240CF97300D43F13 /* Bank */,
 				043372F723FD6C1800034D01 /* SonectConfiguration.plist */,
 				043372DD23FD692C00034D01 /* AppDelegate.swift */,
 				043372DF23FD692C00034D01 /* SceneDelegate.swift */,
@@ -95,6 +100,15 @@
 				043372F223FD6B3C00034D01 /* Sonect.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		048992EC240CF97300D43F13 /* Bank */ = {
+			isa = PBXGroup;
+			children = (
+				048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */,
+				048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */,
+			);
+			path = Bank;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043372EA23FD692D00034D01 /* LaunchScreen.storyboard in Resources */,
+				048992F0240CF98F00D43F13 /* BankConfirmationViewController.xib in Resources */,
 				043372E723FD692D00034D01 /* Assets.xcassets in Resources */,
 				043372E523FD692C00034D01 /* Main.storyboard in Resources */,
 				043372F823FD6C1800034D01 /* SonectConfiguration.plist in Resources */,
@@ -173,6 +188,7 @@
 				043372E223FD692C00034D01 /* ViewController.swift in Sources */,
 				043372DE23FD692C00034D01 /* AppDelegate.swift in Sources */,
 				043372E023FD692C00034D01 /* SceneDelegate.swift in Sources */,
+				048992EF240CF98F00D43F13 /* BankConfirmationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
