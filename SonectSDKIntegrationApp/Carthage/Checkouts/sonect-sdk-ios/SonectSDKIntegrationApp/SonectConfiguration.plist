@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SonectAlpha2CountryCode</key>
+	<string>CH</string>
+	<key>SonectCurrency</key>
+	<string>CHF</string>
+	<key>SonectEnvironment</key>
+	<string>TEST</string>
+	<key>SonectDefaultWithdrawAmountIndex</key>
+	<integer>2</integer>
+	<key>SonectShouldPresentSonectLogo</key>
+	<true/>
+	<key>SonectAllowedCountryCodes</key>
+	<array>
+		<integer>41</integer>
+		<integer>1</integer>
+	</array>
+	<key>SonectShouldPresentTransactionIfAvailable</key>
+	<true/>
+</dict>
+</plist>
