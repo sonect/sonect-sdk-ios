@@ -22,6 +22,7 @@ FOUNDATION_EXPORT SNCTransactionMetadataKey SNCTransactionMetadataKeySignature;
 FOUNDATION_EXPORT SNCTransactionMetadataKey SNCTransactionMetadataKeyTo;
 FOUNDATION_EXPORT SNCTransactionMetadataKey SNCTransactionMetadataKeyType;
 FOUNDATION_EXPORT SNCTransactionMetadataKey SNCTransactionMetadataKeyTrxType;
+FOUNDATION_EXPORT SNCTransactionMetadataKey SNCTransactionMetadataKeyDate;
 
 @protocol SNCTransactionMetadata <NSObject>
 
@@ -33,6 +34,9 @@ FOUNDATION_EXPORT SNCTransactionMetadataKey SNCTransactionMetadataKeyTrxType;
 
 @class SNCTransactionAmount;
 @interface SNCBankTransactionMetadata : NSObject <SNCTransactionMetadata>
+
+/// Set your date format here if needed.
+@property (nullable, copy) NSString *date;
 
 /**
  Creates a transaction metadata object for closed bank API-s,

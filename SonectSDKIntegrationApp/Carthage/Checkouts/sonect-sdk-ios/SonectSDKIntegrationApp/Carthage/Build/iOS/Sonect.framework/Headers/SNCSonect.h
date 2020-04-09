@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class SNCConfiguration, SNCCredentials, UIViewController;
+@class SNCConfiguration, SNCCredentials, SNCUI, UIViewController;
 @interface SNCSonect : NSObject
 
 /**
@@ -32,6 +32,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class) id <SNCSonectPaymentDataSource> paymentDataSource;
 
 /**
+ The Sonect UI overrides .
+ The SDK client can override the default UI by providing the UI settings upfront,
+ 
+ @discussion you can only set the ui once, if you try to set it when SDK is already presented, or override
+ already set ui, an exception will be raised.
+ */
+@property (class, nullable) SNCUI *ui;
+
+/**
  Presents the Sonect View Controller on the presenting view controller, with credentials and
  configuration provided by the client.
  The presented view controller is wrapped in a navigation controller.
@@ -43,6 +52,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)presentWithCredentials:(SNCCredentials *)credentials
                  configuration:(SNCConfiguration *)configuration
       presentingViewController:(UIViewController *)presentingViewController;
+
+/**
+ Dismiss the Sonect View Controller programatically.
+ @discussion The SDK navigation dismisses naturally itself by user interaction.
+ You shouldn't call this method unless absolutely necessary for scenarios like Logout etc.
+ */
++ (void)dismiss;
 
 @end
 
