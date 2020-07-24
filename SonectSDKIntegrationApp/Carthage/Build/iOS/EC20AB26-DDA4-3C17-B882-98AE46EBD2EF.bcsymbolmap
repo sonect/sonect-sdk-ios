@@ -1,0 +1,1555 @@
+BCSymbolMap Version: 2.0
+Apple clang version 11.0.3 (clang-1103.0.32.29)
+/Users/markohlebar/Library/Developer/Xcode/DerivedData/SonectSDK-gpfmsiutcwkjktaeszvehpyalwnd/Build/Intermediates.noindex/ArchiveIntermediates/SonectCore/IntermediateBuildFilesPath/SonectSDK.build/Release-iphoneos/SonectCore.build/DerivedSources/SonectCore_vers.c
+/Users/markohlebar/Work/Sonect/SonectSDK
++[SNCDayTime supportsSecureCoding]
+-[SNCDayTime initWithCoder:]
+-[SNCDayTime encodeWithCoder:]
+-[SNCDayTime initWithDictionary:]
+-[SNCDayTime initWithDay:andTime:]
+-[SNCDayTime time]
+-[SNCDayTime isEqual:]
+-[SNCDayTime hash]
+-[SNCDayTime description]
+-[SNCDayTime day]
+-[SNCDayTime setDay:]
+-[SNCDayTime setTime:]
+-[SNCDayTime .cxx_destruct]
++[SNCPeriod supportsSecureCoding]
+-[SNCPeriod initWithCoder:]
+-[SNCPeriod encodeWithCoder:]
+-[SNCPeriod initWithDictionary:]
+-[SNCPeriod initWithOpeningTime:andClosingTime:]
+-[SNCPeriod copyWithZone:]
+-[SNCPeriod isEqual:]
+-[SNCPeriod hash]
+-[SNCPeriod description]
+-[SNCPeriod open]
+-[SNCPeriod setOpen:]
+-[SNCPeriod close]
+-[SNCPeriod setClose:]
+-[SNCPeriod .cxx_destruct]
++[SNCOpeningHours supportsSecureCoding]
+-[SNCOpeningHours initWithCoder:]
+-[SNCOpeningHours encodeWithCoder:]
+-[SNCOpeningHours initWithPeriods:]
+-[SNCOpeningHours copyWithZone:]
+-[SNCOpeningHours openNow]
+-[SNCOpeningHours setOpenNow:]
+-[SNCOpeningHours weekdayText]
+-[SNCOpeningHours setWeekdayText:]
+-[SNCOpeningHours periods]
+-[SNCOpeningHours setPeriods:]
+-[SNCOpeningHours .cxx_destruct]
+_OBJC_CLASSLIST_SUP_REFS_$_
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_SELECTOR_REFERENCES_.28
+_OBJC_SELECTOR_REFERENCES_.30
+_OBJC_SELECTOR_REFERENCES_.34
+__OBJC_$_CLASS_METHODS_SNCDayTime
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCoding
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSCoding
+__OBJC_PROTOCOL_$_NSCoding
+__OBJC_LABEL_PROTOCOL_$_NSCoding
+__OBJC_$_PROTOCOL_REFS_NSSecureCoding
+__OBJC_$_PROTOCOL_CLASS_METHODS_NSSecureCoding
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSSecureCoding
+__OBJC_$_CLASS_PROP_LIST_NSSecureCoding
+__OBJC_PROTOCOL_$_NSSecureCoding
+__OBJC_LABEL_PROTOCOL_$_NSSecureCoding
+__OBJC_CLASS_PROTOCOLS_$_SNCDayTime
+__OBJC_$_CLASS_PROP_LIST_SNCDayTime
+__OBJC_METACLASS_RO_$_SNCDayTime
+__OBJC_$_INSTANCE_METHODS_SNCDayTime
+_OBJC_IVAR_$_SNCDayTime._day
+_OBJC_IVAR_$_SNCDayTime._time
+__OBJC_$_INSTANCE_VARIABLES_SNCDayTime
+__OBJC_$_PROP_LIST_SNCDayTime
+__OBJC_CLASS_RO_$_SNCDayTime
+_OBJC_CLASSLIST_SUP_REFS_$_.67
+_OBJC_CLASSLIST_REFERENCES_$_.68
+_OBJC_SELECTOR_REFERENCES_.73
+_OBJC_CLASSLIST_REFERENCES_$_.74
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_SELECTOR_REFERENCES_.78
+_OBJC_SELECTOR_REFERENCES_.80
+_OBJC_SELECTOR_REFERENCES_.82
+_OBJC_SELECTOR_REFERENCES_.84
+__OBJC_$_CLASS_METHODS_SNCPeriod
+__OBJC_CLASS_PROTOCOLS_$_SNCPeriod
+__OBJC_$_CLASS_PROP_LIST_SNCPeriod
+__OBJC_METACLASS_RO_$_SNCPeriod
+__OBJC_$_INSTANCE_METHODS_SNCPeriod
+_OBJC_IVAR_$_SNCPeriod._open
+_OBJC_IVAR_$_SNCPeriod._close
+__OBJC_$_INSTANCE_VARIABLES_SNCPeriod
+__OBJC_$_PROP_LIST_SNCPeriod
+__OBJC_CLASS_RO_$_SNCPeriod
+_OBJC_CLASSLIST_SUP_REFS_$_.100
+_OBJC_CLASSLIST_REFERENCES_$_.101
+_OBJC_CLASSLIST_REFERENCES_$_.102
+_OBJC_SELECTOR_REFERENCES_.104
+_OBJC_SELECTOR_REFERENCES_.108
+_OBJC_SELECTOR_REFERENCES_.112
+_OBJC_SELECTOR_REFERENCES_.116
+_OBJC_CLASSLIST_REFERENCES_$_.117
+_OBJC_SELECTOR_REFERENCES_.119
+_OBJC_SELECTOR_REFERENCES_.121
+_OBJC_SELECTOR_REFERENCES_.123
+_OBJC_SELECTOR_REFERENCES_.125
+_OBJC_SELECTOR_REFERENCES_.127
+_OBJC_SELECTOR_REFERENCES_.129
+__OBJC_$_CLASS_METHODS_SNCOpeningHours
+__OBJC_CLASS_PROTOCOLS_$_SNCOpeningHours
+__OBJC_$_CLASS_PROP_LIST_SNCOpeningHours
+__OBJC_METACLASS_RO_$_SNCOpeningHours
+__OBJC_$_INSTANCE_METHODS_SNCOpeningHours
+_OBJC_IVAR_$_SNCOpeningHours._openNow
+_OBJC_IVAR_$_SNCOpeningHours._weekdayText
+_OBJC_IVAR_$_SNCOpeningHours._periods
+__OBJC_$_INSTANCE_VARIABLES_SNCOpeningHours
+__OBJC_$_PROP_LIST_SNCOpeningHours
+__OBJC_CLASS_RO_$_SNCOpeningHours
+_OBJC_LABEL_CLASS_$
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Model/SNCOpeningHours.m
+SonectCore/Model/SNCOpeningHours.m
+SonectCore/Model/SNCOpeningHours.h
++[SNCDDASLLogCapture start]
+___27+[SNCDDASLLogCapture start]_block_invoke
+___copy_helper_block_e8_
+___destroy_helper_block_e8_
++[SNCDDASLLogCapture stop]
++[SNCDDASLLogCapture captureLevel]
++[SNCDDASLLogCapture setCaptureLevel:]
++[SNCDDASLLogCapture configureAslQuery:]
++[SNCDDASLLogCapture aslMessageReceived:]
++[SNCDDASLLogCapture captureAslLogs]
+___36+[SNCDDASLLogCapture captureAslLogs]_block_invoke
+___copy_helper_block_e8_40r
+___destroy_helper_block_e8_40r
+__cancel
+___block_descriptor_40_e8__e5_v8?0l
+__captureLevel
+_OBJC_CLASSLIST_REFERENCES_$_.7
+_OBJC_SELECTOR_REFERENCES_.9
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_CLASSLIST_REFERENCES_$_.12
+_OBJC_SELECTOR_REFERENCES_.15
+_OBJC_CLASSLIST_REFERENCES_$_.16
+_OBJC_SELECTOR_REFERENCES_.23
+_OBJC_SELECTOR_REFERENCES_.25
+___block_descriptor_56_e8_40r_e8_v12?0i8l
+__OBJC_$_CLASS_METHODS_SNCDDASLLogCapture
+__OBJC_$_CLASS_PROP_LIST_SNCDDASLLogCapture
+__OBJC_METACLASS_RO_$_SNCDDASLLogCapture
+__OBJC_CLASS_RO_$_SNCDDASLLogCapture
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SNCDDASLLogCapture.m
+__destroy_helper_block_e8_40r
+__copy_helper_block_e8_40r
+__36+[SNCDDASLLogCapture captureAslLogs]_block_invoke
+SonectCore/Logging/SNCDDASLLogCapture.m
+__destroy_helper_block_e8_
+__copy_helper_block_e8_
+__27+[SNCDDASLLogCapture start]_block_invoke
+-[SNCDDAbstractDatabaseLogger init]
+-[SNCDDAbstractDatabaseLogger dealloc]
+-[SNCDDAbstractDatabaseLogger db_log:]
+-[SNCDDAbstractDatabaseLogger db_save]
+-[SNCDDAbstractDatabaseLogger db_delete]
+-[SNCDDAbstractDatabaseLogger db_saveAndDelete]
+-[SNCDDAbstractDatabaseLogger performSaveAndSuspendSaveTimer]
+-[SNCDDAbstractDatabaseLogger performDelete]
+-[SNCDDAbstractDatabaseLogger destroySaveTimer]
+-[SNCDDAbstractDatabaseLogger updateAndResumeSaveTimer]
+-[SNCDDAbstractDatabaseLogger createSuspendedSaveTimer]
+___55-[SNCDDAbstractDatabaseLogger createSuspendedSaveTimer]_block_invoke
+___copy_helper_block_e8_32s
+___destroy_helper_block_e8_32s
+-[SNCDDAbstractDatabaseLogger destroyDeleteTimer]
+-[SNCDDAbstractDatabaseLogger updateDeleteTimer]
+-[SNCDDAbstractDatabaseLogger createAndStartDeleteTimer]
+___56-[SNCDDAbstractDatabaseLogger createAndStartDeleteTimer]_block_invoke
+-[SNCDDAbstractDatabaseLogger saveThreshold]
+___44-[SNCDDAbstractDatabaseLogger saveThreshold]_block_invoke
+___44-[SNCDDAbstractDatabaseLogger saveThreshold]_block_invoke_2
+___copy_helper_block_e8_32s40r
+___destroy_helper_block_e8_32s40r
+-[SNCDDAbstractDatabaseLogger setSaveThreshold:]
+___48-[SNCDDAbstractDatabaseLogger setSaveThreshold:]_block_invoke
+___48-[SNCDDAbstractDatabaseLogger setSaveThreshold:]_block_invoke.25
+___copy_helper_block_e8_32s40b
+___destroy_helper_block_e8_32s40s
+-[SNCDDAbstractDatabaseLogger saveInterval]
+___43-[SNCDDAbstractDatabaseLogger saveInterval]_block_invoke
+___43-[SNCDDAbstractDatabaseLogger saveInterval]_block_invoke_2
+-[SNCDDAbstractDatabaseLogger setSaveInterval:]
+___47-[SNCDDAbstractDatabaseLogger setSaveInterval:]_block_invoke
+___47-[SNCDDAbstractDatabaseLogger setSaveInterval:]_block_invoke_2
+-[SNCDDAbstractDatabaseLogger maxAge]
+___37-[SNCDDAbstractDatabaseLogger maxAge]_block_invoke
+___37-[SNCDDAbstractDatabaseLogger maxAge]_block_invoke_2
+-[SNCDDAbstractDatabaseLogger setMaxAge:]
+___41-[SNCDDAbstractDatabaseLogger setMaxAge:]_block_invoke
+___41-[SNCDDAbstractDatabaseLogger setMaxAge:]_block_invoke_2
+-[SNCDDAbstractDatabaseLogger deleteInterval]
+___45-[SNCDDAbstractDatabaseLogger deleteInterval]_block_invoke
+___45-[SNCDDAbstractDatabaseLogger deleteInterval]_block_invoke_2
+-[SNCDDAbstractDatabaseLogger setDeleteInterval:]
+___49-[SNCDDAbstractDatabaseLogger setDeleteInterval:]_block_invoke
+___49-[SNCDDAbstractDatabaseLogger setDeleteInterval:]_block_invoke_2
+-[SNCDDAbstractDatabaseLogger deleteOnEverySave]
+___48-[SNCDDAbstractDatabaseLogger deleteOnEverySave]_block_invoke
+___48-[SNCDDAbstractDatabaseLogger deleteOnEverySave]_block_invoke_2
+-[SNCDDAbstractDatabaseLogger setDeleteOnEverySave:]
+___52-[SNCDDAbstractDatabaseLogger setDeleteOnEverySave:]_block_invoke
+___52-[SNCDDAbstractDatabaseLogger setDeleteOnEverySave:]_block_invoke.32
+-[SNCDDAbstractDatabaseLogger savePendingLogEntries]
+___52-[SNCDDAbstractDatabaseLogger savePendingLogEntries]_block_invoke
+-[SNCDDAbstractDatabaseLogger deleteOldLogEntries]
+___50-[SNCDDAbstractDatabaseLogger deleteOldLogEntries]_block_invoke
+-[SNCDDAbstractDatabaseLogger didAddLogger]
+-[SNCDDAbstractDatabaseLogger willRemoveLogger]
+-[SNCDDAbstractDatabaseLogger logMessage:]
+-[SNCDDAbstractDatabaseLogger flush]
+-[SNCDDAbstractDatabaseLogger .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.6
+___block_descriptor_40_e8_32s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.20
+___block_descriptor_48_e8_32s40r_e5_v8?0l
+___block_descriptor_48_e8_32s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.24
+___block_descriptor_48_e8_32s40bs_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.27
+_OBJC_SELECTOR_REFERENCES_.29
+_OBJC_SELECTOR_REFERENCES_.31
+___block_descriptor_41_e8_32s_e5_v8?0l
+__OBJC_METACLASS_RO_$_SNCDDAbstractDatabaseLogger
+__OBJC_$_INSTANCE_METHODS_SNCDDAbstractDatabaseLogger
+__OBJC_$_INSTANCE_VARIABLES_SNCDDAbstractDatabaseLogger
+__OBJC_$_PROP_LIST_SNCDDAbstractDatabaseLogger
+__OBJC_CLASS_RO_$_SNCDDAbstractDatabaseLogger
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SNCDDAbstractDatabaseLogger.m
+SonectCore/Logging/SNCDDAbstractDatabaseLogger.m
+__50-[SNCDDAbstractDatabaseLogger deleteOldLogEntries]_block_invoke
+__52-[SNCDDAbstractDatabaseLogger savePendingLogEntries]_block_invoke
+__52-[SNCDDAbstractDatabaseLogger setDeleteOnEverySave:]_block_invoke.32
+__52-[SNCDDAbstractDatabaseLogger setDeleteOnEverySave:]_block_invoke
+__48-[SNCDDAbstractDatabaseLogger deleteOnEverySave]_block_invoke_2
+__48-[SNCDDAbstractDatabaseLogger deleteOnEverySave]_block_invoke
+__49-[SNCDDAbstractDatabaseLogger setDeleteInterval:]_block_invoke_2
+__49-[SNCDDAbstractDatabaseLogger setDeleteInterval:]_block_invoke
+__45-[SNCDDAbstractDatabaseLogger deleteInterval]_block_invoke_2
+__45-[SNCDDAbstractDatabaseLogger deleteInterval]_block_invoke
+__41-[SNCDDAbstractDatabaseLogger setMaxAge:]_block_invoke_2
+__41-[SNCDDAbstractDatabaseLogger setMaxAge:]_block_invoke
+__37-[SNCDDAbstractDatabaseLogger maxAge]_block_invoke_2
+__37-[SNCDDAbstractDatabaseLogger maxAge]_block_invoke
+__47-[SNCDDAbstractDatabaseLogger setSaveInterval:]_block_invoke_2
+__47-[SNCDDAbstractDatabaseLogger setSaveInterval:]_block_invoke
+__43-[SNCDDAbstractDatabaseLogger saveInterval]_block_invoke_2
+__43-[SNCDDAbstractDatabaseLogger saveInterval]_block_invoke
+__destroy_helper_block_e8_32s40s
+__copy_helper_block_e8_32s40b
+__48-[SNCDDAbstractDatabaseLogger setSaveThreshold:]_block_invoke.25
+__48-[SNCDDAbstractDatabaseLogger setSaveThreshold:]_block_invoke
+__destroy_helper_block_e8_32s40r
+__copy_helper_block_e8_32s40r
+__44-[SNCDDAbstractDatabaseLogger saveThreshold]_block_invoke_2
+__44-[SNCDDAbstractDatabaseLogger saveThreshold]_block_invoke
+__56-[SNCDDAbstractDatabaseLogger createAndStartDeleteTimer]_block_invoke
+__destroy_helper_block_e8_32s
+__copy_helper_block_e8_32s
+__55-[SNCDDAbstractDatabaseLogger createSuspendedSaveTimer]_block_invoke
++[SNCCalendarUtilities sncsdk_weekdayNames]
+___43+[SNCCalendarUtilities sncsdk_weekdayNames]_block_invoke
++[SNCCalendarUtilities weekdayNameFromWeekdayNumber:]
+_sncsdk_weekdayNames.weekdays
+_sncsdk_weekdayNames.onceToken
+___block_descriptor_32_e5_v8?0l
+___block_literal_global
+_OBJC_CLASSLIST_REFERENCES_$_.14
+__OBJC_$_CLASS_METHODS_SNCCalendarUtilities
+__OBJC_METACLASS_RO_$_SNCCalendarUtilities
+__OBJC_CLASS_RO_$_SNCCalendarUtilities
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Utilities/SNCCalendarUtilities.m
+SonectCore/Utilities/SNCCalendarUtilities.m
+__43+[SNCCalendarUtilities sncsdk_weekdayNames]_block_invoke
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/usr/include/dispatch/once.h
++[SNCDDTTYLogger initialize_colors_16]
++[SNCDDTTYLogger initialize_colors_256]
++[SNCDDTTYLogger getRed:green:blue:fromColor:]
++[SNCDDTTYLogger codeIndexForColor:]
++[SNCDDTTYLogger sharedInstance]
+___32+[SNCDDTTYLogger sharedInstance]_block_invoke
+-[SNCDDTTYLogger init]
+-[SNCDDTTYLogger loggerName]
+-[SNCDDTTYLogger loadDefaultColorProfiles]
+-[SNCDDTTYLogger colorsEnabled]
+___31-[SNCDDTTYLogger colorsEnabled]_block_invoke
+___31-[SNCDDTTYLogger colorsEnabled]_block_invoke_2
+-[SNCDDTTYLogger setColorsEnabled:]
+___35-[SNCDDTTYLogger setColorsEnabled:]_block_invoke
+___35-[SNCDDTTYLogger setColorsEnabled:]_block_invoke.128
+-[SNCDDTTYLogger setForegroundColor:backgroundColor:forFlag:]
+-[SNCDDTTYLogger setForegroundColor:backgroundColor:forFlag:context:]
+___69-[SNCDDTTYLogger setForegroundColor:backgroundColor:forFlag:context:]_block_invoke
+___copy_helper_block_e8_32s40s48s
+___destroy_helper_block_e8_32s40s48s
+___69-[SNCDDTTYLogger setForegroundColor:backgroundColor:forFlag:context:]_block_invoke.138
+-[SNCDDTTYLogger setForegroundColor:backgroundColor:forTag:]
+___60-[SNCDDTTYLogger setForegroundColor:backgroundColor:forTag:]_block_invoke
+___copy_helper_block_e8_32s40s48s56s
+___destroy_helper_block_e8_32s40s48s56s
+___60-[SNCDDTTYLogger setForegroundColor:backgroundColor:forTag:]_block_invoke.141
+-[SNCDDTTYLogger clearColorsForFlag:]
+-[SNCDDTTYLogger clearColorsForFlag:context:]
+___45-[SNCDDTTYLogger clearColorsForFlag:context:]_block_invoke
+___45-[SNCDDTTYLogger clearColorsForFlag:context:]_block_invoke.146
+-[SNCDDTTYLogger clearColorsForTag:]
+___36-[SNCDDTTYLogger clearColorsForTag:]_block_invoke
+___copy_helper_block_e8_32s40s
+___36-[SNCDDTTYLogger clearColorsForTag:]_block_invoke.149
+-[SNCDDTTYLogger clearColorsForAllFlags]
+___40-[SNCDDTTYLogger clearColorsForAllFlags]_block_invoke
+___40-[SNCDDTTYLogger clearColorsForAllFlags]_block_invoke.152
+-[SNCDDTTYLogger clearColorsForAllTags]
+___39-[SNCDDTTYLogger clearColorsForAllTags]_block_invoke
+___39-[SNCDDTTYLogger clearColorsForAllTags]_block_invoke_2
+-[SNCDDTTYLogger clearAllColors]
+___32-[SNCDDTTYLogger clearAllColors]_block_invoke
+___32-[SNCDDTTYLogger clearAllColors]_block_invoke_2
+-[SNCDDTTYLogger logMessage:]
+-[SNCDDTTYLogger automaticallyAppendNewlineForCustomFormatters]
+-[SNCDDTTYLogger setAutomaticallyAppendNewlineForCustomFormatters:]
+-[SNCDDTTYLogger .cxx_destruct]
+-[SNCDDTTYLoggerColorProfile initWithForegroundColor:backgroundColor:flag:context:]
+-[SNCDDTTYLoggerColorProfile description]
+-[SNCDDTTYLoggerColorProfile .cxx_destruct]
+___clang_at_available_requires_core_foundation_framework
+___clang_at_available_requires_core_foundation_framework.cold.1
+_codes_fg
+_codes_bg
+_colors
+_OBJC_CLASSLIST_REFERENCES_$_.31
+_OBJC_SELECTOR_REFERENCES_.33
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_SELECTOR_REFERENCES_.69
+_OBJC_CLASSLIST_REFERENCES_$_.70
+_OBJC_SELECTOR_REFERENCES_.74
+_OBJC_SELECTOR_REFERENCES_.86
+_sharedInstance.DDTTYLoggerOnceToken
+_isaXcodeColorTTY
+_isaColorTTY
+_OBJC_SELECTOR_REFERENCES_.93
+_OBJC_SELECTOR_REFERENCES_.95
+_OBJC_SELECTOR_REFERENCES_.97
+_sharedInstance
+_OBJC_SELECTOR_REFERENCES_.103
+_OBJC_SELECTOR_REFERENCES_.105
+_OBJC_IVAR_$_SNCDDTTYLogger._appName
+_OBJC_SELECTOR_REFERENCES_.107
+_OBJC_IVAR_$_SNCDDTTYLogger._appLen
+_OBJC_IVAR_$_SNCDDTTYLogger._app
+_OBJC_SELECTOR_REFERENCES_.111
+_OBJC_IVAR_$_SNCDDTTYLogger._processID
+_OBJC_IVAR_$_SNCDDTTYLogger._pidLen
+_OBJC_IVAR_$_SNCDDTTYLogger._pid
+_OBJC_IVAR_$_SNCDDTTYLogger._colorsEnabled
+_OBJC_SELECTOR_REFERENCES_.115
+_OBJC_IVAR_$_SNCDDTTYLogger._colorProfilesArray
+_OBJC_CLASSLIST_REFERENCES_$_.116
+_OBJC_IVAR_$_SNCDDTTYLogger._colorProfilesDict
+_OBJC_IVAR_$_SNCDDTTYLogger._automaticallyAppendNewlineForCustomFormatters
+_OBJC_SELECTOR_REFERENCES_.118
+_OBJC_CLASSLIST_REFERENCES_$_.119
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_CLASSLIST_REFERENCES_$_.131
+_OBJC_SELECTOR_REFERENCES_.133
+_OBJC_SELECTOR_REFERENCES_.135
+___block_descriptor_72_e8_32s40s48s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.137
+_OBJC_SELECTOR_REFERENCES_.140
+___block_descriptor_64_e8_32s40s48s56s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.143
+_OBJC_SELECTOR_REFERENCES_.145
+___block_descriptor_56_e8_32s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.148
+___block_descriptor_48_e8_32s40s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.151
+_OBJC_SELECTOR_REFERENCES_.154
+_OBJC_SELECTOR_REFERENCES_.156
+_OBJC_SELECTOR_REFERENCES_.160
+_OBJC_SELECTOR_REFERENCES_.164
+__OBJC_$_CLASS_METHODS_SNCDDTTYLogger
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_SNCDDLogger
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SNCDDLogger
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_SNCDDLogger
+__OBJC_$_PROP_LIST_SNCDDLogger
+__OBJC_$_PROTOCOL_METHOD_TYPES_SNCDDLogger
+__OBJC_PROTOCOL_$_SNCDDLogger
+__OBJC_LABEL_PROTOCOL_$_SNCDDLogger
+__OBJC_CLASS_PROTOCOLS_$_SNCDDTTYLogger
+__OBJC_$_CLASS_PROP_LIST_SNCDDTTYLogger
+__OBJC_METACLASS_RO_$_SNCDDTTYLogger
+__OBJC_$_INSTANCE_METHODS_SNCDDTTYLogger
+__OBJC_$_INSTANCE_VARIABLES_SNCDDTTYLogger
+__OBJC_$_PROP_LIST_SNCDDTTYLogger
+__OBJC_CLASS_RO_$_SNCDDTTYLogger
+_OBJC_CLASSLIST_SUP_REFS_$_.275
+_OBJC_CLASSLIST_REFERENCES_$_.276
+_OBJC_SELECTOR_REFERENCES_.277
+_OBJC_SELECTOR_REFERENCES_.279
+__OBJC_METACLASS_RO_$_SNCDDTTYLoggerColorProfile
+__OBJC_$_INSTANCE_METHODS_SNCDDTTYLoggerColorProfile
+__OBJC_$_INSTANCE_VARIABLES_SNCDDTTYLoggerColorProfile
+__OBJC_CLASS_RO_$_SNCDDTTYLoggerColorProfile
+_OBJC_CLASSLIST_REFERENCES_$_.314
+_OBJC_SELECTOR_REFERENCES_.316
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SNCDDTTYLogger.m
+SonectCore/Logging/SNCDDTTYLogger.m
+SonectCore/Logging/include/SNCDDTTYLogger.h
+__32-[SNCDDTTYLogger clearAllColors]_block_invoke_2
+__32-[SNCDDTTYLogger clearAllColors]_block_invoke
+__39-[SNCDDTTYLogger clearColorsForAllTags]_block_invoke_2
+__39-[SNCDDTTYLogger clearColorsForAllTags]_block_invoke
+__40-[SNCDDTTYLogger clearColorsForAllFlags]_block_invoke.152
+__40-[SNCDDTTYLogger clearColorsForAllFlags]_block_invoke
+__36-[SNCDDTTYLogger clearColorsForTag:]_block_invoke.149
+__copy_helper_block_e8_32s40s
+__36-[SNCDDTTYLogger clearColorsForTag:]_block_invoke
+__45-[SNCDDTTYLogger clearColorsForFlag:context:]_block_invoke.146
+__45-[SNCDDTTYLogger clearColorsForFlag:context:]_block_invoke
+__60-[SNCDDTTYLogger setForegroundColor:backgroundColor:forTag:]_block_invoke.141
+__destroy_helper_block_e8_32s40s48s56s
+__copy_helper_block_e8_32s40s48s56s
+__60-[SNCDDTTYLogger setForegroundColor:backgroundColor:forTag:]_block_invoke
+__69-[SNCDDTTYLogger setForegroundColor:backgroundColor:forFlag:context:]_block_invoke.138
+__destroy_helper_block_e8_32s40s48s
+__copy_helper_block_e8_32s40s48s
+__69-[SNCDDTTYLogger setForegroundColor:backgroundColor:forFlag:context:]_block_invoke
+__35-[SNCDDTTYLogger setColorsEnabled:]_block_invoke.128
+__35-[SNCDDTTYLogger setColorsEnabled:]_block_invoke
+__31-[SNCDDTTYLogger colorsEnabled]_block_invoke_2
+__31-[SNCDDTTYLogger colorsEnabled]_block_invoke
+SNCDDMakeColor
+__32+[SNCDDTTYLogger sharedInstance]_block_invoke
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SNCDDLoggerNames.m
+-[SNCDDDispatchQueueLogFormatter init]
+-[SNCDDDispatchQueueLogFormatter initWithMode:]
+-[SNCDDDispatchQueueLogFormatter dealloc]
+-[SNCDDDispatchQueueLogFormatter replacementStringForQueueLabel:]
+-[SNCDDDispatchQueueLogFormatter setReplacementString:forQueueLabel:]
+-[SNCDDDispatchQueueLogFormatter createDateFormatter]
+-[SNCDDDispatchQueueLogFormatter configureDateFormatter:]
+-[SNCDDDispatchQueueLogFormatter stringFromDate:]
+-[SNCDDDispatchQueueLogFormatter queueThreadLabelForLogMessage:]
+-[SNCDDDispatchQueueLogFormatter formatLogMessage:]
+-[SNCDDDispatchQueueLogFormatter minQueueLength]
+-[SNCDDDispatchQueueLogFormatter setMinQueueLength:]
+-[SNCDDDispatchQueueLogFormatter maxQueueLength]
+-[SNCDDDispatchQueueLogFormatter setMaxQueueLength:]
+-[SNCDDDispatchQueueLogFormatter .cxx_destruct]
+-[SNCDDAtomicCounter initWithDefaultValue:]
+-[SNCDDAtomicCounter value]
+-[SNCDDAtomicCounter increment]
+-[SNCDDAtomicCounter decrement]
+_OBJC_CLASSLIST_REFERENCES_$_.25
+_OBJC_CLASSLIST_REFERENCES_$_.34
+_OBJC_SELECTOR_REFERENCES_.38
+_OBJC_SELECTOR_REFERENCES_.40
+_OBJC_CLASSLIST_REFERENCES_$_.41
+_OBJC_SELECTOR_REFERENCES_.43
+_OBJC_SELECTOR_REFERENCES_.45
+_OBJC_SELECTOR_REFERENCES_.47
+_OBJC_SELECTOR_REFERENCES_.49
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_CLASSLIST_REFERENCES_$_.66
+_OBJC_SELECTOR_REFERENCES_.68
+_OBJC_SELECTOR_REFERENCES_.70
+_OBJC_SELECTOR_REFERENCES_.72
+_OBJC_CLASSLIST_REFERENCES_$_.77
+_OBJC_SELECTOR_REFERENCES_.81
+_OBJC_SELECTOR_REFERENCES_.83
+__OBJC_$_PROTOCOL_REFS_SNCDDLogFormatter
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SNCDDLogFormatter
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_SNCDDLogFormatter
+__OBJC_$_PROTOCOL_METHOD_TYPES_SNCDDLogFormatter
+__OBJC_PROTOCOL_$_SNCDDLogFormatter
+__OBJC_LABEL_PROTOCOL_$_SNCDDLogFormatter
+__OBJC_CLASS_PROTOCOLS_$_SNCDDDispatchQueueLogFormatter
+__OBJC_METACLASS_RO_$_SNCDDDispatchQueueLogFormatter
+__OBJC_$_INSTANCE_METHODS_SNCDDDispatchQueueLogFormatter
+_OBJC_IVAR_$_SNCDDDispatchQueueLogFormatter._dateFormatter
+_OBJC_IVAR_$_SNCDDDispatchQueueLogFormatter._mutex
+_OBJC_IVAR_$_SNCDDDispatchQueueLogFormatter._minQueueLength
+_OBJC_IVAR_$_SNCDDDispatchQueueLogFormatter._maxQueueLength
+_OBJC_IVAR_$_SNCDDDispatchQueueLogFormatter._replacements
+__OBJC_$_INSTANCE_VARIABLES_SNCDDDispatchQueueLogFormatter
+__OBJC_$_PROP_LIST_SNCDDDispatchQueueLogFormatter
+__OBJC_CLASS_RO_$_SNCDDDispatchQueueLogFormatter
+_OBJC_CLASSLIST_SUP_REFS_$_.162
+__OBJC_$_PROTOCOL_REFS_SNCDDAtomicCountable
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SNCDDAtomicCountable
+__OBJC_$_PROTOCOL_METHOD_TYPES_SNCDDAtomicCountable
+__OBJC_PROTOCOL_$_SNCDDAtomicCountable
+__OBJC_LABEL_PROTOCOL_$_SNCDDAtomicCountable
+__OBJC_CLASS_PROTOCOLS_$_SNCDDAtomicCounter
+__OBJC_METACLASS_RO_$_SNCDDAtomicCounter
+__OBJC_$_INSTANCE_METHODS_SNCDDAtomicCounter
+_OBJC_IVAR_$_SNCDDAtomicCounter._value
+__OBJC_$_INSTANCE_VARIABLES_SNCDDAtomicCounter
+__OBJC_$_PROP_LIST_SNCDDAtomicCounter
+__OBJC_CLASS_RO_$_SNCDDAtomicCounter
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/Extensions/SNCDDDispatchQueueLogFormatter.m
+SonectCore/Logging/Extensions/SNCDDDispatchQueueLogFormatter.m
+_qos_name
+-[SNCDDOSLogger initWithSubsystem:category:]
+-[SNCDDOSLogger init]
++[SNCDDOSLogger sharedInstance]
+___31+[SNCDDOSLogger sharedInstance]_block_invoke
+-[SNCDDOSLogger getLogger]
+-[SNCDDOSLogger logger]
+-[SNCDDOSLogger loggerName]
+-[SNCDDOSLogger logMessage:]
+-[SNCDDOSLogger subsystem]
+-[SNCDDOSLogger category]
+-[SNCDDOSLogger setLogger:]
+-[SNCDDOSLogger .cxx_destruct]
+_OBJC_IVAR_$_SNCDDOSLogger._subsystem
+_OBJC_IVAR_$_SNCDDOSLogger._category
+_sharedInstance.SNCDDOSLoggerOnceToken
+_OBJC_IVAR_$_SNCDDOSLogger._logger
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_SELECTOR_REFERENCES_.19
+_OBJC_SELECTOR_REFERENCES_.21
+__OBJC_$_CLASS_METHODS_SNCDDOSLogger
+__OBJC_CLASS_PROTOCOLS_$_SNCDDOSLogger
+__OBJC_$_CLASS_PROP_LIST_SNCDDOSLogger
+__OBJC_METACLASS_RO_$_SNCDDOSLogger
+__OBJC_$_INSTANCE_METHODS_SNCDDOSLogger
+__OBJC_$_INSTANCE_VARIABLES_SNCDDOSLogger
+__OBJC_$_PROP_LIST_SNCDDOSLogger
+__OBJC_CLASS_RO_$_SNCDDOSLogger
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SNCDDOSLogger.m
+SonectCore/Logging/SNCDDOSLogger.m
+__31+[SNCDDOSLogger sharedInstance]_block_invoke
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/CLI/SNCCLIColor.m
+-[SNCDDMultiFormatter init]
+-[SNCDDMultiFormatter formatLogMessage:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___40-[SNCDDMultiFormatter formatLogMessage:]_block_invoke
+___copy_helper_block_e8_32s40s48r
+___destroy_helper_block_e8_32s40s48r
+-[SNCDDMultiFormatter logMessageForLine:originalMessage:]
+-[SNCDDMultiFormatter formatters]
+___33-[SNCDDMultiFormatter formatters]_block_invoke
+-[SNCDDMultiFormatter addFormatter:]
+___36-[SNCDDMultiFormatter addFormatter:]_block_invoke
+-[SNCDDMultiFormatter removeFormatter:]
+___39-[SNCDDMultiFormatter removeFormatter:]_block_invoke
+-[SNCDDMultiFormatter removeAllFormatters]
+___42-[SNCDDMultiFormatter removeAllFormatters]_block_invoke
+-[SNCDDMultiFormatter isFormattingWithFormatter:]
+___49-[SNCDDMultiFormatter isFormattingWithFormatter:]_block_invoke
+-[SNCDDMultiFormatter .cxx_destruct]
+___block_descriptor_56_e8_32s40s48r_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.13
+__OBJC_CLASS_PROTOCOLS_$_SNCDDMultiFormatter
+__OBJC_METACLASS_RO_$_SNCDDMultiFormatter
+__OBJC_$_INSTANCE_METHODS_SNCDDMultiFormatter
+_OBJC_IVAR_$_SNCDDMultiFormatter._queue
+_OBJC_IVAR_$_SNCDDMultiFormatter._formatters
+__OBJC_$_INSTANCE_VARIABLES_SNCDDMultiFormatter
+__OBJC_$_PROP_LIST_SNCDDMultiFormatter
+__OBJC_CLASS_RO_$_SNCDDMultiFormatter
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/Extensions/SNCDDMultiFormatter.m
+SonectCore/Logging/Extensions/SNCDDMultiFormatter.m
+__49-[SNCDDMultiFormatter isFormattingWithFormatter:]_block_invoke
+__42-[SNCDDMultiFormatter removeAllFormatters]_block_invoke
+__39-[SNCDDMultiFormatter removeFormatter:]_block_invoke
+__36-[SNCDDMultiFormatter addFormatter:]_block_invoke
+__33-[SNCDDMultiFormatter formatters]_block_invoke
+__destroy_helper_block_e8_32s40s48r
+__copy_helper_block_e8_32s40s48r
+__40-[SNCDDMultiFormatter formatLogMessage:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
++[SNCDDLogFileManagerDefault automaticallyNotifiesObserversForKey:]
+-[SNCDDLogFileManagerDefault init]
+-[SNCDDLogFileManagerDefault initWithLogsDirectory:]
+-[SNCDDLogFileManagerDefault initWithLogsDirectory:defaultFileProtectionLevel:]
+-[SNCDDLogFileManagerDefault dealloc]
+-[SNCDDLogFileManagerDefault observeValueForKeyPath:ofObject:change:context:]
+___77-[SNCDDLogFileManagerDefault observeValueForKeyPath:ofObject:change:context:]_block_invoke
+-[SNCDDLogFileManagerDefault logFileProtection]
+-[SNCDDLogFileManagerDefault deleteOldLogFiles]
+-[SNCDDLogFileManagerDefault defaultLogsDirectory]
+-[SNCDDLogFileManagerDefault logsDirectory]
+-[SNCDDLogFileManagerDefault isLogFile:]
+-[SNCDDLogFileManagerDefault logFileDateFormatter]
+-[SNCDDLogFileManagerDefault unsortedLogFilePaths]
+-[SNCDDLogFileManagerDefault unsortedLogFileNames]
+-[SNCDDLogFileManagerDefault unsortedLogFileInfos]
+-[SNCDDLogFileManagerDefault sortedLogFilePaths]
+-[SNCDDLogFileManagerDefault sortedLogFileNames]
+-[SNCDDLogFileManagerDefault sortedLogFileInfos]
+___48-[SNCDDLogFileManagerDefault sortedLogFileInfos]_block_invoke
+-[SNCDDLogFileManagerDefault newLogFileName]
+-[SNCDDLogFileManagerDefault logFileHeader]
+-[SNCDDLogFileManagerDefault logFileHeaderData]
+-[SNCDDLogFileManagerDefault createNewLogFileWithError:]
+___56-[SNCDDLogFileManagerDefault createNewLogFileWithError:]_block_invoke
+-[SNCDDLogFileManagerDefault applicationName]
+___45-[SNCDDLogFileManagerDefault applicationName]_block_invoke
+-[SNCDDLogFileManagerDefault maximumNumberOfLogFiles]
+-[SNCDDLogFileManagerDefault setMaximumNumberOfLogFiles:]
+-[SNCDDLogFileManagerDefault logFilesDiskQuota]
+-[SNCDDLogFileManagerDefault setLogFilesDiskQuota:]
+-[SNCDDLogFileManagerDefault .cxx_destruct]
+-[SNCDDLogFileFormatterDefault init]
+-[SNCDDLogFileFormatterDefault initWithDateFormatter:]
+-[SNCDDLogFileFormatterDefault formatLogMessage:]
+-[SNCDDLogFileFormatterDefault .cxx_destruct]
+-[SNCDDFileLogger init]
+-[SNCDDFileLogger initWithLogFileManager:]
+-[SNCDDFileLogger initWithLogFileManager:completionQueue:]
+-[SNCDDFileLogger lt_cleanup]
+-[SNCDDFileLogger dealloc]
+___26-[SNCDDFileLogger dealloc]_block_invoke
+-[SNCDDFileLogger maximumFileSize]
+___34-[SNCDDFileLogger maximumFileSize]_block_invoke
+___34-[SNCDDFileLogger maximumFileSize]_block_invoke.319
+-[SNCDDFileLogger setMaximumFileSize:]
+___38-[SNCDDFileLogger setMaximumFileSize:]_block_invoke
+___38-[SNCDDFileLogger setMaximumFileSize:]_block_invoke.322
+-[SNCDDFileLogger rollingFrequency]
+___35-[SNCDDFileLogger rollingFrequency]_block_invoke
+___35-[SNCDDFileLogger rollingFrequency]_block_invoke_2
+-[SNCDDFileLogger setRollingFrequency:]
+___39-[SNCDDFileLogger setRollingFrequency:]_block_invoke
+___39-[SNCDDFileLogger setRollingFrequency:]_block_invoke_2
+-[SNCDDFileLogger lt_scheduleTimerToRollLogFileDueToAge]
+___56-[SNCDDFileLogger lt_scheduleTimerToRollLogFileDueToAge]_block_invoke
+___copy_helper_block_e8_32w
+___destroy_helper_block_e8_32w
+-[SNCDDFileLogger rollLogFile]
+-[SNCDDFileLogger rollLogFileWithCompletionBlock:]
+___50-[SNCDDFileLogger rollLogFileWithCompletionBlock:]_block_invoke
+___50-[SNCDDFileLogger rollLogFileWithCompletionBlock:]_block_invoke_2
+___copy_helper_block_e8_32b
+___50-[SNCDDFileLogger rollLogFileWithCompletionBlock:]_block_invoke.335
+-[SNCDDFileLogger lt_rollLogFileNow]
+___36-[SNCDDFileLogger lt_rollLogFileNow]_block_invoke
+-[SNCDDFileLogger lt_maybeRollLogFileDueToAge]
+-[SNCDDFileLogger lt_maybeRollLogFileDueToSize]
+-[SNCDDFileLogger lt_shouldLogFileBeArchived:]
+-[SNCDDFileLogger currentLogFileInfo]
+___37-[SNCDDFileLogger currentLogFileInfo]_block_invoke
+___37-[SNCDDFileLogger currentLogFileInfo]_block_invoke_2
+-[SNCDDFileLogger lt_currentLogFileInfo]
+-[SNCDDFileLogger lt_shouldUseLogFile:isResuming:]
+___50-[SNCDDFileLogger lt_shouldUseLogFile:isResuming:]_block_invoke
+-[SNCDDFileLogger lt_monitorCurrentLogFileForExternalChanges]
+___61-[SNCDDFileLogger lt_monitorCurrentLogFileForExternalChanges]_block_invoke
+-[SNCDDFileLogger lt_currentLogFileHandle]
+-[SNCDDFileLogger logMessage:]
+-[SNCDDFileLogger willLogMessage:]
+-[SNCDDFileLogger didLogMessage:]
+-[SNCDDFileLogger shouldArchiveRecentLogFileInfo:]
+-[SNCDDFileLogger willRemoveLogger]
+-[SNCDDFileLogger flush]
+___24-[SNCDDFileLogger flush]_block_invoke
+___24-[SNCDDFileLogger flush]_block_invoke_2
+-[SNCDDFileLogger lt_flush]
+-[SNCDDFileLogger loggerName]
+-[SNCDDFileLogger doNotReuseLogFiles]
+-[SNCDDFileLogger setDoNotReuseLogFiles:]
+-[SNCDDFileLogger logFileManager]
+-[SNCDDFileLogger automaticallyAppendNewlineForCustomFormatters]
+-[SNCDDFileLogger setAutomaticallyAppendNewlineForCustomFormatters:]
+-[SNCDDFileLogger .cxx_destruct]
+-[SNCDDFileLogger(Internal) logData:]
+___37-[SNCDDFileLogger(Internal) logData:]_block_invoke
+___37-[SNCDDFileLogger(Internal) logData:]_block_invoke_2
+-[SNCDDFileLogger(Internal) dummyMethod]
+-[SNCDDFileLogger(Internal) methodSignatureForSelector:]
+-[SNCDDFileLogger(Internal) forwardInvocation:]
+-[SNCDDFileLogger(Internal) lt_logData:]
+___40-[SNCDDFileLogger(Internal) lt_logData:]_block_invoke
+-[SNCDDFileLogger(Internal) lt_dataForMessage:]
++[SNCDDLogFileInfo logFileWithPath:]
+-[SNCDDLogFileInfo initWithFilePath:]
+-[SNCDDLogFileInfo fileAttributes]
+-[SNCDDLogFileInfo fileName]
+-[SNCDDLogFileInfo modificationDate]
+-[SNCDDLogFileInfo creationDate]
+-[SNCDDLogFileInfo fileSize]
+-[SNCDDLogFileInfo age]
+-[SNCDDLogFileInfo description]
+-[SNCDDLogFileInfo isArchived]
+-[SNCDDLogFileInfo setIsArchived:]
+-[SNCDDLogFileInfo reset]
+-[SNCDDLogFileInfo renameFile:]
+-[SNCDDLogFileInfo hasExtendedAttributeWithName:]
+-[SNCDDLogFileInfo addExtendedAttributeWithName:]
+-[SNCDDLogFileInfo removeExtendedAttributeWithName:]
+-[SNCDDLogFileInfo isEqual:]
+-[SNCDDLogFileInfo hash]
+-[SNCDDLogFileInfo reverseCompareByCreationDate:]
+-[SNCDDLogFileInfo reverseCompareByModificationDate:]
+-[SNCDDLogFileInfo filePath]
+-[SNCDDLogFileInfo .cxx_destruct]
+_OBJC_CLASSLIST_SUP_REFS_$_.7
+_OBJC_CLASSLIST_REFERENCES_$_.10
+_OBJC_CLASSLIST_REFERENCES_$_.21
+_OBJC_SELECTOR_REFERENCES_.35
+_OBJC_SELECTOR_REFERENCES_.37
+_OBJC_SELECTOR_REFERENCES_.39
+_OBJC_SELECTOR_REFERENCES_.41
+_OBJC_SELECTOR_REFERENCES_.50
+_OBJC_SELECTOR_REFERENCES_.52
+_OBJC_SELECTOR_REFERENCES_.54
+_OBJC_SELECTOR_REFERENCES_.56
+_OBJC_SELECTOR_REFERENCES_.58
+_OBJC_CLASSLIST_REFERENCES_$_.59
+_OBJC_SELECTOR_REFERENCES_.61
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_SELECTOR_REFERENCES_.75
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_SELECTOR_REFERENCES_.85
+_OBJC_SELECTOR_REFERENCES_.89
+_OBJC_SELECTOR_REFERENCES_.91
+_OBJC_CLASSLIST_REFERENCES_$_.94
+_OBJC_SELECTOR_REFERENCES_.96
+_OBJC_SELECTOR_REFERENCES_.98
+_OBJC_SELECTOR_REFERENCES_.100
+_OBJC_SELECTOR_REFERENCES_.102
+_OBJC_SELECTOR_REFERENCES_.106
+_OBJC_CLASSLIST_REFERENCES_$_.107
+_OBJC_SELECTOR_REFERENCES_.109
+_OBJC_SELECTOR_REFERENCES_.113
+_OBJC_CLASSLIST_REFERENCES_$_.114
+_OBJC_SELECTOR_REFERENCES_.120
+_OBJC_SELECTOR_REFERENCES_.124
+_OBJC_SELECTOR_REFERENCES_.126
+_OBJC_SELECTOR_REFERENCES_.128
+_OBJC_SELECTOR_REFERENCES_.132
+___block_descriptor_40_e8_32s_e47_q24?0"SNCDDLogFileInfo"8"SNCDDLogFileInfo"16l
+_OBJC_SELECTOR_REFERENCES_.139
+_OBJC_CLASSLIST_REFERENCES_$_.140
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_SELECTOR_REFERENCES_.146
+_OBJC_SELECTOR_REFERENCES_.150
+_OBJC_SELECTOR_REFERENCES_.152
+_OBJC_CLASSLIST_REFERENCES_$_.155
+_OBJC_SELECTOR_REFERENCES_.159
+_OBJC_SELECTOR_REFERENCES_.161
+_OBJC_SELECTOR_REFERENCES_.165
+_OBJC_SELECTOR_REFERENCES_.167
+_OBJC_SELECTOR_REFERENCES_.169
+_OBJC_SELECTOR_REFERENCES_.171
+_OBJC_CLASSLIST_REFERENCES_$_.172
+_OBJC_SELECTOR_REFERENCES_.174
+_OBJC_SELECTOR_REFERENCES_.176
+_OBJC_SELECTOR_REFERENCES_.178
+_applicationName._appName
+_applicationName.onceToken
+_OBJC_CLASSLIST_REFERENCES_$_.181
+_OBJC_SELECTOR_REFERENCES_.183
+_OBJC_SELECTOR_REFERENCES_.187
+_OBJC_CLASSLIST_REFERENCES_$_.188
+_OBJC_SELECTOR_REFERENCES_.190
+_OBJC_SELECTOR_REFERENCES_.192
+__OBJC_$_CLASS_METHODS_SNCDDLogFileManagerDefault
+__OBJC_$_PROTOCOL_REFS_DDLogFileManager
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_DDLogFileManager
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_DDLogFileManager
+__OBJC_$_PROP_LIST_DDLogFileManager
+__OBJC_$_PROTOCOL_METHOD_TYPES_DDLogFileManager
+__OBJC_PROTOCOL_$_DDLogFileManager
+__OBJC_LABEL_PROTOCOL_$_DDLogFileManager
+__OBJC_CLASS_PROTOCOLS_$_SNCDDLogFileManagerDefault
+__OBJC_METACLASS_RO_$_SNCDDLogFileManagerDefault
+__OBJC_$_INSTANCE_METHODS_SNCDDLogFileManagerDefault
+_OBJC_IVAR_$_SNCDDLogFileManagerDefault._fileDateFormatter
+_OBJC_IVAR_$_SNCDDLogFileManagerDefault._maximumNumberOfLogFiles
+_OBJC_IVAR_$_SNCDDLogFileManagerDefault._logFilesDiskQuota
+_OBJC_IVAR_$_SNCDDLogFileManagerDefault._logsDirectory
+_OBJC_IVAR_$_SNCDDLogFileManagerDefault._defaultFileProtectionLevel
+__OBJC_$_INSTANCE_VARIABLES_SNCDDLogFileManagerDefault
+__OBJC_$_PROP_LIST_SNCDDLogFileManagerDefault
+__OBJC_CLASS_RO_$_SNCDDLogFileManagerDefault
+_OBJC_SELECTOR_REFERENCES_.281
+_OBJC_CLASSLIST_SUP_REFS_$_.282
+_OBJC_SELECTOR_REFERENCES_.284
+__OBJC_CLASS_PROTOCOLS_$_SNCDDLogFileFormatterDefault
+__OBJC_METACLASS_RO_$_SNCDDLogFileFormatterDefault
+__OBJC_$_INSTANCE_METHODS_SNCDDLogFileFormatterDefault
+_OBJC_IVAR_$_SNCDDLogFileFormatterDefault._dateFormatter
+__OBJC_$_INSTANCE_VARIABLES_SNCDDLogFileFormatterDefault
+__OBJC_$_PROP_LIST_SNCDDLogFileFormatterDefault
+__OBJC_CLASS_RO_$_SNCDDLogFileFormatterDefault
+_OBJC_CLASSLIST_REFERENCES_$_.301
+_OBJC_SELECTOR_REFERENCES_.303
+_OBJC_CLASSLIST_SUP_REFS_$_.304
+_OBJC_IVAR_$_SNCDDFileLogger._completionQueue
+_OBJC_IVAR_$_SNCDDFileLogger._maximumFileSize
+_OBJC_IVAR_$_SNCDDFileLogger._rollingFrequency
+_OBJC_IVAR_$_SNCDDFileLogger._automaticallyAppendNewlineForCustomFormatters
+_OBJC_IVAR_$_SNCDDFileLogger._logFileManager
+_OBJC_CLASSLIST_REFERENCES_$_.305
+_OBJC_IVAR_$_SNCDDFileLogger._currentLogFileHandle
+_OBJC_SELECTOR_REFERENCES_.307
+_OBJC_SELECTOR_REFERENCES_.309
+_OBJC_IVAR_$_SNCDDFileLogger._currentLogFileVnode
+_OBJC_IVAR_$_SNCDDFileLogger._rollingTimer
+_OBJC_SELECTOR_REFERENCES_.311
+_OBJC_SELECTOR_REFERENCES_.313
+_OBJC_SELECTOR_REFERENCES_.315
+_OBJC_CLASSLIST_REFERENCES_$_.316
+_OBJC_SELECTOR_REFERENCES_.318
+_OBJC_SELECTOR_REFERENCES_.321
+_OBJC_SELECTOR_REFERENCES_.324
+_OBJC_IVAR_$_SNCDDFileLogger._currentLogFileInfo
+_OBJC_SELECTOR_REFERENCES_.326
+_OBJC_SELECTOR_REFERENCES_.328
+___block_descriptor_40_e8_32w_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.330
+_OBJC_SELECTOR_REFERENCES_.332
+_OBJC_SELECTOR_REFERENCES_.334
+___block_descriptor_40_e8_32bs_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.337
+_OBJC_SELECTOR_REFERENCES_.338
+_OBJC_SELECTOR_REFERENCES_.339
+_OBJC_SELECTOR_REFERENCES_.341
+_OBJC_SELECTOR_REFERENCES_.343
+_OBJC_SELECTOR_REFERENCES_.345
+_OBJC_SELECTOR_REFERENCES_.347
+_OBJC_SELECTOR_REFERENCES_.349
+_OBJC_SELECTOR_REFERENCES_.351
+_OBJC_SELECTOR_REFERENCES_.353
+_OBJC_SELECTOR_REFERENCES_.354
+_OBJC_SELECTOR_REFERENCES_.357
+_OBJC_SELECTOR_REFERENCES_.359
+_OBJC_IVAR_$_SNCDDFileLogger._doNotReuseLogFiles
+_OBJC_SELECTOR_REFERENCES_.361
+_OBJC_SELECTOR_REFERENCES_.362
+_OBJC_SELECTOR_REFERENCES_.364
+_OBJC_CLASSLIST_REFERENCES_$_.365
+_OBJC_SELECTOR_REFERENCES_.367
+_OBJC_SELECTOR_REFERENCES_.369
+_OBJC_SELECTOR_REFERENCES_.371
+_OBJC_SELECTOR_REFERENCES_.373
+_OBJC_SELECTOR_REFERENCES_.375
+_OBJC_SELECTOR_REFERENCES_.377
+__OBJC_CLASS_PROTOCOLS_$_SNCDDFileLogger
+__OBJC_METACLASS_RO_$_SNCDDFileLogger
+__OBJC_$_INSTANCE_METHODS_SNCDDFileLogger
+__OBJC_$_INSTANCE_VARIABLES_SNCDDFileLogger
+__OBJC_$_PROP_LIST_SNCDDFileLogger
+__OBJC_CLASS_RO_$_SNCDDFileLogger
+_OBJC_SELECTOR_REFERENCES_.448
+_OBJC_SELECTOR_REFERENCES_.450
+_OBJC_SELECTOR_REFERENCES_.452
+_OBJC_SELECTOR_REFERENCES_.454
+_OBJC_SELECTOR_REFERENCES_.456
+_OBJC_SELECTOR_REFERENCES_.458
+_lt_logData:.implementsDeprecatedWillLog
+_lt_logData:.implementsDeprecatedDidLog
+_lt_logData:.onceToken
+_OBJC_SELECTOR_REFERENCES_.459
+_OBJC_SELECTOR_REFERENCES_.460
+_OBJC_SELECTOR_REFERENCES_.462
+_OBJC_SELECTOR_REFERENCES_.463
+_exception_count
+_OBJC_SELECTOR_REFERENCES_.468
+__OBJC_$_CATEGORY_INSTANCE_METHODS_SNCDDFileLogger_$_Internal
+__OBJC_$_CATEGORY_SNCDDFileLogger_$_Internal
+_OBJC_CLASSLIST_SUP_REFS_$_.473
+_OBJC_SELECTOR_REFERENCES_.475
+_OBJC_SELECTOR_REFERENCES_.479
+_OBJC_SELECTOR_REFERENCES_.491
+_OBJC_CLASSLIST_REFERENCES_$_.494
+_OBJC_SELECTOR_REFERENCES_.496
+_OBJC_SELECTOR_REFERENCES_.500
+_OBJC_SELECTOR_REFERENCES_.504
+_OBJC_SELECTOR_REFERENCES_.505
+_OBJC_SELECTOR_REFERENCES_.507
+_OBJC_SELECTOR_REFERENCES_.509
+_OBJC_SELECTOR_REFERENCES_.511
+_OBJC_SELECTOR_REFERENCES_.513
+_OBJC_SELECTOR_REFERENCES_.517
+_OBJC_SELECTOR_REFERENCES_.521
+_OBJC_SELECTOR_REFERENCES_.523
+_OBJC_SELECTOR_REFERENCES_.525
+_OBJC_SELECTOR_REFERENCES_.531
+_OBJC_SELECTOR_REFERENCES_.532
+_OBJC_SELECTOR_REFERENCES_.533
+__OBJC_$_CLASS_METHODS_SNCDDLogFileInfo
+__OBJC_METACLASS_RO_$_SNCDDLogFileInfo
+__OBJC_$_INSTANCE_METHODS_SNCDDLogFileInfo
+_OBJC_IVAR_$_SNCDDLogFileInfo._filePath
+_OBJC_IVAR_$_SNCDDLogFileInfo._fileName
+_OBJC_IVAR_$_SNCDDLogFileInfo._fileAttributes
+_OBJC_IVAR_$_SNCDDLogFileInfo._creationDate
+_OBJC_IVAR_$_SNCDDLogFileInfo._modificationDate
+_OBJC_IVAR_$_SNCDDLogFileInfo._fileSize
+_OBJC_IVAR_$_SNCDDLogFileInfo.filePath
+__OBJC_$_INSTANCE_VARIABLES_SNCDDLogFileInfo
+__OBJC_$_PROP_LIST_SNCDDLogFileInfo
+__OBJC_CLASS_RO_$_SNCDDLogFileInfo
+_OBJC_LABEL_CATEGORY_$
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SNCDDFileLogger.m
+SonectCore/Logging/SNCDDFileLogger.m
+__40-[SNCDDFileLogger(Internal) lt_logData:]_block_invoke
+__37-[SNCDDFileLogger(Internal) logData:]_block_invoke_2
+__37-[SNCDDFileLogger(Internal) logData:]_block_invoke
+SonectCore/Logging/include/SNCDDFileLogger.h
+__24-[SNCDDFileLogger flush]_block_invoke_2
+__24-[SNCDDFileLogger flush]_block_invoke
+__61-[SNCDDFileLogger lt_monitorCurrentLogFileForExternalChanges]_block_invoke
+__50-[SNCDDFileLogger lt_shouldUseLogFile:isResuming:]_block_invoke
+__37-[SNCDDFileLogger currentLogFileInfo]_block_invoke_2
+__37-[SNCDDFileLogger currentLogFileInfo]_block_invoke
+__36-[SNCDDFileLogger lt_rollLogFileNow]_block_invoke
+__50-[SNCDDFileLogger rollLogFileWithCompletionBlock:]_block_invoke.335
+__copy_helper_block_e8_32b
+__50-[SNCDDFileLogger rollLogFileWithCompletionBlock:]_block_invoke_2
+__50-[SNCDDFileLogger rollLogFileWithCompletionBlock:]_block_invoke
+__destroy_helper_block_e8_32w
+__copy_helper_block_e8_32w
+__56-[SNCDDFileLogger lt_scheduleTimerToRollLogFileDueToAge]_block_invoke
+__39-[SNCDDFileLogger setRollingFrequency:]_block_invoke_2
+__39-[SNCDDFileLogger setRollingFrequency:]_block_invoke
+__35-[SNCDDFileLogger rollingFrequency]_block_invoke_2
+__35-[SNCDDFileLogger rollingFrequency]_block_invoke
+__38-[SNCDDFileLogger setMaximumFileSize:]_block_invoke.322
+__38-[SNCDDFileLogger setMaximumFileSize:]_block_invoke
+__34-[SNCDDFileLogger maximumFileSize]_block_invoke.319
+__34-[SNCDDFileLogger maximumFileSize]_block_invoke
+__26-[SNCDDFileLogger dealloc]_block_invoke
+__45-[SNCDDLogFileManagerDefault applicationName]_block_invoke
+__56-[SNCDDLogFileManagerDefault createNewLogFileWithError:]_block_invoke
+__48-[SNCDDLogFileManagerDefault sortedLogFileInfos]_block_invoke
+doesAppRunInBackground
+__77-[SNCDDLogFileManagerDefault observeValueForKeyPath:ofObject:change:context:]_block_invoke
++[SNCDDLog sharedInstance]
+___26+[SNCDDLog sharedInstance]_block_invoke
++[SNCDDLog initialize]
+___22+[SNCDDLog initialize]_block_invoke
+-[SNCDDLog init]
++[SNCDDLog loggingQueue]
+-[SNCDDLog applicationWillTerminate:]
++[SNCDDLog addLogger:]
+-[SNCDDLog addLogger:]
++[SNCDDLog addLogger:withLevel:]
+-[SNCDDLog addLogger:withLevel:]
+___32-[SNCDDLog addLogger:withLevel:]_block_invoke
++[SNCDDLog removeLogger:]
+-[SNCDDLog removeLogger:]
+___25-[SNCDDLog removeLogger:]_block_invoke
++[SNCDDLog removeAllLoggers]
+-[SNCDDLog removeAllLoggers]
+___28-[SNCDDLog removeAllLoggers]_block_invoke
++[SNCDDLog allLoggers]
+-[SNCDDLog allLoggers]
+___22-[SNCDDLog allLoggers]_block_invoke
++[SNCDDLog allLoggersWithLevel]
+-[SNCDDLog allLoggersWithLevel]
+___31-[SNCDDLog allLoggersWithLevel]_block_invoke
+-[SNCDDLog queueLogMessage:asynchronously:]
+___43-[SNCDDLog queueLogMessage:asynchronously:]_block_invoke
++[SNCDDLog log:level:flag:context:file:function:line:tag:format:]
+-[SNCDDLog log:level:flag:context:file:function:line:tag:format:]
++[SNCDDLog log:level:flag:context:file:function:line:tag:format:args:]
+-[SNCDDLog log:level:flag:context:file:function:line:tag:format:args:]
++[SNCDDLog log:message:level:flag:context:file:function:line:tag:]
+-[SNCDDLog log:message:level:flag:context:file:function:line:tag:]
++[SNCDDLog log:message:]
+-[SNCDDLog log:message:]
++[SNCDDLog flushLog]
+-[SNCDDLog flushLog]
+___20-[SNCDDLog flushLog]_block_invoke
++[SNCDDLog isRegisteredClass:]
++[SNCDDLog registeredClasses]
++[SNCDDLog registeredClassNames]
++[SNCDDLog levelForClass:]
++[SNCDDLog levelForClassWithName:]
++[SNCDDLog setLevel:forClass:]
++[SNCDDLog setLevel:forClassWithName:]
+-[SNCDDLog lt_addLogger:level:]
+___31-[SNCDDLog lt_addLogger:level:]_block_invoke
+___31-[SNCDDLog lt_addLogger:level:]_block_invoke_2
+-[SNCDDLog lt_removeLogger:]
+___28-[SNCDDLog lt_removeLogger:]_block_invoke
+-[SNCDDLog lt_removeAllLoggers]
+___31-[SNCDDLog lt_removeAllLoggers]_block_invoke
+-[SNCDDLog lt_allLoggers]
+-[SNCDDLog lt_allLoggersWithLevel]
+-[SNCDDLog lt_log:]
+___19-[SNCDDLog lt_log:]_block_invoke
+___19-[SNCDDLog lt_log:]_block_invoke_2
+-[SNCDDLog lt_flush]
+___20-[SNCDDLog lt_flush]_block_invoke
+-[SNCDDLog _loggers]
+-[SNCDDLog set_loggers:]
+-[SNCDDLog .cxx_destruct]
+-[SNCDDLoggerNode initWithLogger:loggerQueue:level:]
++[SNCDDLoggerNode nodeWithLogger:loggerQueue:level:]
+-[SNCDDLoggerNode dealloc]
+-[SNCDDLoggerNode logger]
+-[SNCDDLoggerNode level]
+-[SNCDDLoggerNode loggerQueue]
+-[SNCDDLoggerNode .cxx_destruct]
+-[SNCDDLogMessage init]
+-[SNCDDLogMessage initWithMessage:level:flag:context:file:function:line:tag:options:timestamp:]
+-[SNCDDLogMessage copyWithZone:]
+-[SNCDDLogMessage message]
+-[SNCDDLogMessage level]
+-[SNCDDLogMessage flag]
+-[SNCDDLogMessage context]
+-[SNCDDLogMessage file]
+-[SNCDDLogMessage fileName]
+-[SNCDDLogMessage function]
+-[SNCDDLogMessage line]
+-[SNCDDLogMessage tag]
+-[SNCDDLogMessage options]
+-[SNCDDLogMessage timestamp]
+-[SNCDDLogMessage threadID]
+-[SNCDDLogMessage threadName]
+-[SNCDDLogMessage queueLabel]
+-[SNCDDLogMessage qos]
+-[SNCDDLogMessage .cxx_destruct]
+-[SNCDDAbstractLogger init]
+-[SNCDDAbstractLogger dealloc]
+-[SNCDDAbstractLogger logMessage:]
+-[SNCDDAbstractLogger logFormatter]
+___35-[SNCDDAbstractLogger logFormatter]_block_invoke
+___35-[SNCDDAbstractLogger logFormatter]_block_invoke_2
+-[SNCDDAbstractLogger setLogFormatter:]
+___39-[SNCDDAbstractLogger setLogFormatter:]_block_invoke
+___39-[SNCDDAbstractLogger setLogFormatter:]_block_invoke_2
+-[SNCDDAbstractLogger loggerQueue]
+-[SNCDDAbstractLogger loggerName]
+-[SNCDDAbstractLogger isOnGlobalLoggingQueue]
+-[SNCDDAbstractLogger isOnInternalLoggerQueue]
+-[SNCDDAbstractLogger setLoggerQueue:]
+-[SNCDDAbstractLogger .cxx_destruct]
+-[SNCDDLoggerInformation initWithLogger:andLevel:]
++[SNCDDLoggerInformation informationWithLogger:andLevel:]
+-[SNCDDLoggerInformation logger]
+-[SNCDDLoggerInformation level]
+-[SNCDDLoggerInformation .cxx_destruct]
+_sharedInstance.sharedInstance
+_sharedInstance.onceToken
+_initialize.DDLogOnceToken
+__loggingQueue
+__loggingGroup
+_GlobalLoggingQueueIdentityKey
+__queueSemaphore
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_SELECTOR_REFERENCES_.5
+__numProcessors
+_OBJC_CLASSLIST_REFERENCES_$_.6
+_OBJC_CLASSLIST_REFERENCES_$_.11
+___block_descriptor_56_e8_32s40s_e5_v8?0l
+_OBJC_CLASSLIST_REFERENCES_$_.46
+_OBJC_SELECTOR_REFERENCES_.48
+_OBJC_CLASSLIST_REFERENCES_$_.53
+_OBJC_SELECTOR_REFERENCES_.60
+_OBJC_SELECTOR_REFERENCES_.62
+_OBJC_SELECTOR_REFERENCES_.64
+_OBJC_SELECTOR_REFERENCES_.66
+_OBJC_SELECTOR_REFERENCES_.88
+_OBJC_SELECTOR_REFERENCES_.90
+_OBJC_SELECTOR_REFERENCES_.92
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_CLASSLIST_REFERENCES_$_.95
+_OBJC_SELECTOR_REFERENCES_.99
+_OBJC_SELECTOR_REFERENCES_.101
+_OBJC_CLASSLIST_REFERENCES_$_.112
+_OBJC_SELECTOR_REFERENCES_.114
+_OBJC_SELECTOR_REFERENCES_.122
+__OBJC_$_CLASS_METHODS_SNCDDLog
+__OBJC_$_CLASS_PROP_LIST_SNCDDLog
+__OBJC_METACLASS_RO_$_SNCDDLog
+__OBJC_$_INSTANCE_METHODS_SNCDDLog
+_OBJC_IVAR_$_SNCDDLog.__loggers
+__OBJC_$_INSTANCE_VARIABLES_SNCDDLog
+__OBJC_$_PROP_LIST_SNCDDLog
+__OBJC_CLASS_RO_$_SNCDDLog
+_OBJC_CLASSLIST_SUP_REFS_$_.157
+__OBJC_$_CLASS_METHODS_SNCDDLoggerNode
+__OBJC_METACLASS_RO_$_SNCDDLoggerNode
+__OBJC_$_INSTANCE_METHODS_SNCDDLoggerNode
+__OBJC_$_INSTANCE_VARIABLES_SNCDDLoggerNode
+__OBJC_$_PROP_LIST_SNCDDLoggerNode
+__OBJC_CLASS_RO_$_SNCDDLoggerNode
+_OBJC_CLASSLIST_SUP_REFS_$_.180
+_OBJC_SELECTOR_REFERENCES_.185
+_OBJC_SELECTOR_REFERENCES_.194
+_OBJC_SELECTOR_REFERENCES_.198
+_OBJC_SELECTOR_REFERENCES_.200
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCopying
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSCopying
+__OBJC_PROTOCOL_$_NSCopying
+__OBJC_LABEL_PROTOCOL_$_NSCopying
+__OBJC_CLASS_PROTOCOLS_$_SNCDDLogMessage
+__OBJC_METACLASS_RO_$_SNCDDLogMessage
+__OBJC_$_INSTANCE_METHODS_SNCDDLogMessage
+__OBJC_$_INSTANCE_VARIABLES_SNCDDLogMessage
+__OBJC_$_PROP_LIST_SNCDDLogMessage
+__OBJC_CLASS_RO_$_SNCDDLogMessage
+_OBJC_CLASSLIST_SUP_REFS_$_.268
+_OBJC_CLASSLIST_REFERENCES_$_.269
+_OBJC_SELECTOR_REFERENCES_.270
+_OBJC_SELECTOR_REFERENCES_.272
+_OBJC_SELECTOR_REFERENCES_.274
+_OBJC_SELECTOR_REFERENCES_.276
+_OBJC_SELECTOR_REFERENCES_.278
+__OBJC_CLASS_PROTOCOLS_$_SNCDDAbstractLogger
+__OBJC_METACLASS_RO_$_SNCDDAbstractLogger
+__OBJC_$_INSTANCE_METHODS_SNCDDAbstractLogger
+__OBJC_$_INSTANCE_VARIABLES_SNCDDAbstractLogger
+__OBJC_$_PROP_LIST_SNCDDAbstractLogger
+__OBJC_CLASS_RO_$_SNCDDAbstractLogger
+_OBJC_CLASSLIST_SUP_REFS_$_.340
+_OBJC_SELECTOR_REFERENCES_.342
+__OBJC_$_CLASS_METHODS_SNCDDLoggerInformation
+__OBJC_METACLASS_RO_$_SNCDDLoggerInformation
+__OBJC_$_INSTANCE_METHODS_SNCDDLoggerInformation
+__OBJC_$_INSTANCE_VARIABLES_SNCDDLoggerInformation
+__OBJC_$_PROP_LIST_SNCDDLoggerInformation
+__OBJC_CLASS_RO_$_SNCDDLoggerInformation
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SNCDDLog.m
+SonectCore/Logging/SNCDDLog.m
+SonectCore/Logging/include/SNCDDLog.h
+__39-[SNCDDAbstractLogger setLogFormatter:]_block_invoke_2
+__39-[SNCDDAbstractLogger setLogFormatter:]_block_invoke
+__35-[SNCDDAbstractLogger logFormatter]_block_invoke_2
+__35-[SNCDDAbstractLogger logFormatter]_block_invoke
+DDExtractFileNameWithoutExtension
+__20-[SNCDDLog lt_flush]_block_invoke
+__19-[SNCDDLog lt_log:]_block_invoke_2
+__19-[SNCDDLog lt_log:]_block_invoke
+__31-[SNCDDLog lt_removeAllLoggers]_block_invoke
+__28-[SNCDDLog lt_removeLogger:]_block_invoke
+__31-[SNCDDLog lt_addLogger:level:]_block_invoke_2
+__31-[SNCDDLog lt_addLogger:level:]_block_invoke
+__20-[SNCDDLog flushLog]_block_invoke
+__43-[SNCDDLog queueLogMessage:asynchronously:]_block_invoke
+__31-[SNCDDLog allLoggersWithLevel]_block_invoke
+__22-[SNCDDLog allLoggers]_block_invoke
+__28-[SNCDDLog removeAllLoggers]_block_invoke
+__25-[SNCDDLog removeLogger:]_block_invoke
+__32-[SNCDDLog addLogger:withLevel:]_block_invoke
+__22+[SNCDDLog initialize]_block_invoke
+__26+[SNCDDLog sharedInstance]_block_invoke
+-[SNCDDBufferedProxy initWithFileLogger:]
+-[SNCDDBufferedProxy dealloc]
+___29-[SNCDDBufferedProxy dealloc]_block_invoke
+-[SNCDDBufferedProxy flushBuffer]
+-[SNCDDBufferedProxy lt_sendBufferedDataToFileLogger]
+-[SNCDDBufferedProxy logMessage:]
+___33-[SNCDDBufferedProxy logMessage:]_block_invoke
+-[SNCDDBufferedProxy flush]
+___27-[SNCDDBufferedProxy flush]_block_invoke
+___27-[SNCDDBufferedProxy flush]_block_invoke_2
+-[SNCDDBufferedProxy setMaxBufferSizeBytes:]
+-[SNCDDBufferedProxy wrapWithBuffer]
+-[SNCDDBufferedProxy unwrapFromBuffer]
+-[SNCDDBufferedProxy methodSignatureForSelector:]
+-[SNCDDBufferedProxy respondsToSelector:]
+-[SNCDDBufferedProxy forwardInvocation:]
+-[SNCDDBufferedProxy fileLogger]
+-[SNCDDBufferedProxy setFileLogger:]
+-[SNCDDBufferedProxy buffer]
+-[SNCDDBufferedProxy setBuffer:]
+-[SNCDDBufferedProxy maxBufferSizeBytes]
+-[SNCDDBufferedProxy currentBufferSizeBytes]
+-[SNCDDBufferedProxy setCurrentBufferSizeBytes:]
+-[SNCDDBufferedProxy .cxx_destruct]
+-[SNCDDFileLogger(Buffering) wrapWithBuffer]
+-[SNCDDFileLogger(Buffering) unwrapFromBuffer]
+___DDGetDefaultBufferSizeBytes_block_invoke
+___DDGetMaxBufferSizeBytes_block_invoke
+_OBJC_IVAR_$_SNCDDBufferedProxy._fileLogger
+_OBJC_IVAR_$_SNCDDBufferedProxy._maxBufferSizeBytes
+_OBJC_IVAR_$_SNCDDBufferedProxy._buffer
+_OBJC_IVAR_$_SNCDDBufferedProxy._currentBufferSizeBytes
+___block_descriptor_40_e8_32s_e29_v40?0r^v8{_NSRange=QQ}16^B32l
+_OBJC_SELECTOR_REFERENCES_.36
+_OBJC_SELECTOR_REFERENCES_.42
+__OBJC_METACLASS_RO_$_SNCDDBufferedProxy
+__OBJC_$_INSTANCE_METHODS_SNCDDBufferedProxy
+__OBJC_$_INSTANCE_VARIABLES_SNCDDBufferedProxy
+__OBJC_$_PROP_LIST_SNCDDBufferedProxy
+__OBJC_CLASS_RO_$_SNCDDBufferedProxy
+__OBJC_$_CATEGORY_INSTANCE_METHODS_SNCDDFileLogger_$_Buffering
+__OBJC_$_CATEGORY_SNCDDFileLogger_$_Buffering
+_DDGetDefaultBufferSizeBytes.defaultBufferSize
+_DDGetDefaultBufferSizeBytes.onceToken
+_DDGetMaxBufferSizeBytes.maxBufferSize
+_DDGetMaxBufferSizeBytes.onceToken
+___block_literal_global.80
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/Extensions/SNCDDFileLogger+Buffering.m
+__DDGetMaxBufferSizeBytes_block_invoke
+SonectCore/Logging/Extensions/SNCDDFileLogger+Buffering.m
+p_DDGetDefaultBufferSizeBytesMax
+__DDGetDefaultBufferSizeBytes_block_invoke
+DDGetMaxBufferSizeBytes
+__27-[SNCDDBufferedProxy flush]_block_invoke_2
+__27-[SNCDDBufferedProxy flush]_block_invoke
+__33-[SNCDDBufferedProxy logMessage:]_block_invoke
+__29-[SNCDDBufferedProxy dealloc]_block_invoke
+DDGetDefaultBufferSizeBytes
+-[SNCDDContextWhitelistFilterLogFormatter init]
+-[SNCDDContextWhitelistFilterLogFormatter addToWhitelist:]
+-[SNCDDContextWhitelistFilterLogFormatter removeFromWhitelist:]
+-[SNCDDContextWhitelistFilterLogFormatter whitelist]
+-[SNCDDContextWhitelistFilterLogFormatter isOnWhitelist:]
+-[SNCDDContextWhitelistFilterLogFormatter formatLogMessage:]
+-[SNCDDContextWhitelistFilterLogFormatter .cxx_destruct]
+-[SNCDDContextBlacklistFilterLogFormatter init]
+-[SNCDDContextBlacklistFilterLogFormatter addToBlacklist:]
+-[SNCDDContextBlacklistFilterLogFormatter removeFromBlacklist:]
+-[SNCDDContextBlacklistFilterLogFormatter blacklist]
+-[SNCDDContextBlacklistFilterLogFormatter isOnBlacklist:]
+-[SNCDDContextBlacklistFilterLogFormatter formatLogMessage:]
+-[SNCDDContextBlacklistFilterLogFormatter .cxx_destruct]
+-[SNCDDDLoggingContextSet init]
+-[SNCDDDLoggingContextSet dealloc]
+-[SNCDDDLoggingContextSet addToSet:]
+-[SNCDDDLoggingContextSet removeFromSet:]
+-[SNCDDDLoggingContextSet currentSet]
+-[SNCDDDLoggingContextSet isInSet:]
+-[SNCDDDLoggingContextSet .cxx_destruct]
+__OBJC_CLASS_PROTOCOLS_$_SNCDDContextWhitelistFilterLogFormatter
+__OBJC_METACLASS_RO_$_SNCDDContextWhitelistFilterLogFormatter
+__OBJC_$_INSTANCE_METHODS_SNCDDContextWhitelistFilterLogFormatter
+_OBJC_IVAR_$_SNCDDContextWhitelistFilterLogFormatter._contextSet
+__OBJC_$_INSTANCE_VARIABLES_SNCDDContextWhitelistFilterLogFormatter
+__OBJC_$_PROP_LIST_SNCDDContextWhitelistFilterLogFormatter
+__OBJC_CLASS_RO_$_SNCDDContextWhitelistFilterLogFormatter
+_OBJC_CLASSLIST_SUP_REFS_$_.74
+__OBJC_CLASS_PROTOCOLS_$_SNCDDContextBlacklistFilterLogFormatter
+__OBJC_METACLASS_RO_$_SNCDDContextBlacklistFilterLogFormatter
+__OBJC_$_INSTANCE_METHODS_SNCDDContextBlacklistFilterLogFormatter
+_OBJC_IVAR_$_SNCDDContextBlacklistFilterLogFormatter._contextSet
+__OBJC_$_INSTANCE_VARIABLES_SNCDDContextBlacklistFilterLogFormatter
+__OBJC_$_PROP_LIST_SNCDDContextBlacklistFilterLogFormatter
+__OBJC_CLASS_RO_$_SNCDDContextBlacklistFilterLogFormatter
+_OBJC_CLASSLIST_SUP_REFS_$_.84
+_OBJC_CLASSLIST_REFERENCES_$_.85
+_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_CLASSLIST_REFERENCES_$_.88
+__OBJC_METACLASS_RO_$_SNCDDDLoggingContextSet
+__OBJC_$_INSTANCE_METHODS_SNCDDDLoggingContextSet
+_OBJC_IVAR_$_SNCDDDLoggingContextSet._mutex
+_OBJC_IVAR_$_SNCDDDLoggingContextSet._set
+__OBJC_$_INSTANCE_VARIABLES_SNCDDDLoggingContextSet
+__OBJC_$_PROP_LIST_SNCDDDLoggingContextSet
+__OBJC_CLASS_RO_$_SNCDDDLoggingContextSet
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/Extensions/SNCDDContextFilterLogFormatter.m
+SonectCore/Logging/Extensions/SNCDDContextFilterLogFormatter.m
++[SNCDDASLLogger sharedInstance]
+___32+[SNCDDASLLogger sharedInstance]_block_invoke
+-[SNCDDASLLogger init]
+-[SNCDDASLLogger loggerName]
+-[SNCDDASLLogger logMessage:]
+_sharedInstance.DDASLLoggerOnceToken
+_OBJC_IVAR_$_SNCDDASLLogger._client
+_logMessage:.level_strings
+__OBJC_$_CLASS_METHODS_SNCDDASLLogger
+__OBJC_CLASS_PROTOCOLS_$_SNCDDASLLogger
+__OBJC_$_CLASS_PROP_LIST_SNCDDASLLogger
+__OBJC_METACLASS_RO_$_SNCDDASLLogger
+__OBJC_$_INSTANCE_METHODS_SNCDDASLLogger
+__OBJC_$_INSTANCE_VARIABLES_SNCDDASLLogger
+__OBJC_$_PROP_LIST_SNCDDASLLogger
+__OBJC_CLASS_RO_$_SNCDDASLLogger
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SNCDDASLLogger.m
+SonectCore/Logging/SNCDDASLLogger.m
+__32+[SNCDDASLLogger sharedInstance]_block_invoke
+_globalinit_33_FCEA36ABC5AAF19419111938DED72084_func0
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACPxycfCTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP5unionyxxnFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP12intersectionyxxFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP19symmetricDifferenceyxxnFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP6insertySb8inserted_7ElementQz17memberAfterInserttAHnFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP6removey7ElementQzSgAGFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP6update4with7ElementQzSgAHn_tFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP9formUnionyyxnFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP16formIntersectionyyxFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP23formSymmetricDifferenceyyxnFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP11subtractingyxxFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP8isSubset2ofSbx_tFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP10isDisjoint4withSbx_tFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP10isSuperset2ofSbx_tFTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP7isEmptySbvgTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACPyxqd__ncSTRd__7ElementQyd__AERtzlufCTW
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP8subtractyyxFTW
+_$sSo19DDLogMessageOptionsVSQSCSQ2eeoiySbx_xtFZTW
+_$sSo19DDLogMessageOptionsVs25ExpressibleByArrayLiteralSCsACP05arrayG0x0fG7ElementQzd_tcfCTW
+_$sSo19DDLogMessageOptionsVs9OptionSetSCsACP8rawValuex03RawG0Qz_tcfCTW
+_$sSo19DDLogMessageOptionsVSYSCSY8rawValuexSg03RawE0Qz_tcfCTW
+_$sSo19DDLogMessageOptionsVSYSCSY8rawValue03RawE0QzvgTW
+_$ss12StaticStringVs06CustomB11ConvertiblessACP11descriptionSSvgTW
+_$sypSgWOc
+___swift_instantiateConcreteTypeFromMangledName
+_$ss10SetAlgebraPs7ElementQz012ArrayLiteralC0RtzrlE05arrayE0xAFd_tcfCSo19DDLogMessageOptionsV_Tgq5Tf4gd_n
+_$sSo15SNCDDLogMessageC7message5level4flag7context4file8function4line3tag7options9timestampABSS_So0A5LevelVSo0A4FlagVSiS2SSgSuypSgSo05DDLogB7OptionsV10Foundation4DateVSgtcfcTOTf4gnnnnnnnnnn_n
+__swift_FORCE_LOAD_$_swiftCompatibility50
+__swift_FORCE_LOAD_$_swiftCompatibilityDynamicReplacements
+_$sSo19DDLogMessageOptionsVMa
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCSQWb
+_$sSo19DDLogMessageOptionsVABSQSCWl
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCs25ExpressibleByArrayLiteralPWb
+_$sSo19DDLogMessageOptionsVABs25ExpressibleByArrayLiteralSCWl
+_$sSo19DDLogMessageOptionsVs9OptionSetSCSYWb
+_$sSo19DDLogMessageOptionsVABSYSCWl
+_$sSo19DDLogMessageOptionsVs9OptionSetSCs0E7AlgebraPWb
+_$sSo19DDLogMessageOptionsVABs10SetAlgebraSCWl
+_$sSo19DDLogMessageOptionsVABSQSCWlTm
+_$ss10SetAlgebraPsEyxqd__ncSTRd__7ElementQyd__ACRtzlufCSo19DDLogMessageOptionsV_SayAGGTg5Tf4gd_n
+___swift_project_boxed_opaque_existential_0
+___swift_destroy_boxed_opaque_existential_0
+_$sSSSgWOe
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCsACP8containsySb7ElementQzFTW
+_globalinit_33_FCEA36ABC5AAF19419111938DED72084_token0
+_$s10SonectCore11SNCDDAssert__5level7context4file8function4line3tag12asynchronous5ddlogySbyXK_SSyXKSo13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0L0CtFTv_
+_$s10SonectCore8LogError_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFTv_
+_$s10SonectCore21SNCDDAssertionFailure_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFTv_
+_$s10SonectCore7LogWarn_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFTv_
+_symbolic _____y_____G s23_ContiguousArrayStorageC So19DDLogMessageOptionsV
+_$ss23_ContiguousArrayStorageCySo19DDLogMessageOptionsVGMD
+__swift_FORCE_LOAD_$_swiftCompatibility50_$_SonectCore
+__swift_FORCE_LOAD_$_swiftCompatibilityDynamicReplacements_$_SonectCore
+_$sSoMXM
+_$sSo19DDLogMessageOptionsVMn
+_$sSo19DDLogMessageOptionsVMf
+_$sSo19DDLogMessageOptionsVML
+_symbolic _____ So19DDLogMessageOptionsV
+_$sSo19DDLogMessageOptionsVMB
+_symbolic Si
+_$sSo19DDLogMessageOptionsVMF
+_$sSo19DDLogMessageOptionsVABSQSCWL
+_associated conformance So19DDLogMessageOptionsVs10SetAlgebraSCSQ
+_$sSo19DDLogMessageOptionsVABs25ExpressibleByArrayLiteralSCWL
+_associated conformance So19DDLogMessageOptionsVs10SetAlgebraSCs25ExpressibleByArrayLiteral
+_$sSo19DDLogMessageOptionsVABSYSCWL
+_associated conformance So19DDLogMessageOptionsVs9OptionSetSCSY
+_$sSo19DDLogMessageOptionsVABs10SetAlgebraSCWL
+_associated conformance So19DDLogMessageOptionsVs9OptionSetSCs0E7Algebra
+_symbolic $ss25ExpressibleByArrayLiteralP
+_$sSo19DDLogMessageOptionsVs25ExpressibleByArrayLiteralSCMA
+_$s10SonectCoreMXM
+_$sSo19DDLogMessageOptionsVs25ExpressibleByArrayLiteralSCMc
+_$sSo19DDLogMessageOptionsVSQSCMc
+_symbolic $ss10SetAlgebraP
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCMA
+_$sSo19DDLogMessageOptionsVs10SetAlgebraSCMc
+_symbolic $sSY
+_$sSo19DDLogMessageOptionsVSYSCMA
+_$sSo19DDLogMessageOptionsVSYSCMc
+_symbolic $ss9OptionSetP
+_$sSo19DDLogMessageOptionsVs9OptionSetSCMA
+_$sSo19DDLogMessageOptionsVs9OptionSetSCMc
+___swift_reflection_version
+<swift-imported-modules>
+Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SwiftSupport/SNCDDAssert.swift
+__swift_destroy_boxed_opaque_existential_0
+<compiler-generated>
+__swift_project_boxed_opaque_existential_0
+llvm.loop.isvectorized
+llvm.loop.unroll.runtime.disable
+init
+$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSaySo19DDLogMessageOptionsVG_Tg5
+$ss16IndexingIteratorV4next7ElementQzSgyFSaySo19DDLogMessageOptionsVG_TG5
+$sSiSQsSQ2eeoiySbx_xtFZTW
+insert
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSo19DDLogMessageOptionsV_Tg5
+$sSayxSicirSo19DDLogMessageOptionsV_Tg5
+$sSayxSicigSo19DDLogMessageOptionsV_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo19DDLogMessageOptionsV_TG5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSo19DDLogMessageOptionsV_Tg5
+$sSa9formIndex5afterySiz_tFSo19DDLogMessageOptionsV_TG5
+$sSa9formIndex5afterySiz_tFTf4nd_n
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo19DDLogMessageOptionsV_Tg5
+$sSayxGSlsSl8endIndex0B0QzvgTWSo19DDLogMessageOptionsV_Tg5
+$sSa8endIndexSivgSo19DDLogMessageOptionsV_Tg5
+$sSa9_getCountSiyFSo19DDLogMessageOptionsV_Tg5
+$ss22_ContiguousArrayBufferV5countSivgSo19DDLogMessageOptionsV_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo19DDLogMessageOptionsV_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo19DDLogMessageOptionsV_Tg5Tf4n_g
+$sSo19DDLogMessageOptionsVABSQSCWl
+$sSo19DDLogMessageOptionsVs9OptionSetSCs0E7AlgebraPWb
+$sSo19DDLogMessageOptionsVs9OptionSetSCSYWb
+$sSo19DDLogMessageOptionsVs10SetAlgebraSCs25ExpressibleByArrayLiteralPWb
+$sSo19DDLogMessageOptionsVs10SetAlgebraSCSQWb
+$sSo19DDLogMessageOptionsVMa
+$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSaySo19DDLogMessageOptionsVG_Ti5
+$ss16IndexingIteratorV4next7ElementQzSgyFSaySo19DDLogMessageOptionsVG_Tgq5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSo19DDLogMessageOptionsV_Ti5
+$sSa9formIndex5afterySiz_tFSo19DDLogMessageOptionsV_Tgq5
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSo19DDLogMessageOptionsV_Ti5
+$sSayxSicirSo19DDLogMessageOptionsV_Tgq5
+$sSayxSicigSo19DDLogMessageOptionsV_Tgq5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo19DDLogMessageOptionsV_Tgq5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo19DDLogMessageOptionsV_Tgq5
+$sSayxGSlsSl8endIndex0B0QzvgTWSo19DDLogMessageOptionsV_Ti5
+$sSa8endIndexSivgSo19DDLogMessageOptionsV_Tgq5
+$sSa9_getCountSiyFSo19DDLogMessageOptionsV_Tgq5
+$ss22_ContiguousArrayBufferV5countSivgSo19DDLogMessageOptionsV_Tgq5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo19DDLogMessageOptionsV_Tgq5
+$sypSgWOc
+$ss12StaticStringVs06CustomB11ConvertiblessACP11descriptionSSvgTW
+rawValue.get
+==
+subtract
+formIntersection
+$sSiSzsSz1aoiyxx_xtFZTW
+isEmpty.get
+isSuperset
+isSubset
+intersection
+isDisjoint
+subtracting
+formSymmetricDifference
+$sSiSzsSz1xoiyxx_xtFZTW
+formUnion
+$sSiSzsSz1ooiyxx_xtFZTW
+update
+symmetricDifference
+union
+SNCDDAssertionFailure
+LogError
+SonectCore/Logging/SwiftSupport/SNCLog.swift
+_SNCDDLogMessage
+$s10SonectCore15dynamicLogLevelSo08SNCDDLogE0Vvau
+_allocateUninitializedArray
+$sSa13_adoptStorage_5countSayxG_SpyxGts016_ContiguousArrayB0CyxGn_SitFZSo19DDLogMessageOptionsV_Tgq5
+$s10SonectCore8LogError_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFSSyXEfu_
+$s10SonectCore21SNCDDAssertionFailure_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFSSyXEfu_
+SNCDDAssert
+$s10SonectCore11SNCDDAssert__5level7context4file8function4line3tag12asynchronous5ddlogySbyXK_SSyXKSo13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0L0CtFSSyXEfu_
+_$sSiSzsSz1ooiyxx_xtFZTW
+_$ss11_StringGutsV15scalarAlignSlowySS5IndexVAEF
+_$sS2SSysWl
+_$s10Foundation6LocaleVSgWOh
+_$sS2SSysWL
+/Users/markohlebar/Work/Sonect/SonectSDK/SonectCore/Logging/SwiftSupport/SNCLog.swift
+$s10Foundation6LocaleVSgWOh
+$sS2SSysWl
+$ss11_StringGutsV15scalarAlignSlowySS5IndexVAEF
+$ss12_scalarAlignySiSRys5UInt8VG_SitF
+CurrentFileName
+currentFileName
+subscript.get
+$ss16PartialRangeFromVyxGSXsSX8relative2toSny5BoundQzGqd___tSlRd__5IndexQyd__AGRSlFTWSSAIV_SSTi5
+$sSSSlsSly11SubSequenceQzSny5IndexQzGcigTW
+$sSSySsSnySS5IndexVGcig
+$sSSySsSnySS5IndexVGcigTf4nn_g
+range
+$sSSSlsSl8endIndex0B0QzvgTW
+$sSS8endIndexSS0B0Vvg
+$sSS5IndexVSLsSL2leoiySbx_xtFZTW
+$sSLsE2leoiySbx_xtFZSS5IndexV_Tg5
+$sSS5IndexVSLsSL1loiySbx_xtFZTW
+$sSS5IndexV1loiySbAB_ABtFZ
+LogVerbose
+$s10SonectCore10LogVerbose_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFSSyXEfu_
+LogWarn
+$s10SonectCore7LogWarn_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFSSyXEfu_
+LogInfo
+$s10SonectCore7LogInfo_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFSSyXEfu_
+LogDebug
+$s10SonectCore8LogDebug_5level7context4file8function4line3tag12asynchronous5ddlogySSyXK_So13SNCDDLogLevelVSis12StaticStringVANSuypSgSbSo0M0CtFSSyXEfu_
+$s10SonectCore19asyncLoggingEnabledSbvau
+defaultDebugLevel.set
+defaultDebugLevel.get
+resetDynamicLogLevel
+globalinit_33_FCEA36ABC5AAF19419111938DED72084_func0
+toLogLevel
+from
+_swift_getFunctionReplacement50
+_swift_getOrigOfReplaceable50
+/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/CompatibilityDynamicReplacements -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/CompatibilityDynamicReplacements -I include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/llvm-project/llvm/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/llvm-project/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/cmark/src -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -std=c++14 -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -isysroot /BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fno-exceptions -fno-rtti -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -Wall -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibilityDynamicReplacements -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk -arch arm64 -F/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/../../../Developer/Library/Frameworks -F/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -Werror=gnu -MD -MT stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -MF stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o.d -o stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -c /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp -Wno-objc-signed-char-bool-implicit-int-conversion -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -mlinker-version=556.5 -stdlib=libc++
+/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
+/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/swift-macosx-x86_64
+swift_getOrigOfReplaceable50
+Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
+/BuildRoot/Library/Caches/com.apple.xbs
+swift_getFunctionReplacement50
+__ZN5swift17getRootSuperclassEv
+__ZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_E
+__ZL24registerAddImageCallbackPv
+__ZZZN5swift17getRootSuperclassEvENK3$_0clEvENUlPvE_8__invokeES1_
+__ZL16addImageCallbackPK11mach_headerl
+__ZZZL20getObjCClassMetadataPKN5swift19TargetClassMetadataINS_9InProcessEEEENK3$_2clEvENUlPvE_8__invokeES6_
+__ZZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_EE5token
+__ZZZN5swift17getRootSuperclassEvENK3$_0clEvE7TheLazy
+__ZL27ProtocolConformancesSection
+_DummyTargetContextDescriptor
+__ZZZL20getObjCClassMetadataPKN5swift19TargetClassMetadataINS_9InProcessEEEENK3$_2clEvE7TheLazy
+/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50 -I include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/llvm-project/llvm/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/llvm-project/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/cmark/src -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -std=c++14 -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -isysroot /BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fno-exceptions -fno-rtti -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -Wall -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk -arch arm64 -F/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/../../../Developer/Library/Frameworks -F/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -Werror=gnu -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -c /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp -Wno-objc-signed-char-bool-implicit-int-conversion -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -mlinker-version=556.5 -stdlib=libc++
+/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
+__invoke
+Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
+operator()
+addImageCallback
+_getTypeDescriptorLocation
+Sources/swiftlang/swiftlang-1103.0.32.1/swift/include/swift/ABI/Metadata.h
+get
+Sources/swiftlang/swiftlang-1103.0.32.1/swift/include/swift/Basic/RelativePointer.h
+getTypeKind
+getTypeReferenceKind
+Sources/swiftlang/swiftlang-1103.0.32.1/swift/include/swift/ABI/MetadataValues.h
+applyRelativeOffset<const swift::RelativeDirectPointerImpl<swift::TargetProtocolConformanceDescriptor<swift::InProcess>, false, int>, int>
+registerAddImageCallback
+swift50override_conformsToProtocol
+_swift50override_class_getSuperclass
+getObjCClassMetadata
+Sources/swiftlang/swiftlang-1103.0.32.1/swift/include/swift/Basic/Lazy.h
+Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/usr/include/dispatch/once.h
+/BuildRoot
+dyn_cast<swift::TargetForeignClassMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> >
+Sources/swiftlang/swiftlang-1103.0.32.1/llvm-project/llvm/include/llvm/Support/Casting.h
+isa<swift::TargetForeignClassMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> *>
+doit
+classof
+getKind
+getEnumeratedMetadataKind
+classHasSuperclass
+Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50/../../public/runtime/Private.h
+getClassObject
+getRootSuperclass
+__ZL29installGetClassHook_untrustedv
+__ZL35getObjCClassByMangledName_untrustedPKcPP10objc_class
+_Overrides
+__ZL15OldGetClassHook
+/BuildRoot/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50 -I include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/llvm-project/llvm/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/llvm-project/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/cmark/src -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -std=c++14 -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -O2 -D NDEBUG -isysroot /BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fno-exceptions -fno-rtti -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -Wall -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk -arch arm64 -F/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/../../../Developer/Library/Frameworks -F/BuildRoot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -Werror=gnu -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -c /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50/Overrides.cpp -Wno-objc-signed-char-bool-implicit-int-conversion -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -mlinker-version=556.5 -stdlib=libc++
+/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50/Overrides.cpp
+getObjCClassByMangledName_untrusted
+Sources/swiftlang/swiftlang-1103.0.32.1/swift/stdlib/toolchain/Compatibility50/Overrides.cpp
+installGetClassHook_untrusted

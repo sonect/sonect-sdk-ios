@@ -16,6 +16,8 @@
 		043372F423FD6B4600034D01 /* Sonect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043372F223FD6B3C00034D01 /* Sonect.framework */; };
 		043372F523FD6B4600034D01 /* Sonect.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 043372F223FD6B3C00034D01 /* Sonect.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		043372F823FD6C1800034D01 /* SonectConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043372F723FD6C1800034D01 /* SonectConfiguration.plist */; };
+		047C77AD24CABD7F00E7A337 /* SonectCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047C77AC24CABD7F00E7A337 /* SonectCore.framework */; };
+		047C77AE24CABD8C00E7A337 /* SonectCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 047C77AC24CABD7F00E7A337 /* SonectCore.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		048992EF240CF98F00D43F13 /* BankConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */; };
 		048992F0240CF98F00D43F13 /* BankConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				043372F523FD6B4600034D01 /* Sonect.framework in Embed Frameworks */,
+				047C77AE24CABD8C00E7A337 /* SonectCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +48,7 @@
 		043372EB23FD692D00034D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043372F223FD6B3C00034D01 /* Sonect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sonect.framework; path = Carthage/Build/iOS/Sonect.framework; sourceTree = SOURCE_ROOT; };
 		043372F723FD6C1800034D01 /* SonectConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = SonectConfiguration.plist; sourceTree = SOURCE_ROOT; };
+		047C77AC24CABD7F00E7A337 /* SonectCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SonectCore.framework; path = Carthage/Build/iOS/SonectCore.framework; sourceTree = SOURCE_ROOT; };
 		048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankConfirmationViewController.swift; sourceTree = "<group>"; };
 		048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankConfirmationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043372F423FD6B4600034D01 /* Sonect.framework in Frameworks */,
+				047C77AD24CABD7F00E7A337 /* SonectCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,7 @@
 		043372F123FD6B2B00034D01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				047C77AC24CABD7F00E7A337 /* SonectCore.framework */,
 				043372F223FD6B3C00034D01 /* Sonect.framework */,
 			);
 			path = Frameworks;
@@ -333,6 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VJ8Q6FKHZ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -343,7 +350,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.sonect.SonectSDKIntegrationApp;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.sonect.sdk.ios.OpenBankIntegrationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VJ8Q6FKHZ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,7 +374,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.sonect.SonectSDKIntegrationApp;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.sonect.sdk.ios.OpenBankIntegrationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,0 +1,11 @@
+framework module SonectCore {
+  umbrella header "SonectCore.h"
+
+  export *
+  module * { export * }
+}
+
+module SonectCore.Swift {
+    header "SonectCore-Swift.h"
+    requires objc
+}
