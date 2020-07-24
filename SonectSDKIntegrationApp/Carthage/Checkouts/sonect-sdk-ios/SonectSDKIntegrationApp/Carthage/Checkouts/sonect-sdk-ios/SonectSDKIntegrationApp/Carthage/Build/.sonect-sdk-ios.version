@@ -8,11 +8,11 @@
   "tvOS" : [
 
   ],
-  "commitish" : "0.9.28",
+  "commitish" : "0.9.47",
   "iOS" : [
     {
       "name" : "Sonect",
-      "hash" : "f368aaa6d928a45212de5b971270402944e6ae380d38eb256870322a6441728a"
+      "hash" : "535b061ab52b3cc494533aae7c89332c4b2bf728b058aac067731b81df099041"
     }
   ]
 }
