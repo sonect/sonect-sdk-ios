@@ -17,6 +17,7 @@ protocol PaymentMethodDelegate: class {
 
 class PaymentMethod: NSObject, SNCPaymentMethod {
     
+    var title: String? = "Bank ACME"
     var shortDescription: String? = "Bank Account"
     var detailDescription: String? = "Bank account ****"
     var name: String? = "Bank ACME"

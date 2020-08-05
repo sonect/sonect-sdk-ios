@@ -1,0 +1,311 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  before_all do
+    # ensure_git_status_clean
+    setup_circle_ci
+  end
+
+  desc "Run all tests."
+  lane :test do
+    scan(scheme: "Sonect")
+  end
+
+  lane :generate_documentation do |options|
+    sdk = options[:sdk]
+    root = Dir.pwd.gsub("/fastlane", "")
+    if sdk == "user" || sdk == "shop" || sdk == "core"
+        generate_docs(
+          base_dir: root,
+          headers_paths: get_sdk_heders_paths(sdk),
+          target: get_sdk_target(sdk),
+        )
+    end
+
+  end
+
+  lane :distribute do |options|
+    sdk = options[:sdk]
+    modes = options[:mode] ? options[:mode].split(","): ["private"]
+
+    if sdk
+      if sdk == "user" || sdk == "shop" || sdk == "core"
+        modes.each { |mode|
+          if sdk == "user" && mode == "private"
+            private_release_user()
+          elsif sdk == "user" && mode == "public"
+            public_release_user()
+          elsif sdk == "shop" && mode == "private"
+            private_release_shop()
+          elsif sdk == "shop" && mode == "public"
+            public_release_shop()
+          elsif sdk == "core"
+            public_release_core()
+          else
+            UI.user_error!("\nInvalid mode: " + mode + ".\nPlease enter \"private\" or \"public\" as options.\nfastlane distribute sdk:user mode:private,public")
+          end
+        }
+      else
+        UI.user_error!("\nInvalid SDK: " + sdk + ".\nPlease enter \"user\" or \"shop\" as options.\nfastlane distribute sdk:user")
+      end
+    else
+      UI.user_error!("\SDK not specified.\nPlease enter \"user\" or \"shop\" as options.\nfastlane distribute sdk:user")
+    end
+  end
+
+  lane :print_notes do |options|
+    print change_log_since_last_minor_version_tag(options[:sdk])
+  end
+
+
+  def archive(src, dst)
+    src = "../" + src
+    dst = "../" + dst
+    sh("ditto", "-c", "-k", "--sequesterRsrc", "--keepParent", src, dst)
+  end
+
+  def private_release_user()
+    carthage(
+      command: "build",
+      platform: "iOS",
+      no_skip_current: true)
+
+    carthage(
+      command: "archive",
+      frameworks: ["Sonect", "SonectProtected"],
+      output: "SonectPrivateBundle.framework.zip")
+
+    version = get_version_number(
+      target: "Sonect")
+
+    name = "Release " + version
+
+    set_github_release(
+      tag_name: "USER-" + version,
+      name: name,
+      description: change_log_since_last_minor_version_tag("user"),
+      repository_name: "sonect/ios-user-sdk",
+      api_token: "f9e9eed99e112f2a9e07cdc3221a1fd25cf42160",
+      upload_assets: ["SonectPrivateBundle.framework.zip"])
+
+    commitAndPush("Update latest User Protected SDK build")
+  end
+
+  def public_release_user()
+    carthage(
+      command: "build",
+      platform: "iOS",
+      no_skip_current: true)
+
+    carthage(
+      command: "archive",
+      frameworks: ["Sonect"],
+      output: "SonectSDK.framework.zip")
+
+    archive("Carthage/Build/iOS/Sonect.framework", "SonectSDK_Cocoapods.framework.zip")
+
+    version = get_version_number(
+      target: "Sonect")
+
+    name = "Release " + version
+
+    set_github_release(
+      tag_name: version,
+      name: name,
+      description: "No changelog provided",
+      repository_name: "sonect/sonect-sdk-ios",
+      api_token: "f9e9eed99e112f2a9e07cdc3221a1fd25cf42160",
+      upload_assets: ["SonectSDK.framework.zip", "SonectSDK_Cocoapods.framework.zip"])
+
+    commitAndPush("Update latest User Public SDK build")
+  end
+
+  def private_release_shop()
+    carthage(
+      command: "build",
+      platform: "iOS",
+      no_skip_current: true)
+
+    carthage(
+      command: "archive",
+      frameworks: ["SonectShop", "SonectShopProtected"],
+      output: "SonectShopPrivateBundle.framework.zip")
+
+    version = get_version_number(
+      target: "SonectShop")
+
+    name = "Release " + version
+
+    set_github_release(
+      tag_name: "SHOP-" + version,
+      name: name,
+      description: change_log_since_last_minor_version_tag("shop"),
+      repository_name: "sonect/ios-shop-sdk",
+      api_token: "069f7a4e97050671417551c57bbb8f1b801c0265",
+      upload_assets: ["SonectShopPrivateBundle.framework.zip"])
+
+    tag_shop_sdk(version)
+
+    commitAndPush("Update latest Shop Protected SDK build")
+  end
+
+  def tag_shop_sdk(version)
+    shop_tag = "SHOP-" + version
+    add_git_tag(
+        tag: shop_tag)
+    push_git_tags(
+        tag: shop_tag)
+  end
+
+  def public_release_shop()
+    carthage(
+      command: "build",
+      platform: "iOS",
+      no_skip_current: true)
+
+    carthage(
+      command: "archive",
+      frameworks: ["SonectShop"],
+      output: "SonectShopSDK.framework.zip")
+
+    archive("Carthage/Build/iOS/SonectShop.framework", "SonectShopSDK_Cocoapods.framework.zip")
+
+    version = get_version_number(
+      target: "SonectShop")
+
+    name = "Release " + version
+
+    set_github_release(
+      tag_name: version,
+      name: name,
+      description: "No changelog provided",
+      repository_name: "sonect/sonect-shop-sdk-ios",
+      api_token: "069f7a4e97050671417551c57bbb8f1b801c0265",
+      upload_assets: ["SonectShopSDK.framework.zip", "SonectShopSDK_Cocoapods.framework.zip"])
+
+    commitAndPush("Update latest Shop Public SDK build")
+  end
+
+  def public_release_core()
+    carthage(
+      command: "build",
+      platform: "iOS",
+      no_skip_current: true)
+
+    carthage(
+      command: "archive",
+      frameworks: ["SonectCore"],
+      output: "SonectCoreSDK.framework.zip")
+
+    archive("Carthage/Build/iOS/SonectCore.framework", "SonectCoreSDK_Cocoapods.framework.zip")
+
+    version = get_version_number(
+      target: "SonectCore")
+
+    name = "Release " + version
+
+    set_github_release(
+      tag_name: version,
+      name: name,
+      description: "No changelog provided",
+      repository_name: "sonect/sonect-core-ios",
+      api_token: "069f7a4e97050671417551c57bbb8f1b801c0265",
+      upload_assets: ["SonectCoreSDK.framework.zip", "SonectCoreSDK_Cocoapods.framework.zip"])
+
+    commitAndPush("Update latest Core Public SDK build")
+  end
+
+  def commitAndPush(message)
+    git_add
+    git_commit(path: "*", message: message)
+    push_to_git_remote(
+      local_branch: "develop",
+      remote_branch: "develop")
+  end
+
+  def change_log_since_last_minor_version_tag(sdk)
+    if sdk == "user"
+      version = get_version_number(
+        target: "Sonect")
+      version_pattern = pervious_minor_version(version)
+      match_pattern = "USER-" + version_pattern + "*"
+    elsif sdk == "shop"
+      version = get_version_number(
+        target: "SonectShop")
+      version_pattern = pervious_minor_version(version)
+      match_pattern = "SHOP-" + version_pattern + "*"
+    elsif sdk == "core"
+      match_pattern = "CORE*"
+    end
+
+    changelog = changelog_from_git_commits(
+    pretty: '%s',
+    quiet: true,
+    tag_match_pattern: match_pattern)
+
+    return format_changelog(changelog)
+  end
+
+  def pervious_minor_version(version)
+    version_pattern = version[0..(version.rindex(".") - 1)]
+    last_minor_version = Integer(version_pattern[version_pattern.length - 1]) - 1
+    version_pattern[version_pattern.length - 1] = last_minor_version.to_s
+    return version_pattern
+  end
+
+  def format_changelog(changelog)
+    commits_array = changelog.split("\n")
+
+    formatted_messages = []
+    unique_tickets = []
+
+    commits_array.each {|message|
+        jira_ticket = message[/SO-\d+/, 0]
+
+        if jira_ticket && !unique_tickets.any? { |avoid| avoid.include?(jira_ticket) }
+            unique_tickets.push(jira_ticket)
+            formatted_message = "[" + message[message.index(jira_ticket)..message.length] + "]" "(https://sonectapp.atlassian.net/browse/" + jira_ticket + ")"
+            formatted_messages.push(formatted_message)
+        end
+    }
+
+    return formatted_messages.join("\n")
+  end
+
+  def get_sdk_target(name)
+    if name == "core"
+      return "SonectCore"
+    elsif name == "shop"
+      return "SonectShop"
+    else
+      return "Sonect"
+    end
+  end
+
+  def get_sdk_heders_paths(name)
+    if name == "user" || name == "shop"
+      return ["/Public"]
+    elsif name == "core"
+      return ["/Logging/include", "/Utilities", "/Model", "/Plugins"]
+    else
+      return []
+    end
+  end
+
+end

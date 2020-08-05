@@ -27,3 +27,4 @@ FOUNDATION_EXPORT const unsigned char SonectVersionString[];
 #import <Sonect/SNCToken.h>
 #import <Sonect/SNCTransactionMetadata.h>
 #import <Sonect/SNCTransactionAmount.h>
+#import <Sonect/SNCUI.h>

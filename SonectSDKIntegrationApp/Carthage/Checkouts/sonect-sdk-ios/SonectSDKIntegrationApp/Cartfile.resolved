@@ -1,1 +1,2 @@
-github "sonect/sonect-sdk-ios" "0.9.50"
+github "sonect/sonect-core-ios" "1.0.3"
+github "sonect/sonect-sdk-ios" "1.5.0"

@@ -11,6 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString * const SNCThemeSystemFontName;
+extern NSString * const SNCThemeBoldSystemFontName;
+
 typedef NS_ENUM(NSUInteger, SNCThemeType) {
     SNCThemeTypeDark = 0,
     SNCThemeTypeLight,
@@ -40,11 +43,13 @@ typedef NS_ENUM(NSUInteger, SNCThemeType) {
 
 /**
  The regular font name.
+ @discussion to use system fonts, pass SNCThemeSystemFontName.
  */
 @property (nonatomic, nullable) NSString *fontName;
 
 /**
  The bold font name.
+ @discussion to use system fonts, pass SNCThemeBoldSystemFontName.
  */
 @property (nonatomic, nullable) NSString *boldFontName;
 
@@ -57,6 +62,22 @@ typedef NS_ENUM(NSUInteger, SNCThemeType) {
  The title image in the navigation bar.
  */
 @property (nonatomic, nullable) UIImage *navigationBarTitleImage;
+
+/**
+ The color of back arrow button in the navigation bar.
+ */
+@property (nonatomic, nullable) UIColor *backButtonColor;
+
+/**
+ The color selected amount. For default denominations, order of colors in amount picker is as follows:
+ 0 - 20
+ 1 - 50
+ 2 - 100
+ 3 - 200
+  
+ If number of colors is less than number of denominations in amount picker, it falls back to default colors.
+ */
+@property (nonatomic, nullable) NSArray <UIColor *> *selectedAmountColors;
 
 /**
  Order of categories:

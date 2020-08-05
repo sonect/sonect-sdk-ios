@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class SNCUserAttributes;
+@class SNCAttributes;
 @interface SNCConfiguration : NSObject
 
 /**
@@ -44,9 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) BOOL shouldPresentTransactionIfAvailable;
 
 /**
- Additional user attributes that could be of variable nature.
+ Additional attributes that could be of variable nature.
 */
-@property (nonatomic, strong, nullable) SNCUserAttributes *userAttributes;
+@property (nonatomic, strong, nullable) SNCAttributes *attributes;
 
 /**
  Initializes the configuration with a designated configuration plist file.

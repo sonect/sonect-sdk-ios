@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SNCSonectPaymentDataSource.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class SNCConfiguration, SNCCredentials, SNCUI, UIViewController;
+@protocol SNCSonectEventHandler, SNCSonectPaymentDataSource, SNCKycProviderPlugin, SNCAddressAutocompletionPlugin;
+
 @interface SNCSonect : NSObject
 
 /**
@@ -32,6 +33,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class) id <SNCSonectPaymentDataSource> paymentDataSource;
 
 /**
+ The plugin to be used when getting customer KYC data.
+*/
+@property (class, nullable) id <SNCKycProviderPlugin> kycProviderPlugin;
+
+/**
+ The plugin to be used for getting address autocompletion.
+*/
+@property (class, nullable) id <SNCAddressAutocompletionPlugin> addressAutocompletionPlugin;
+
+/**
  The Sonect UI overrides .
  The SDK client can override the default UI by providing the UI settings upfront,
  
@@ -39,6 +50,12 @@ NS_ASSUME_NONNULL_BEGIN
  already set ui, an exception will be raised.
  */
 @property (class, nullable) SNCUI *ui;
+
+/**
+The Event handler.
+The current Event handler that are passed through SDK
+*/
+@property(class, weak, nullable) id <SNCSonectEventHandler> eventHandler;
 
 /**
  Presents the Sonect View Controller on the presenting view controller, with credentials and

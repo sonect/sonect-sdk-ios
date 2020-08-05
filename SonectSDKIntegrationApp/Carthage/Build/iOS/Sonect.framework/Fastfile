@@ -17,6 +17,8 @@ default_platform(:ios)
 
 platform :ios do
 
+  GITHUB_API_TOKEN = "1dd477dd27616f35640636f689b5f13abc944eaf"
+
   before_all do
     # ensure_git_status_clean
     setup_circle_ci
@@ -101,7 +103,7 @@ platform :ios do
       name: name,
       description: change_log_since_last_minor_version_tag("user"),
       repository_name: "sonect/ios-user-sdk",
-      api_token: "f9e9eed99e112f2a9e07cdc3221a1fd25cf42160",
+      api_token: GITHUB_API_TOKEN,
       upload_assets: ["SonectPrivateBundle.framework.zip"])
 
     commitAndPush("Update latest User Protected SDK build")
@@ -130,7 +132,7 @@ platform :ios do
       name: name,
       description: "No changelog provided",
       repository_name: "sonect/sonect-sdk-ios",
-      api_token: "f9e9eed99e112f2a9e07cdc3221a1fd25cf42160",
+      api_token: GITHUB_API_TOKEN,
       upload_assets: ["SonectSDK.framework.zip", "SonectSDK_Cocoapods.framework.zip"])
 
     commitAndPush("Update latest User Public SDK build")
@@ -157,7 +159,7 @@ platform :ios do
       name: name,
       description: change_log_since_last_minor_version_tag("shop"),
       repository_name: "sonect/ios-shop-sdk",
-      api_token: "069f7a4e97050671417551c57bbb8f1b801c0265",
+      api_token: GITHUB_API_TOKEN,
       upload_assets: ["SonectShopPrivateBundle.framework.zip"])
 
     tag_shop_sdk(version)
@@ -196,7 +198,7 @@ platform :ios do
       name: name,
       description: "No changelog provided",
       repository_name: "sonect/sonect-shop-sdk-ios",
-      api_token: "069f7a4e97050671417551c57bbb8f1b801c0265",
+      api_token: GITHUB_API_TOKEN,
       upload_assets: ["SonectShopSDK.framework.zip", "SonectShopSDK_Cocoapods.framework.zip"])
 
     commitAndPush("Update latest Shop Public SDK build")
@@ -225,7 +227,7 @@ platform :ios do
       name: name,
       description: "No changelog provided",
       repository_name: "sonect/sonect-core-ios",
-      api_token: "069f7a4e97050671417551c57bbb8f1b801c0265",
+      api_token: GITHUB_API_TOKEN,
       upload_assets: ["SonectCoreSDK.framework.zip", "SonectCoreSDK_Cocoapods.framework.zip"])
 
     commitAndPush("Update latest Core Public SDK build")
