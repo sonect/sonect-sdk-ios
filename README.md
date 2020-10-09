@@ -37,10 +37,13 @@ SNCConfiguration *configuration = [SNCConfiguration defaultConfiguration];
 ### Configuration file
 
 In order to configure the SDK, create a `SonectConfiguration.plist` file, and fill out the mandatory fields. You can load the configuration by using the `SNCConfiguration` object. A sample plist file might look like this, for more info consult the `SNCConfiguration` interface documentation. 
+Note that "My App Name" contains special non-breaking space rather than regular one, for the App title always to appear on the single line.
 
 Sample `SonectConfiguration.plist` values: 
 ```xml
 <dict>
+	<key>SonectDashboardWelcomeName</key>
+	<string>My App Name</string>
 	<key>SonectAlpha2CountryCode</key>
 	<string>ch</string>
 	<key>SonectCurrency</key>
