@@ -79,7 +79,7 @@ In order to check if your bank can authorize a certain amount to be paid, the ob
          withHandler:(SNCPaymentMethodAvailabilityHandler)paymentAvailabilityHandler
 ``` 
 
-check for the account balance, and then return the permission to proceed with payment, or an error if one occured while checking for the balance. 
+check for the account balance, and then return the permission to proceed with payment, or an error if one occured while checking for the balance. The error alert will display info from the `userInfo` dictionary that you pass in the `NSError` object. To change the title of the alert, populate `SNCLocalizedTitleKey`, to change the description, populate `NSLocalizedDescriptionKey`. 
 
 In order to process the payment, your object implementing `SNCPaymentMethod` protocol will need to create an `SNCTransactionMetadata` object and pass it back to the SDK for processing. The SDK will call `-payAmount:withHandler:` for you, and you will pass back the necessary info via `SNCPaymentMethodHandler`, this can happen asynchronously. 
 
