@@ -48,8 +48,6 @@ Sample `SonectConfiguration.plist` values:
 	<string>ch</string>
 	<key>SonectCurrency</key>
 	<string>CHF</string>
-	<key>SonectDashboardWelcomeName</key>
-	<string>Sonect</string>
 	<key>SonectDefaultWithdrawAmountIndex</key>
 	<integer>2</integer>
 	<key>SonectAllowedCountryCodes</key>
