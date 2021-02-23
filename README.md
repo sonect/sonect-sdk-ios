@@ -55,6 +55,17 @@ Sample `SonectConfiguration.plist` values:
 		<integer>41</integer>
 		<integer>1</integer>
 	</array>
+	<key>SonectTransactionStatusToPaymentReferenceVisibility</key>
+	<dict>
+		<key>expired</key>
+		<false/>
+		<key>cancelled</key>
+		<false/>
+		<key>rejected</key>
+		<true/>
+		<key>confirmed</key>
+		<true/>
+	</dict>
 </dict>
 ```
 
