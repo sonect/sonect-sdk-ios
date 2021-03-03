@@ -18,12 +18,12 @@ Pod::Spec.new do |spec|
   spec.author             = { "sonect" => "marko.hlebar@sonect.ch" }
   spec.platform     = :ios, "9.0"
   spec.source       = { :http => "https://github.com/sonect/sonect-sdk-ios/releases/download/#{spec.version}/SonectSDK_Cocoapods.framework.zip" }
-  spec.ios.vendored_frameworks = 'Sonect.framework'
+  spec.ios.vendored_frameworks = 'Sonect.xcframework'
   spec.dependency 'sonect-core-ios', '~> 1.2.1'
 
-  spec.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-  }
-  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  # spec.pod_target_xcconfig = {
+  #   'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  # }
+  # spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end
