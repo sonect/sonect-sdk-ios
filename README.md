@@ -1,4 +1,4 @@
-# Sonect SDK for iOS [PRELIMINARY]
+# Sonect SDK for iOS
 
 In this document we will go through the necessary steps to integrate
 Sonect SDK in your iOS app. 
@@ -118,13 +118,10 @@ SNCTheme *theme = [SNCTheme new];
 theme.type = SNCThemeTypeLight;
 theme.fontName = "Futura-Medium";
 theme.boldFontName = "Futura-CondensedExtraBold";
-theme.detailColor1 = UIColor.yellowColor;
-theme.detailColor2 = UIColor.yellowColor;
-theme.detailColor3 = UIColor.yellowColor;
-theme.detailColor4 = UIColor.yellowColor;
-theme.detailColor5 = UIColor.yellowColor;
-theme.navigationBarTintColor = UIColor.yellowColor;
-theme.navigationBarTitleImage = [UIImage imageNamed:@"rba"];
+theme.primaryColor1 = UIColor.yellowColor;
+theme.primaryColor2 = UIColor.yellowColor;
+theme.primaryColor3 = UIColor.yellowColor;
+theme5.statusTextColor1 = UIColor.redColor;
 [theme set];
 ```
 
