@@ -7,7 +7,7 @@
 	<key>SonectCurrency</key>
 	<string>CHF</string>
 	<key>SonectEnvironment</key>
-	<string>DEV</string>
+	<string>TEST</string>
 	<key>SonectDefaultWithdrawAmountIndex</key>
 	<integer>2</integer>
 	<key>SonectShouldPresentSonectLogo</key>

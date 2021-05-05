@@ -42,9 +42,9 @@ class PaymentMethod: NSObject, SNCPaymentMethod {
 
 class ViewController: UIViewController {
     //Calculate the credentials on your server before presenting the Sonect SDK
-    let sdkToken = "_YOUR_TOKEN_"
-    let userId = "_YOUR_USER_ID_"
-    let signature = "_YOUR_SIGNATURE_"
+    let sdkToken = "N2QwYmQ2ZjAtODdmNC0xMWViLTg0NTUtYmI5MmQ4YjgzNjk1OjFhOTE4OWY2NDE0NDM1YTNiZjg0Y2U5Njc3ZDc0OTQ1ZmI2OTM1ZWVhMjZkYzg2MzQwYjg1MmQzZjEzYzIxYWY="
+    let userId = "User"
+    let signature = "Nuj31a37m+5MIgsrZl8VwgCfcVN23gce/6onrsM19dM="
 
     lazy var paymentMethod: PaymentMethod = {
         let paymentMethod = PaymentMethod()
