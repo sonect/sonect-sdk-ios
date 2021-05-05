@@ -1,0 +1,65 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Sonect
+import Foundation
+@_exported import Sonect
+import Swift
+import UIKit
+@objc @_inheritsConvenienceInitializers public class BorderedView : UIKit.UIControl {
+  @objc override dynamic public func layoutSubviews()
+  @IBInspectable @objc public var cornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @objc public var borderWidth: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @IBInspectable @objc public var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc public protocol NameEntryViewDelegate : AnyObject, ObjectiveC.NSObjectProtocol {
+  @objc func nameEntryViewDidBecomeUnverified(_ view: Sonect.NameEntryView)
+  @objc func nameEntryView(_ view: Sonect.NameEntryView, didFinishEntering name: Swift.String)
+  @objc func nameEntryView(_ view: Sonect.NameEntryView, didChange name: Swift.String)
+  @objc func nameEntryViewShouldBeginEditing(_ view: Sonect.NameEntryView) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NameEntryView : Sonect.BorderedView, UIKit.UITextFieldDelegate {
+  @objc weak public var delegate: Sonect.NameEntryViewDelegate?
+  @objc weak public var nextEntryView: UIKit.UIResponder?
+  @objc public var isDisabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var placeholderString: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var verified: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var text: Foundation.NSString? {
+    @objc get
+  }
+  @objc override dynamic public var isFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @discardableResult
+  @objc override dynamic public func becomeFirstResponder() -> Swift.Bool
+  @objc override dynamic public func resignFirstResponder() -> Swift.Bool
+  @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class OnboardingEmailEntryView : Sonect.NameEntryView {
+  @objc deinit
+}
+infix operator ==^ : ComparisonPrecedence

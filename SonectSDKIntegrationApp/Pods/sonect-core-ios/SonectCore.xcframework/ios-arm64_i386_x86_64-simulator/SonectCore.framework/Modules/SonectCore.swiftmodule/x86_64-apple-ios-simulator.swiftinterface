@@ -1,0 +1,68 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name SonectCore
+@_exported import SonectCore
+import Swift
+@inlinable public func SNCDDAssert(_ condition: @autoclosure () -> Swift.Bool, _ message: @autoclosure () -> Swift.String = "", level: SonectCore.SNCDDLogLevel = SNCDefaultLogLevel, context: Swift.Int = 0, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line, tag: Any? = nil, asynchronous async: Swift.Bool = false, ddlog: SonectCore.SNCDDLog = SNCDDLog.sharedInstance) {
+    if !condition() {
+        LogError(message(), level: level, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
+        Swift.assertionFailure(message(), file: file, line: line)
+    }
+}
+@inlinable public func SNCDDAssertionFailure(_ message: @autoclosure () -> Swift.String = "", level: SonectCore.SNCDDLogLevel = SNCDefaultLogLevel, context: Swift.Int = 0, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line, tag: Any? = nil, asynchronous async: Swift.Bool = false, ddlog: SonectCore.SNCDDLog = SNCDDLog.sharedInstance) {
+    LogError(message(), level: level, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
+    Swift.assertionFailure(message(), file: file, line: line)
+}
+extension SNCDDLogFlag {
+  public static func from(_ logLevel: SonectCore.SNCDDLogLevel) -> SonectCore.SNCDDLogFlag
+  public init(_ logLevel: SonectCore.SNCDDLogLevel)
+  public func toLogLevel() -> SonectCore.SNCDDLogLevel
+}
+public var dynamicLogLevel: SonectCore.SNCDDLogLevel
+@inlinable public func resetDynamicLogLevel() {
+    dynamicLogLevel = .all
+}
+@available(*, deprecated, renamed: "dynamicLogLevel", message: "Please use dynamicLogLevel")
+public var defaultDebugLevel: SonectCore.SNCDDLogLevel {
+  get
+  set
+}
+@available(*, deprecated, renamed: "resetDynamicLogLevel", message: "Please use resetDynamicLogLevel")
+public func resetDefaultDebugLevel()
+public var asyncLoggingEnabled: Swift.Bool
+@inlinable public func _SNCDDLogMessage(_ message: @autoclosure () -> Swift.String, level: SonectCore.SNCDDLogLevel, flag: SonectCore.SNCDDLogFlag, context: Swift.Int, file: Swift.StaticString, function: Swift.StaticString, line: Swift.UInt, tag: Any?, asynchronous: Swift.Bool, ddlog: SonectCore.SNCDDLog) {
+    // The `dynamicLogLevel` will always be checked here (instead of being passed in).
+    // We cannot "mix" it with the `SNCDefaultLogLevel`, because otherwise the compiler won't strip strings that are not logged.
+    if level.rawValue & flag.rawValue != 0 && dynamicLogLevel.rawValue & flag.rawValue != 0 {
+        // Tell the SNCDDLogMessage constructor to copy the C strings that get passed to it.
+        let logMessage = SNCDDLogMessage(message: message(),
+                                      level: level,
+                                      flag: flag,
+                                      context: context,
+                                      file: String(describing: file),
+                                      function: String(describing: function),
+                                      line: line,
+                                      tag: tag,
+                                      options: [.copyFile, .copyFunction],
+                                      timestamp: nil)
+        ddlog.log(asynchronous: asynchronous, message: logMessage)
+    }
+}
+@inlinable public func LogDebug(_ message: @autoclosure () -> Swift.String, level: SonectCore.SNCDDLogLevel = SNCDefaultLogLevel, context: Swift.Int = 0, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line, tag: Any? = nil, asynchronous async: Swift.Bool = asyncLoggingEnabled, ddlog: SonectCore.SNCDDLog = .sharedInstance) {
+    _SNCDDLogMessage(message(), level: level, flag: .debug, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
+}
+@inlinable public func LogInfo(_ message: @autoclosure () -> Swift.String, level: SonectCore.SNCDDLogLevel = SNCDefaultLogLevel, context: Swift.Int = 0, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line, tag: Any? = nil, asynchronous async: Swift.Bool = asyncLoggingEnabled, ddlog: SonectCore.SNCDDLog = .sharedInstance) {
+    _SNCDDLogMessage(message(), level: level, flag: .info, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
+}
+@inlinable public func LogWarn(_ message: @autoclosure () -> Swift.String, level: SonectCore.SNCDDLogLevel = SNCDefaultLogLevel, context: Swift.Int = 0, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line, tag: Any? = nil, asynchronous async: Swift.Bool = asyncLoggingEnabled, ddlog: SonectCore.SNCDDLog = .sharedInstance) {
+    _SNCDDLogMessage(message(), level: level, flag: .warning, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
+}
+@inlinable public func LogVerbose(_ message: @autoclosure () -> Swift.String, level: SonectCore.SNCDDLogLevel = SNCDefaultLogLevel, context: Swift.Int = 0, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line, tag: Any? = nil, asynchronous async: Swift.Bool = asyncLoggingEnabled, ddlog: SonectCore.SNCDDLog = .sharedInstance) {
+    _SNCDDLogMessage(message(), level: level, flag: .verbose, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
+}
+@inlinable public func LogError(_ message: @autoclosure () -> Swift.String, level: SonectCore.SNCDDLogLevel = SNCDefaultLogLevel, context: Swift.Int = 0, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line, tag: Any? = nil, asynchronous async: Swift.Bool = false, ddlog: SonectCore.SNCDDLog = .sharedInstance) {
+    _SNCDDLogMessage(message(), level: level, flag: .error, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
+}
+public func currentFileName(_ fileName: Swift.StaticString = #file) -> Swift.String
+@available(*, deprecated, renamed: "currentFileName", message: "Please use currentFileName")
+public func CurrentFileName(_ fileName: Swift.StaticString = #file) -> Swift.String

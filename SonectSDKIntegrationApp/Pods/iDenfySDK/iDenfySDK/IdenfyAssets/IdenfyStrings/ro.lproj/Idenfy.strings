@@ -1,0 +1,396 @@
+/**V2**/
+/*Idenfy Splash Screen V2*/
+"idenfy_splash_screen_title_v2" = "Verificare rapida si corecta a identitatii";
+
+/*Idenfy Start Identification Predefined View V2*/
+"idenfy_start_identification_predefined_view_information_title_v2" = "Începerea verificării identităţii";
+"idenfy_start_identification_predefined_view_information_description_v2" = "Ţara de emitere a documentului";
+"idenfy_start_identification_predefined_view_begin_identification_button_v2" = "Să începem";
+
+/*Idenfy Country Selection View V2*/
+"idenfy_country_selection_view_information_title_v2" = "Alege tara de emitere";
+"idenfy_country_selection_view_information_description_v2" = "Te rugam sa alegi tara in care a fost emis documentul tau";
+"idenfy_country_selection_view_searchbar_hint_v2" = "Cauta tara documentului…";
+
+/*Idenfy Language Selection View V2*/
+"idenfy_language_selection_view_information_title_v2" = "Selectați o limbă";
+"idenfy_language_selection_name_lt_v2" = "Lietuvių";
+"idenfy_language_selection_name_en_v2" = "English";
+"idenfy_language_selection_name_ru_v2" = "Pусский";
+"idenfy_language_selection_name_ro_v2" = "Română";
+"idenfy_language_selection_name_lv_v2" = "Latviešu";
+"idenfy_language_selection_name_pl_v2" = "Polski";
+"idenfy_language_selection_name_de_v2" = "Deutsch";
+"idenfy_language_selection_name_fr_v2" = "Français";
+"idenfy_language_selection_name_it_v2" = "Italiano";
+"idenfy_language_selection_name_es_v2" = "Spanish";
+"idenfy_language_selection_name_sv_v2" = "Swedish";
+
+/*Idenfy Documents Selection View V2*/
+"idenfy_documents_selection_view_information_title_v2" = "Selectați un document";
+"idenfy_documents_selection_view_information_description_v2" = "Ce tip de document ai vrea sa identifici?";
+"idenfy_documents_selection_view_list_item_document_type_passport_title_v2" = "Paşaport";
+"idenfy_documents_selection_view_list_item_document_type_id_card_title_v2" = "Carte de identitate";
+"idenfy_documents_selection_view_list_item_document_type_other_title_v2" = "Alte situaţii";
+"idenfy_documents_selection_view_list_item_document_type_driver_licence_title_v2" = "Permis de conducere";
+"idenfy_documents_selection_view_list_item_document_type_residence_permit_titlev2" = "Permis de rezidenţă";
+
+/*Idenfy Confirmation View V2*/
+"idenfy_confirmation_view_information_title_v2" = "Confirmați tipul de document";
+"idenfy_confirmation_view_information_description_type_id_card_description_placeholder_v2" = "Te rugam sa pregatesti documentul de identitate pentru a te putea identifica";
+"idenfy_confirmation_view_information_description_type_passport_description_placeholder_v2" = "Please have your **passport** ready to identify";
+"idenfy_confirmation_view_information_description_type_residence_permit_placeholder_v2" = "Please have your **residence permit** ready to identify";
+"idenfy_confirmation_view_information_description_type_driver_licence_placeholder_v2" = "Please have your **driver\'s license** ready to identify";
+"idenfy_confirmation_view_information_description_type_other_placeholder_v2" = "Please have your **document** ready to identify";
+"idenfy_confirmation_view_information_description_part_1_v2" = "Te rugam sa pregatesti";
+"idenfy_confirmation_view_information_document_type_id_card_description_part_2_v2" = "documentul de identitate";
+"idenfy_confirmation_view_information_document_type_passport_description_part_2_v2" = "pasaportul pentru";
+"idenfy_confirmation_view_information_document_type_residence_permit_description_part_2_v2" = "permisul de sedere pentru";
+"idenfy_confirmation_view_information_document_type_driver_licence_description_part_2_v2" = "permisul de conducere pentru";
+"idenfy_confirmation_view_information_document_type_other_description_part_2_v2" = "documentul pentru";
+"idenfy_confirmation_view_information_description_part_3_v2" = "a te putea identification";
+"idenfy_confirmation_view_document_steps_title_part_placeholder_v2" = "Identificarea va avea 5 pasi:";
+"idenfy_confirmation_view_document_steps_title_part_1_v2" = "Identificarea va avea";
+"idenfy_confirmation_view_document_steps_title_part_2_v2" = "5";
+"idenfy_confirmation_view_document_steps_title_part_3_v2" = "pasi:";
+"idenfy_confirmation_view_document_steps_step_front_title_v2" = "Fotografie faţă document";
+"idenfy_confirmation_view_document_steps_step_back_title_v2" = "Fotografie spate document";
+"idenfy_confirmation_view_document_steps_step_face_title_v2" = "Fotografie faţă";
+"idenfy_confirmation_view_document_steps_step_liveliness_title_v2" = "Verificarea valabilităţii";
+"idenfy_confirmation_view_document_steps_step_passport_cover_title_v2" = "Fotografia coperţii de pașaport";
+"idenfy_confirmation_view_document_steps_step_proof_of_address_title_v2" = "Dovada fotografiei documentului de adresă";
+"idenfy_confirmation_view_document_steps_step_second_proof_of_address_title_v2" = "A doua dovadă a fotografiei documentului de adresă";
+"idenfy_confirmation_view_upload_image_title_v2" = "Poti incarca poze in fiecare pas";
+"idenfy_confirmation_view_begin_identification_title_v2" = "INCEPE IDENTIFICAREA";
+
+/*Idenfy Document Camera Preview Session View V2*/
+"idenfy_document_camera_preview_session_view_information_step_front_document_type_id_card_title_v2" = "Faţa cărții de identitate";
+"idenfy_document_camera_preview_session_view_information_step_back_document_type_id_card_title_v2" = "Spatele cărții de identitate";
+"idenfy_document_camera_preview_session_view_information_step_front_document_type_other_title_v2" = "Faţa documentului";
+"idenfy_document_camera_preview_session_view_information_step_back_document_type_other_title_v2" = "Spatele documentului";
+"idenfy_document_camera_preview_session_view_information_step_front_document_type_residence_permit_title_v2" = "Faţa permisului de sedere";
+"idenfy_document_camera_preview_session_view_information_step_back_document_type_residence_permit_title_v2" = "Spatele permisului de sedere";
+"idenfy_document_camera_preview_session_view_information_step_front_document_type_driver_license_title_v2" = "Faţa permisului de conducere";
+"idenfy_document_camera_preview_session_view_information_step_back_document_type_driver_license_title_v2" = "Spatele permisului de conducere";
+"idenfy_document_camera_preview_session_view_information_step_front_document_type_passport_cover_title_v2" = "Coperta de pașaport";
+"idenfy_document_camera_preview_session_view_information_step_front_document_type_passport_title_v2" = "Pagina principala pasaport";
+"idenfy_document_camera_preview_session_view_information_step_front_document_type_proof_of_address_title_v2" = "Dovada adresei";
+"idenfy_document_camera_preview_session_view_information_step_front_document_type_second_proof_of_address_title_v2" = "A doua proba de adresa";
+"idenfy_document_camera_preview_session_view_information_description_v2" = "Plaseaza documentul in interiorul chenarului si fa o poza clara";
+
+/*Idenfy Document Camera Results View V2*/
+"idenfy_document_camera_results_view_information_step_front_document_type_id_card_title_v2" = "Din față a cărții de identitate";
+"idenfy_document_camera_results_view_information_step_back_document_type_id_card_title_v2" = "Spatele cărții de identitate";
+"idenfy_document_camera_results_view_information_step_front_document_type_other_title_v2" = "Faţa documentului";
+"idenfy_document_camera_results_view_information_step_back_document_type_other_title_v2" = "Spatele documentului";
+"idenfy_document_camera_results_view_information_step_front_document_type_residence_permit_title_v2" = "Față a permisului de rezidență";
+"idenfy_document_camera_results_view_information_step_back_document_type_residence_permit_title_v2" = "Spatele permisului de reședință";
+"idenfy_document_camera_results_view_information_step_front_document_type_driver_license_title_v2" = "Faţa permisului de conducere";
+"idenfy_document_camera_results_view_information_step_back_document_type_driver_license_title_v2" = "Spatele permisului de conducere";
+"idenfy_document_camera_results_view_information_step_front_document_type_passport_cover_title_v2" = "Coperta de pașaport";
+"idenfy_document_camera_results_view_information_step_front_document_type_passport_title_v2" = "Pagina principala pasaport";
+"idenfy_document_camera_results_view_information_step_front_document_type_proof_of_address_title_v2" = "Dovada adresei";
+"idenfy_document_camera_results_view_information_step_front_document_type_second_proof_of_address_title_v2" = "A doua proba de adresa";
+"idenfy_document_camera_results_view_information_step_front_document_type_id_card_description_placeholder_v2" = "Este **faţa cărții de identitate** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_back_document_type_id_card_description_placeholder_v2" = "Este **spatele cărții de identitate** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_front_document_type_other_description_placeholder_v2" = "Este **faţa documentului** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_back_document_type_other_description_placeholder_v2" = "Este **spatele documentului** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_front_document_type_residence_permit_description_placeholder_v2" = "Este **faţa permisului de sedere** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_back_document_type_residence_permit_description_placeholder_v2" = "Este **spatele permisului de sedere** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_front_document_type_driver_license_description_placeholder_v2" = "Este **faţa permisului de conducere** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_back_document_type_driver_license_description_placeholder_v2" = "Este **spatele permisului de conducere** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_front_document_type_passport_cover_description_placeholder_v2" = "Este **coperta de pașaport** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_front_document_type_proof_of_address_description_placeholder_v2" = "Este **dovada adresei** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_front_document_type_second_proof_of_address_description_placeholder_v2" = "Este **a doua proba de adresa** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_front_document_type_passport_description_placeholder_v2" = "Este **pagina principala pasaport** clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_description_part_1_v2" = "Este";
+"idenfy_document_camera_results_view_information_step_front_document_type_id_card_description_part_2_v2" = "faţa cărții de identitate";
+"idenfy_document_camera_results_view_information_step_back_document_type_id_card_description_part_2_v2" = "spatele cărții de identitate";
+"idenfy_document_camera_results_view_information_step_front_document_type_other_description_part_2_v2" = "faţa documentului";
+"idenfy_document_camera_results_view_information_step_back_document_type_other_description_part_2_v2" = "spatele documentului";
+"idenfy_document_camera_results_view_information_step_front_document_type_residence_permit_description_part_2_v2" = "faţa permisului de sedere";
+"idenfy_document_camera_results_view_information_step_back_document_type_residence_permit_description_part_2_v2" = "spatele permisului de sedere";
+"idenfy_document_camera_results_view_information_step_front_document_type_driver_license_description_part_2_v2" = "faţa permisului de conducere";
+"idenfy_document_camera_results_view_information_step_back_document_type_driver_license_description_part_2_v2" = "spatele permisului de conducere";
+"idenfy_document_camera_results_view_information_step_front_document_type_passport_cover_description_part_2_v2" = "coperta de pașaport";
+"idenfy_document_camera_results_view_information_step_front_document_type_proof_of_address_description_part_2_v2" = "dovada adresei";
+"idenfy_document_camera_results_view_information_step_front_document_type_second_proof_of_address_description_part_2_v2" = "a doua proba de adresa";
+"idenfy_document_camera_results_view_information_step_front_document_type_passport_description_part_2_v2" = "pagina principala pasaport";
+"idenfy_document_camera_results_view_information_description_part_3_v2" = "clar vizibil si in interiorul chenarului?";
+"idenfy_document_camera_results_view_details_first_title_v2_front" = "Imaginea feței tale este clar vizibilă?";
+"idenfy_document_camera_results_view_details_second_title_v2_front" = "Puteți citi în mod clar detaliile documentului?";
+"idenfy_document_camera_results_view_details_first_title_v2_back" = "Este partea din spate a documentului?";
+"idenfy_document_camera_results_view_details_second_title_v2_back" = "Puteți citi în mod clar detaliile documentului?";
+"idenfy_document_camera_results_view_details_second_title_v2_default" = "Puteți citi în mod clar detaliile documentului?";
+
+/*Idenfy Face Camera Preview Session View V2*/
+"idenfy_face_camera_preview_session_description_v2" = "Plaseaza fata ta in zona marcata si fa o poza clara";
+"idenfy_face_camera_preview_title_v2" = "Captură a feţei";
+
+/*Idenfy Face Camera Results View V2*/
+"idenfy_face_camera_results_title_v2" = "Confirma poza la fata";
+"idenfy_face_camera_results_description_v2" = "Este fata ta clar vizibila si in interiorul chenarului?";
+"idenfy_document_camera_results_view_information_step_face_description_placeholder_v2" = "Este **fata** ta clar vizibila si in interiorul chenarului?";
+"idenfy_face_camera_results_view_details_first_title_v2" = "Este fața ta vizibilă și suficient de apropiată pentru inspecție?";
+
+/*Idenfy Document And Face Results View V2*/
+"idenfy_document_and_face_camera_results_title_v2" = "Inspectați fotografia";
+"idenfy_document_and_face_camera_results_powered_by_idenfy_card_title_v2" = "Powered by iDenfy";
+"idenfy_document_and_face_camera_results_button_retake_photo_title_v2" = "FACE O FOTO NOUĂ";
+"idenfy_document_and_face_camera_results_button_next_step_title_v2" = "DA, CONTINUĂ";
+
+/*Upload document photo V2*/
+"idenfy_upload_results_view_information_step_front_document_type_id_card_title_v2" = "Faţa cărții de identitate";
+"idenfy_upload_results_view_information_step_back_document_type_id_card_title_v2" = "Spatele cărții de identitate";
+"idenfy_upload_results_view_information_step_front_document_type_other_title_v2" = "Faţa documentului";
+"idenfy_upload_results_view_information_step_back_document_type_other_title_v2" = "Spatele documentului";
+"idenfy_upload_results_view_information_step_front_document_type_residence_permit_title_v2" = "Faţa permisului de sedere";
+"idenfy_upload_results_view_information_step_back_document_type_residence_permit_title_v2" = "Spatele permisului de sedere";
+"idenfy_upload_results_view_information_step_front_document_type_driver_license_title_v2" = "Faţa permisului de conducere";
+"idenfy_upload_results_view_information_step_back_document_type_driver_license_title_v2" = "Spatele permisului de conducere";
+"idenfy_upload_results_view_information_step_front_document_type_passport_cover_title_v2" = "Coperta de pașaport";
+"idenfy_upload_results_view_information_step_front_document_type_passport_title_v2" = "Pagina principala pasaport";
+"idenfy_upload_results_view_information_step_front_document_type_proof_of_address_title_v2" = "Dovada adresei";
+"idenfy_upload_results_view_information_step_front_document_type_second_proof_of_address_title_v2" = "A doua proba de adresa";
+"idenfy_upload_results_view_information_step_face_title_v2" = "Confirma poza la fata";
+"idenfy_upload_results_view_cropping_description_v2" = "Aliniaza poza incarcata in zona marcata";
+"idenfy_upload_results_view_choose_another_photo_button_title_v2" = "ALEGEAZĂ O ALTĂ";
+"idenfy_upload_results_view_document_continue_button_title_v2" = "CONTINUA";
+
+/*Idenfy Identification Results View V2*/
+"idenfy_identification_results_identification_status_loading_title_v2" = "Se analizeaza verificarea…";
+"idenfy_identification_results_identification_status_loading_description_v2" = "Te rugam sa astepti pana ce setam lucrurile pentru tine!";
+"idenfy_identification_results_identification_status_error_title_v2" = "Identificare eşuată";
+"idenfy_identification_results_step_front_document_type_id_card_title_v2" = "Faţa cărții de identitate";
+"idenfy_identification_results_step_back_document_type_id_card_title_v2" = "Spatele cărții de identitate";
+"idenfy_identification_results_step_passport_cover_title_v2" = "Coperta de pașaport";
+"idenfy_identification_results_step_proof_of_address_title_v2" = "Dovada adresei";
+"idenfy_identification_results_step_second_proof_of_address_title_v2" = "A doua proba de adresa";
+"idenfy_identification_results_step_front_document_type_passport_title_v2" = "Pagina principala pasaport";
+"idenfy_identification_results_step_front_document_type_other_title_v2" = "Faţa documentului";
+"idenfy_identification_results_step_back_document_type_other_title_v2" = "Spatele documentului";
+"idenfy_identification_results_step_front_document_type_residence_permit_title_v2" = "Faţa permisului de sedere";
+"idenfy_identification_results_step_back_document_type_residence_permit_title_v2" = "Spatele permisului de sedere";
+"idenfy_identification_results_step_front_document_type_driver_license_title_v2" = "Faţa permisului de conducere";
+"idenfy_identification_results_step_back_document_type_driver_license_title_v2" = "Spatele permisului de conducere";
+"idenfy_identification_results_step_face" = "Fotografie faţă";
+"idenfy_identification_results_retake_button_title_v2" = "ÎNCEARCĂ DIN NOU";
+"idenfy_identification_results_error_continue_button_title_v2" = "CONTINUA";
+
+/*Idenfy Identification Results Success View V2*/
+"idenfy_identification_results_success_fragment_title_v2" = "Identificare reuşită";
+"idenfy_identification_results_success_fragment_description_v2" = " ";
+"idenfy_identifiaction_results_success_fragment_identified_v2" = "Identificat";
+
+/*Idenfy Manual Reviewing Identification Results Status Waiting View V2*/
+"idenfy_manual_reviewing_status_waiting_view_information_title_v2" = "Se așteaptă confirmarea supravegherii umane";
+"idenfy_manual_reviewing_status_waiting_view_information_description_v2" = "De obicei, durează până la 20 minute pentru a verifica o identificare manuală.";
+"idenfy_manual_reviewing_status_waiting_view_stop_waiting_button_v2" = "ÎNAPOI LA CONT";
+"idenfy_manual_reviewing_status_waiting_view_identification_submitted_title_v2" = "Identificare depusă";
+"idenfy_manual_reviewing_status_waiting_view_identification_auto_completed_title_v2" = "S-a finalizat verificarea automatizată a AI";
+
+/*Idenfy Manual Reviewing Identification Results Status Waiting Stop Waiting Identification Alert V2*/
+"idenfy_alert_title_manual_reviewing_status_waiting_stop_waiting_information" = "Anulați identificarea";
+"idenfy_alert_message_manual_reviewing_status_waiting_stop_waiting_information" = "Sunteţi sigur că vreţi să anulați identificarea?";
+"idenfy_alert_positive_button_manual_reviewing_status_waiting_stop_waiting_information" = "Da";
+"idenfy_alert_negative_button_manual_reviewing_status_waiting_stop_waiting_information" = "Nu";
+
+/*Idenfy Manual Reviewing Identification Results Status Approved View V2*/
+"idenfy_manual_reviewing_status_approved_view_information_title_v2" = "Identificarea dvs. s-a făcut cu succes!";
+"idenfy_manual_reviewing_status_approved_view_information_description_v2" = "Mulţumim";
+"idenfy_manual_reviewing_status_approved_view_continue_button_v2" = "CONTINUA";
+
+/*Idenfy Manual Reviewing Identification Results Status Failed View V2*/
+"idenfy_manual_reviewing_status_failed_view_information_title_v2" = "Identificare Eşuată";
+"idenfy_manual_reviewing_status_failed_view_information_description_v2" = "Nu am putut confirma identitatea dvs";
+"idenfy_manual_reviewing_status_failed_view_continue_button_v2" = "CONTINUA";
+
+/*Idenfy Camera Permission View V2*/
+"idenfy_camera_permissions_view_information_title_v2" = "Putem folosi camera dvs.?";
+"idenfy_camera_permissions_view_information_description_v2" = "Trebuie să utilizăm camera pentru a face fotografia documentului și fotografia feței";
+"idenfy_camera_permissions_view_guidance_information_description_v2" = "Accesați setările, atingeți „Permisii” pentru a acorda acces la cameră";
+"idenfy_camera_permissions_view_goto_settings_button_title_v2" = "MERGI LA SETARI";
+
+/**Shared strings**/
+/*Idenfy Permissions*/
+"idenfy_permission_asks_to_provide_camera_permission_manually" = "Furnizați permisiunile manual";
+
+/*Idenfy Error messages*/
+"IDENFY_FACE_LIVENESS_MESSAGE" = "Prea multe ori nu a reușit controlul de vioiciune";
+"IDENFY_SERVER_ERROR_MESSAGE" = "Oops! Ceva nu a funcţionat corespunzător.";
+"IDENFY_TOKEN_NOT_VALID_MESSAGE" = "Sesiune expirată";
+"IDENFY_TOO_MANY_REATTEMPTS_MESSAGE" = "Prea multe încercări!";
+
+/*Idenfy navigation*/
+"idenfy_common_title_navigation_back" = "Reveniţi";
+
+/*Idenfy Identification Results Additional Information*/
+"idenfy_identification_results_title_additional_info_uploading_front_document_photo" = "Se incarca imaginea cu fata documentului…";
+"idenfy_identification_results_title_additional_info_uploading_back_document_photo" = "Se incarca imaginea cu spatele documentului…";
+"idenfy_identification_results_title_additional_info_uploading_face_document_photo" = "Se incarca imaginea cu poza documentului…";
+"idenfy_identification_results_title_additional_info_uploading_liveness_document_photo" = "Se verifica…";
+"idenfy_identification_results_title_additional_info_uploading_passport_cover_photo" = "Se incarca imaginea de coperta a pasaportului…";
+"idenfy_identification_results_title_additional_info_uploading_proof_of_address_photo" = "Se incarca dovada fotografiei documentului de adresă…";
+"idenfy_identification_results_title_additional_info_uploading_second_proof_of_address_photo" = "Se incarca a doua dovadă a fotografiei documentului de adresă…";
+
+/*Idenfy Alerts*/
+
+/*Manual Reviewing Alert*/
+"idenfy_alert_positive_button_manual_reviewing_information" = "Procedaţi la";
+"idenfy_alert_title_manual_reviewing_information" = "INFORMAŢIA";
+"idenfy_alert_message_manual_reviewing_information" = "Deoarece ați ales un alt document decât o carte de identitate sau un pașaport, trebuie să vă examinăm cererea încă o dată.";
+
+/*Idenfy Liveness Failed Alert*/
+"idenfy_alert_positive_button_liveness_default_error" = "Procedaţi la";
+"idenfy_alert_title_liveness_default_error" = "INFORMAŢIA";
+"idenfy_alert_message_liveness_default_error" = "Verificarea valabilităţii nu a reușit. Încercați din nou.";
+"idenfy_alert_message_liveness_face_timeout_error" = "Timpul de verificare a stării de viață a feței a trecut. Vă rugăm să încercați din nou.";
+
+
+/*Document Analysis Alert*/
+"idenfy_alert_positive_button_document_analysis_information" = "Continuaţi";
+"idenfy_alert_title_document_analysis_information" = "OH NU!";
+"idenfy_alert_message_document_analysis_information" = "Nu s-a putut determina tipul de document, vă rugăm să selectați tipul de document în pasul următor.";
+
+/*Abort Identification Alert*/
+"idenfy_alert_message_abort_identification_information" = "Sunteţi sigur că vreţi să anulați identificarea?";
+"idenfy_alert_title_abort_identification_information" = "Anulați identificarea";
+"idenfy_alert_positive_button_abort_identification_information" = "Da";
+"idenfy_alert_negative_button_abort_identification_information" = "Nu";
+
+/*Abort Restart Identification Alert*/
+"idenfy_alert_message_restart_identification_information" = "Sunteţi sigur că vreţi să reveniţi?";
+"idenfy_alert_title_restart_identification_information" = "Începeți";
+"idenfy_alert_positive_button_restart_identification_information" = "Da";
+"idenfy_alert_negative_button_restart_identification_information" = "Nu";
+
+/*Unknown Document Analysis Alert*/
+"idenfy_document_and_face_camera_results_document_analysis_title" = "Trwa weryfikacja...";
+"idenfy_document_and_face_camera_results_document_analysis_description" = "Proszę czekać.";
+
+
+/*Idenfy Instruction strings */
+
+/* Passport */
+"idenfy_instructions_passport_correct_title" = "Afișează coperta pașaportului";
+"idenfy_instructions_passport_correct_text" = "Asigurați-vă că vă arătați pașaportul în timpul identificării și nu alt document.";
+
+"idenfy_instructions_passport_mrz_title" = "Paşaportul are zona MRZ";
+"idenfy_instructions_passport_mrz_text" = "Asigurați-vă că documentul dvs. are MRZ (2 sau 3 linii de caractere). Dacă documentul dvs. nu are o zonă MRZ, selectați \„ALTE DOCUMENTE\” în fereastra de selectare a documentelor.";
+
+"idenfy_instructions_passport_fits_frame_title" = "Paşaportul Dvs. se potriveşte în cadrul alb";
+"idenfy_instructions_passport_fits_frame_text" = "Asigurați-vă că pașaportul se încadrează în cadrul alb și nu depășește marginile cadrului, iar documentul prezentat nu este neclar și clar lizibil.";
+
+"idenfy_instructions_passport_finger_title" = "Degetul nu acoperă documentul";
+"idenfy_instructions_passport_finger_text" = "Nu vă acoperiţi faţa sau orice informaţie din document.";
+
+"idenfy_instructions_passport_reflection_title" = "Nu este nicio reflexie a luminii";
+"idenfy_instructions_passport_reflection_text" = "Asigurați-vă că reflexia luminii sau holograma documentului nu acoperă fața sau alte informații importante despre documente.";
+
+/* ID-Card front */
+"idenfy_instructions_id_front_correct_title" = "Arătaţi Cartea Dvs. de Identitate";
+"idenfy_instructions_id_front_correct_text" = "Asigurați-vă că afișați cartea de identitate în momentul identificării, nu celălalt document.";
+
+"idenfy_instructions_id_front_fit_frame_title" = "Cartea de Identitate se potriveşte în cadrul alb.";
+"idenfy_instructions_id_front_fit_frame_text" = "Asigurați-vă că partea din față a cărții de identitate se încadrează în cadrul alb și nu depășește marginile cadrului, iar documentul arătat nu este încețoșat și clar lizibil.";
+
+"idenfy_instructions_id_front_finger_title" = "Degetul nu acoperă documentul";
+"idenfy_instructions_id_front_finger_text" = "Nu vă acoperiţi faţa sau orice informaţie din document.";
+
+"idenfy_instructions_id_front_reflection_title" = "Nu este nicio reflexie a luminii";
+"idenfy_instructions_id_front_reflection_text" = "Asigurați-vă că reflexia luminii sau holograma documentului nu acoperă fața sau alte informații importante despre documente.";
+
+/* ID-Card back */
+"idenfy_instructions_id_back_correct_title" = "Arătaţi spatele Cărţii Dvs. de Identitate";
+"idenfy_instructions_id_back_correct_text" = "Asigurați-vă că afișați spatele cărții de identitate.";
+
+"idenfy_instructions_id_back_mrz_title" = "Documentul are zona MRZ";
+"idenfy_instructions_id_back_mrz_text" = "Asigurați-vă că documentul dvs. are MRZ (2 sau 3 linii de caractere). Dacă documentul dvs. nu are o zonă MRZ, selectați \„ALTE DOCUMENTE\” în fereastra de selectare a documentelor.";
+
+"idenfy_instructions_id_back_fit_frame_title" = "Partea din spate a cărții de identitate se încadrează în cadrul alb";
+"idenfy_instructions_id_back_fit_frame_text" = "Asigurați-vă că partea din spate a cărții de identitate se încadrează în cadrul alb și nu depășește marginile cadrului. De asemenea, asigurați-vă că documentul pe care îl afișați nu este încețoșat și clar lizibil.";
+
+"idenfy_instructions_id_back_finger_title" = "Degetul nu acoperă documentul";
+"idenfy_instructions_id_back_finger_text" = "Nu acoperiţi inmformaţia din document cu degetul.";
+
+/* Residence-permit front */
+"idenfy_instructions_residence_permit_front_correct_title" = "Afișați permisul de ședere";
+"idenfy_instructions_residence_permit_front_correct_text" = "Asigurați-vă că afișați permisul de ședere la momentul identificării, nu la celălalt document.";
+
+"idenfy_instructions_residence_permit_front_fit_frame_title" = "Fața permisului de ședere se încadrează în rame albe";
+"idenfy_instructions_residence_permit_front_fit_frame_text" = "Asigurați-vă că partea din față a permisului de rezidență se încadrează în cadrul alb și nu depășește marginile cadrului, iar documentul arătat nu este încețoșat și clar lizibil.";
+
+"idenfy_instructions_residence_permit_front_finger_title" = "Degetul nu acoperă documentul";
+"idenfy_instructions_residence_permit_front_finger_text" = "Nu vă acoperiţi faţa sau orice informaţie din document.";
+
+"idenfy_instructions_residence_permit_front_reflection_title" = "Nu este nicio reflexie a luminii";
+"idenfy_instructions_residence_permit_front_reflection_text" = "Asigurați-vă că reflexia luminii sau holograma documentului nu acoperă fața sau alte informații importante despre documente.";
+
+/* Residence-permit back */
+"idenfy_instructions_residence_permit_back_correct_title" = "Afișați spatele permisului de ședere";
+"idenfy_instructions_residence_permit_back_correct_text" = "Asigurați-vă că afișați spatele permisului de reședință.";
+
+"idenfy_instructions_residence_permit_back_mrz_title" = "Documentul are zona MRZ";
+"idenfy_instructions_residence_permit_back_mrz_text" = "Asigurați-vă că documentul dvs. are MRZ (2 sau 3 linii de caractere). Dacă documentul dvs. nu are o zonă MRZ, selectați \„ALTE DOCUMENTE\” în fereastra de selectare a documentelor.";
+
+"idenfy_instructions_residence_permit_back_fit_frame_title" = "Partea din spate a permisului de ședere se încadrează în rame albe";
+"idenfy_instructions_residence_permit_back_fit_frame_text" = "Asigurați-vă că partea din spate a permisului de rezidență se încadrează în cadrul alb și nu depășește marginile cadrului. De asemenea, asigurați-vă că documentul pe care îl afișați nu este încețoșat și clar lizibil.";
+
+"idenfy_instructions_residence_permit_back_finger_title" = "Degetul nu acoperă documentul";
+"idenfy_instructions_residence_permit_back_finger_text" = "Nu acoperiţi inmformaţia din document cu degetul.";
+
+/* Driver-license front */
+"idenfy_instructions_driver_license_front_correct_title" = "Afișați permisul de conducere";
+"idenfy_instructions_driver_license_front_correct_text" = "Asigurați-vă că afișați permisul de conducere la momentul identificării, nu celălalt document.";
+
+"idenfy_instructions_driver_license_front_fit_frame_title" = "Faţa permisului de conducere se încadrează în cadrul alb";
+"idenfy_instructions_driver_license_front_fit_frame_text" = "Asigurați-vă că partea din față a permisului de conducere se încadrează în cadrul alb și nu depășește marginile cadrului, iar documentul prezentat nu este neclar și clar lizibil.";
+
+"idenfy_instructions_driver_license_front_finger_title" = "Degetul nu acoperă documentul";
+"idenfy_instructions_driver_license_front_finger_text" = "Nu vă acoperiţi faţa sau orice informaţie din document.";
+
+"idenfy_instructions_driver_license_front_reflection_title" = "Nu este nicio reflexie a luminii";
+"idenfy_instructions_driver_license_front_reflection_text" = "Asigurați-vă că reflexia luminii sau holograma documentului nu acoperă fața sau alte informații importante despre documente.";
+
+/* Other documents front */
+"idenfy_instructions_other_front_mrz_title" = "Afișați documentul dvs. care nu are MRZ";
+"idenfy_instructions_other_front_mrz_text" = "Asigurați-vă că afișați documentul care nu are MRZ.";
+
+"idenfy_instructions_other_front_fit_frame_title" = "Fața documentului se încadrează în cadrul alb";
+"idenfy_instructions_other_front_fit_frame_text" = "Asigurați-vă că partea din față a documentului se încadrează în cadrul alb și nu depășește marginile cadrului, iar documentul arătat nu este estompat și este clar lizibil.";
+
+"idenfy_instructions_other_front_finger_title" = "Degetul nu acoperă documentul";
+"idenfy_instructions_other_front_finger_text" = "Nu vă acoperiţi faţa sau orice informaţie din document.";
+
+"idenfy_instructions_other_front_reflection_title" = "Nu este nicio reflexie a luminii";
+"idenfy_instructions_other_front_reflection_text" = "Asigurați-vă că reflexia luminii sau holograma documentului nu acoperă fața sau alte informații importante despre documente.";
+
+/* Other documents back */
+"idenfy_instructions_other_back_fit_frame_title" = "Partea din spate a documentului se încadrează în cadrul alb";
+"idenfy_instructions_other_back_fit_frame_text" = "Asigurați-vă că partea din spate a documentului se încadrează în cadrul alb și nu depășește marginile cadrului, iar documentul arătat nu este estompat și este clar lizibil.";
+
+"idenfy_instructions_other_back_finger_title" = "Degetul nu acoperă documentul";
+"idenfy_instructions_other_back_finger_text" = "Nu acoperiţi inmformaţia din document cu degetul.";
+
+/* Face camera */
+"idenfy_instructions_face_fit_frame_title" = "Faţa se potriveşte în cadrul alb";
+"idenfy_instructions_face_fit_frame_text" = "Asiguraţi-vă că faţa Dvs. se potriveşte în cadrul alb.";
+
+"idenfy_instructions_face_one_face_title" = "Numai o faţă este vizibilă";
+"idenfy_instructions_face_one_face_text" = "Asiguraţi-vă că nu este nici o altă faţă vizibilă în imagine.";
+
+"idenfy_instructions_face_shadow_title" = "Faţa nu este acoperită de o umbră";
+"idenfy_instructions_face_shadow_text" = "Asigurați-vă că fața dvs. este bine luminată și că nu există nicio umbră pe ea.";
+
+"idenfy_instructions_face_zoom_title" = "Faţa se potriveşte în cadru";
+"idenfy_instructions_face_zoom_text" = "Asigurați-vă că faţa dvs. se încadrează în cadru. După ce ai efectuat selfie-ul, mișcați fața mai aproape.";
+
+/**/
+
+
+///*System specific*///
+/* <!--Camera Permission Not Enabled Alert--> */
+"idenfy_alert_title_camera_permission_not_enabled" = "Imposibil de acces la aparatul foto";
+"idenfy_alert_message_camera_permission_not_enabled" = "Pentru a activa accesul, accesați Setări> Confidențialitate> Cameră foto și activați Accesul camerei pentru această aplicație.";
+"idenfy_alert_positive_button_camera_permission_not_enabled" = "Da";
+

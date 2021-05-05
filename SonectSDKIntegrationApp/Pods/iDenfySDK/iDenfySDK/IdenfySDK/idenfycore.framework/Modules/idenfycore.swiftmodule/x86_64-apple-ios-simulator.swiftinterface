@@ -1,0 +1,487 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name idenfycore
+import CommonCrypto
+import Foundation
+import Security
+import Swift
+import UIKit
+@_exported import idenfycore
+public class JMUnidecode {
+  public static func preload()
+  public static func unidecode(_ string: Swift.String) -> Swift.String
+  @objc deinit
+}
+public enum Status {
+  case SUCCESS
+  case ERROR
+  case LOADING
+  public static func == (a: idenfycore.Status, b: idenfycore.Status) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public class RequestModel<T> : ObjectiveC.NSObject where T : Swift.Decodable {
+  public func withPath(_ path: Swift.String) -> idenfycore.RequestModel<T>
+  public func withCustomPath(_ customPath: Swift.String) -> idenfycore.RequestModel<T>
+  public func withParameters(_ parameters: [Swift.String : Any?]) -> idenfycore.RequestModel<T>
+  public func withHeaders(_ headers: [Swift.String : Swift.String]) -> idenfycore.RequestModel<T>
+  public func withBody(_ body: [Swift.String : Any?]) -> idenfycore.RequestModel<T>
+  public func withCustomBody(_ customBody: Foundation.Data) -> idenfycore.RequestModel<T>
+  public func withHTTPMethod(_ method: idenfycore.RequestHTTPMethod) -> idenfycore.RequestModel<T>
+  public func build() -> idenfycore.RequestModel<T>
+  @objc override dynamic public init()
+  @objc deinit
+}
+public class APIhelper {
+  public init()
+  public func getRequestBody(type: Swift.String, url: Foundation.URL) -> Foundation.URLRequest
+  public func getMultipartRequestBody(type: Swift.String, url: Foundation.URL, boundary: Swift.String) -> Foundation.URLRequest
+  public func formS3PhotoData(_ presignedUrlModel: idenfycore.PresignedUrlModel, _ step: Swift.String, _ data: Foundation.Data, _ boundary: Swift.String) -> Foundation.Data
+  public func formBackgroundPhotoData(_ presignedUrlModel: idenfycore.PresignedUrlModel, _: Swift.String, _ zip: Foundation.URL, _ boundary: Swift.String) -> Foundation.Data
+  @objc deinit
+}
+public class ServiceManager {
+  public static let shared: idenfycore.ServiceManager
+  public var session: Foundation.URLSession
+  public var errorFormatingClass: idenfycore.ErrorFormatingClass!
+  public func requestWithResponse<T>(networkRetryingStore: idenfycore.NetworkRetryingStore, request: idenfycore.RequestModel<T>, result: @escaping (Swift.Result<T?, idenfycore.ErrorResponse>) -> Swift.Void) where T : Swift.Decodable
+  public func setErrorFormatter(errorFormatingClass: idenfycore.ErrorFormatingClass)
+  @objc deinit
+}
+public class PartnerInfo {
+  public var country: idenfycore.IssuingCountryInPartnerInfo
+  public var zoomLiveliness: Swift.Bool
+  public var residencePermitAndIdCard: Swift.Bool
+  public var countriesBlacklist: [Swift.String]
+  public var smartEnginesMobile: Swift.Bool
+  public var percentOfDocScanning: Swift.Int
+  public var recordIdentification: Swift.Bool
+  public var canUpload: Swift.Bool
+  public var showDocumentsSelection: Swift.Bool
+  public var personalisation: idenfycore.PartnerInfo.Personalisation
+  public var ReviewSuccessful: Swift.Bool
+  public var ReviewFailed: Swift.Bool
+  public var showInstruction: Swift.Bool
+  public var useZoomIdCheck: Swift.Bool
+  public var skipCountrySelection: Swift.Bool
+  public var skipDocumentOnboarding: Swift.Bool
+  public var skipDocumentSelection: Swift.Bool
+  public var skipWaitingForResults: Swift.Bool
+  public var skipSelfieWithLiveness: Swift.Bool
+  public struct Personalisation {
+    public var immediateRedirect: Swift.Bool
+    public var showIdenfyWaterMark: Swift.Bool
+    public init(immediateRedirect: Swift.Bool, showIdenfyWaterMark: Swift.Bool)
+  }
+  public init(country: idenfycore.IssuingCountryInPartnerInfo, zoomLiveliness: Swift.Bool, residencePermitAndIdCard: Swift.Bool, countriesBlacklist: [Swift.String], smartEnginesMobile: Swift.Bool, percentOfDocScanning: Swift.Int, recordIdentification: Swift.Bool, canUpload: Swift.Bool, showDocumentsSelection: Swift.Bool, personalisation: idenfycore.PartnerInfo.Personalisation, ReviewSuccessful: Swift.Bool, ReviewFailed: Swift.Bool, showInstruction: Swift.Bool, useZoomIdCheck: Swift.Bool, skipCountrySelection: Swift.Bool, skipDocumentOnboarding: Swift.Bool, skipDocumentSelection: Swift.Bool, skipWaitingForResults: Swift.Bool, skipSelfieLiveness: Swift.Bool)
+  @objc deinit
+}
+extension Throwable {
+  public var value: T? {
+    get
+  }
+}
+public enum Throwable<T> : Swift.Decodable where T : Swift.Decodable {
+  case failure(Swift.Error)
+  case success(T)
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LivelinessLicense : Swift.Codable {
+  public let expiryDate: Swift.String
+  public let key: Swift.String
+  public let appId: Swift.String
+  public init(_ expiryDate: Swift.String, _ key: Swift.String, appId: Swift.String)
+  public func getFormattedAsLicense() -> Swift.String
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Int {
+  public var isSuccessHTTPCode: Swift.Bool {
+    get
+  }
+}
+public class StepStatusClass {
+  public var step: Swift.String
+  public var status: idenfycore.Status
+  public init(step: Swift.String)
+  @objc deinit
+}
+public class PresignedUrlModel {
+  public var url: Swift.String
+  public var key: Swift.String
+  public var AWSAccessKeyId: Swift.String
+  public var policy: Swift.String
+  public var signature: Swift.String
+  public init(with dictionary: [Swift.String : Any]?)
+  @objc deinit
+}
+public enum IdenfyDecodableValue : Swift.Decodable {
+  case int(Swift.Int), string(Swift.String), bool(Swift.Bool)
+  public init(from decoder: Swift.Decoder) throws
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var stringValue: Swift.String? {
+    get
+  }
+  public var boolValue: Swift.Bool? {
+    get
+  }
+}
+public class PartnerInfoDTO : Swift.Decodable {
+  public var country: Swift.String?
+  public var zoomLiveliness: Swift.Bool
+  public var residencePermitAndIdCard: Swift.Bool
+  public var countriesBlacklist: [Swift.String]?
+  public var smartEnginesMobile: Swift.Bool
+  public var percentOfDocScanning: Swift.Int?
+  public var recordIdentification: Swift.Bool
+  public var canUpload: Swift.Bool
+  public var showDocumentsSelection: Swift.Bool
+  public var personalisation: idenfycore.PartnerInfoDTO.Personalisation?
+  public var ReviewSuccessful: Swift.Bool
+  public var ReviewFailed: Swift.Bool
+  public var showInstruction: Swift.Bool
+  public var useZoomIdCheck: Swift.Bool
+  public var skipCountrySelection: Swift.Bool
+  public var skipDocumentOnboarding: Swift.Bool
+  public var skipDocumentSelection: Swift.Bool
+  public var skipSelfieWithLiveness: Swift.Bool
+  public struct Personalisation : Swift.Decodable {
+    public var immediateRedirect: Swift.Bool
+    public var showIdenfyWaterMark: Swift.Bool
+    public init(from decoder: Swift.Decoder) throws
+  }
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public enum DocumentTypeEnum : Swift.String {
+  case ID_CARD
+  case PASSPORT
+  case OTHER
+  case DRIVER_LICENSE
+  case RESIDENCE_PERMIT
+  public func getJSONValue() -> Swift.String
+  public func getTitle(_ lang: Swift.String? = nil, isCustomStrings: Swift.Bool) -> Swift.String
+  public func getTitleV2(_ lang: Swift.String? = nil, isCustomStrings: Swift.Bool) -> Swift.String
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public class ErrorResponse : ObjectiveC.NSObject, Swift.Codable, Swift.Error {
+  public var message: Swift.String?
+  public var identifier: Swift.String?
+  public var severity: Swift.String?
+  required public init(message: Swift.String, identifier: Swift.String, severity: Swift.String)
+  required public init(message: Swift.String, identifier: Swift.String)
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum Result<Value> {
+  case success(Value)
+  case failure(idenfycore.ErrorResponse)
+}
+public class RedirectURLResponse : Swift.Codable {
+  public var redirectUrl: Swift.String?
+  public var success: Swift.Bool?
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public class DocumentTypeClass {
+  public var documentTypeEnum: idenfycore.DocumentTypeEnum
+  public var currentStepInteger: Swift.Int
+  public var stepsArray: [Swift.String]
+  public var combinedStepsArray: [idenfycore.CombinedStep]
+  public var originalStepsArray: [idenfycore.CombinedStep]
+  public init(documentTypeEnum: idenfycore.DocumentTypeEnum, steps: [idenfycore.CombinedStep], originalSteps: [idenfycore.CombinedStep])
+  public func getCurrentCombinedStep() -> idenfycore.CombinedStep
+  public func setupValuesForRetakeSteps(steps: [Swift.String])
+  public func getCurrentStep() -> Swift.String
+  public func getNextStepInteger() -> Swift.Int
+  public func increaseCurrentStep()
+  public func dicreaseCurrentStep()
+  public func getNextStep() -> Swift.String
+  public func shouldNavigateToFaceView() -> Swift.Bool
+  public func shouldNavigateToDocScanning() -> Swift.Bool
+  public func isThisStepIsLast() -> Swift.Bool
+  public func shouldNavigateToDocumentsView() -> Swift.Bool
+  public func shouldNavigateToResultsView() -> Swift.Bool
+  public func isReadyToGoFaceSegue() -> Swift.Bool
+  @objc deinit
+}
+public struct PhotoUploadResponseModel : Swift.Decodable {
+  public let success: Swift.Bool
+  public let errorMessage: idenfycore.ErrorMessage?
+  public init(from decoder: Swift.Decoder) throws
+}
+public typealias DocumentType = [idenfycore.DocumentTypeElement]
+public class DocumentTypeElement : Swift.Decodable {
+  public var type: Swift.String
+  public var steps: [Swift.String]
+  public var additionalSteps: [Swift.String : idenfycore.AdditionalStep]
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum Step : Swift.String, Swift.Codable {
+  case BACK
+  case FACE
+  case FRONT
+  case UTILITY_BILL
+  case PASSPORT_COVER
+  case LIVENESS
+  case SECOND_UTILITY_BILL
+  public static let allSteps: [idenfycore.Step]
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class CombinedStep {
+  public var name: Swift.String
+  public var texts: [Swift.String : [Swift.String : Swift.String]]?
+  public var settings: [Swift.String : idenfycore.IdenfyDecodableValue]?
+  public init(name: Swift.String, texts: [Swift.String : [Swift.String : Swift.String]]? = nil, settings: [Swift.String : idenfycore.IdenfyDecodableValue]? = nil)
+  @objc deinit
+}
+public enum ErrorsFormatingHelper : Swift.String {
+  case TOKEN_NOT_VALID_IDENTIFIER
+  case MALFORMED_JSON_IDENTIFIER
+  case IDENFY_SERVER_ERROR_IDENTIFIER
+  case TOO_MANY_REATTEMPTS_IDENTIFIER
+  case ASSERTION_ERROR_IDENTIFIER
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class NetworkRetryingUseCase {
+  @objc deinit
+}
+@objc public class AuthenticationResultResponseOptionalDTO : ObjectiveC.NSObject, Swift.Codable {
+  final public let processingStatus: Swift.String?, identificationStatus: Swift.String?
+  public var errorMessage: idenfycore.ErrorMessage?
+  final public let retakeSteps: idenfycore.RetakeSteps?
+  final public let mrzFound: Swift.Bool, countryMatch: Swift.Bool, documentSupported: Swift.Bool, zoomLiveliness: Swift.Bool, manualReviewed: Swift.Bool, manualApproved: Swift.Bool
+  final public let attemptsLeft: Swift.Int
+  public init(retakeSteps: idenfycore.RetakeSteps?, processingStatus: Swift.String?, identificationStatus: Swift.String?, errorMessage: idenfycore.ErrorMessage?, mrzFound: Swift.Bool, countryMatch: Swift.Bool, documentSupported: Swift.Bool, zoomLiveliness: Swift.Bool, attemptsLeft: Swift.Int, manualReviewed: Swift.Bool, manualApproved: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+open class ErrorMessage : Swift.Codable {
+  final public let en: Swift.String, lt: Swift.String, ru: Swift.String, pl: Swift.String, ro: Swift.String, lv: Swift.String, fr: Swift.String, de: Swift.String, it: Swift.String
+  final public let sv: Swift.String?, es: Swift.String?, bg: Swift.String?
+  public init(en: Swift.String, lt: Swift.String, ru: Swift.String, pl: Swift.String, ro: Swift.String, lv: Swift.String, fr: Swift.String, de: Swift.String, it: Swift.String, sv: Swift.String?, es: Swift.String?, bg: Swift.String?)
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  open func encode(to encoder: Swift.Encoder) throws
+}
+open class RetakeSteps : Swift.Codable {
+  final public let front: Swift.Bool?, back: Swift.Bool?, face: Swift.Bool?
+  public init(front: Swift.Bool?, back: Swift.Bool?, face: Swift.Bool?)
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  open func encode(to encoder: Swift.Encoder) throws
+}
+public enum SkipAnalysisEnum {
+  case skip
+  case notUsing
+  case notSkip
+  public func getSkipAnalysisRequestBody(_ documentData: Swift.String, _ documentStep: Swift.String) -> [Swift.String : Any?]
+  public static func == (a: idenfycore.SkipAnalysisEnum, b: idenfycore.SkipAnalysisEnum) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public class NetworkRetryingStore {
+  public var s3API: Swift.Bool
+  public var currentRetryCount: Swift.Int
+  public init(s3API: Swift.Bool)
+  public func checkIfShouldRetryAgain() -> Swift.Bool
+  @objc deinit
+}
+public class CountryCode : Swift.Codable {
+  final public let country: Swift.String
+  public init(country: Swift.String)
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public class CoreConsts {
+  public static let constDocScanningBunleVersion: Swift.String
+  public static let maxNetworkRetryCount: Swift.Int
+  public static let networkRetryDelayInSeconds: Swift.Double
+  public static let networkRetryDelayWhenConnectionLostInSeconds: Swift.Double
+  @objc deinit
+}
+public enum RequestHTTPMethod : Swift.String {
+  case get
+  case post
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+}
+public class CurrentStepUIViewModel {
+  public var overlayTitle: Swift.String
+  public var sessionInformationTitle: Swift.String
+  public var resultsInformationTitle: Swift.String
+  public var areInstructionsNeeded: Swift.Bool
+  public var documentCameraFrameRatio: CoreGraphics.CGFloat
+  public var instructionsDrawerInformationTitle: Swift.String
+  public var instructionsDrawerDescriptionLabel: Swift.String
+  public var photoResultTitle: Swift.String
+  public var photoResultDescription: Swift.String
+  public var photoResultContinueButtonTitle: Swift.String
+  public var photoResultChooseAnotherPhotoButtonTitle: Swift.String
+  public var photoResultDetailsCardTitle: Swift.String
+  public var photoResultDetailsSecondCardTitle: Swift.String
+  public var isRectangleVisibleInCamera: Swift.Bool
+  public init(_ overlayTitle: Swift.String, _ sessionInformationTitle: Swift.String, _ resultsInformationTitle: Swift.String, _ documentCameraFrameRatio: CoreGraphics.CGFloat, _ instructionsDrawerDescriptionLabel: Swift.String, _ instructionsDrawerInformationTitle: Swift.String, _ areInstructionsNeeded: Swift.Bool, _ photoResultTitle: Swift.String, _ photoResultDescription: Swift.String, _ photoResultContinueButtonTitle: Swift.String, _ photoResultChooseAnotherPhotoButtonTitle: Swift.String, _ photoResultDetailsCardTitle: Swift.String, _ photoResultDetailsSecondCardTitle: Swift.String, _ isRectangleVisibleInCamera: Swift.Bool)
+  @objc deinit
+}
+public class ErrorFormatingClass {
+  public var TOKEN_NOT_VALID_IDENTIFIER: Swift.String
+  public var MALFORMED_JSON_IDENTIFIER: Swift.String
+  public var IDENFY_SERVER_ERROR_IDENTIFIER: Swift.String
+  public var TOO_MANY_REATTEMPTS_IDENTIFIER: Swift.String
+  public var FACE_LIVENESS_ERROR_IDENTIFIER: Swift.String
+  final public let LIVENESS_SDK_NOT_INTEGRATED: Swift.String
+  public init(lang: Swift.String?)
+  @objc deinit
+  public func getIdenfyError() -> idenfycore.ErrorResponse
+  public func getLocalizedErrorMessage(identifier: Swift.String) -> Swift.String
+  public func updateLocale(locale: Swift.String)
+}
+extension UIImage {
+  public func rotateImage(radians: Swift.Float) -> UIKit.UIImage?
+  public func cropToRectFace(rect: CoreGraphics.CGRect!) -> UIKit.UIImage?
+  public func cropToRect(rect: CoreGraphics.CGRect!) -> UIKit.UIImage?
+  public func croppedInRect(rect: CoreGraphics.CGRect) -> UIKit.UIImage
+  public func rotate(_ radians: CoreGraphics.CGFloat) -> UIKit.UIImage
+}
+extension CGFloat {
+  public func pixelsToPoints() -> CoreGraphics.CGFloat
+  public static func onePixelInPoints() -> CoreGraphics.CGFloat
+}
+public enum IssuingCountryInPartnerInfo {
+  case issuingCountryProvided(country: Swift.String)
+  case issuingCountryNotProvided
+}
+public func == (lhs: idenfycore.IssuingCountryInPartnerInfo, rhs: idenfycore.IssuingCountryInPartnerInfo) -> Swift.Bool
+public struct DocumentDataAfterAnalyzation : Swift.Codable {
+  public let documentType: Swift.String
+  public let identificationSteps: [Swift.String]
+  public let processingId: Swift.String
+  public let frontProcessingId: Swift.String
+  public let backProcessingId: Swift.String
+  public init(_ documentType: Swift.String, _ identificationSteps: [Swift.String], _ processingId: Swift.String, _ frontProcessingId: Swift.String, _ backProcessingId: Swift.String)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public class StatusClass {
+  public var status: idenfycore.Status
+  public init()
+  @objc deinit
+}
+public class AdditionalStep : Swift.Decodable {
+  public var texts: [Swift.String : [Swift.String : Swift.String]]?
+  public var settings: [Swift.String : idenfycore.IdenfyDecodableValue]?
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+public struct CountryUtility {
+  public static func getCountryCodeAlpha3(countryCodeAlpha2: Swift.String) -> Swift.String?
+  public static func checkIfCountryISO3IsValids(_ countryCodeAlpha3: Swift.String) -> Swift.Bool
+  public static func getLocalCountryCode() -> Swift.String?
+  public static func getLocalCountry() -> Swift.String?
+}
+public struct DocumentDataAfterAnalyzationDTO : Swift.Codable {
+  public let documentType: Swift.String?
+  public let identificationSteps: [Swift.String]?
+  public let processingId: Swift.String?
+  public let frontProcessingId: Swift.String?
+  public let backProcessingId: Swift.String?
+  public init(_ documentType: Swift.String?, _ identificationSteps: [Swift.String]?, _ processingId: Swift.String?, _ frontProcessingId: Swift.String?, _ backProcessingId: Swift.String?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public class IdenfyUtils {
+  public static func resized(_ image: UIKit.UIImage, withPercentage percentage: CoreGraphics.CGFloat) -> UIKit.UIImage?
+  public static func statusBarHeight() -> CoreGraphics.CGFloat
+  public static func convertImageToBase64(image: UIKit.UIImage) -> Swift.String
+  public static func cropFaceImage(_ image: UIKit.UIImage, topHeight: CoreGraphics.CGFloat, bottomHeight: CoreGraphics.CGFloat) -> UIKit.UIImage
+  public static func cropImageWithoutRectangle(_ image: UIKit.UIImage, topHeight: CoreGraphics.CGFloat, bottomHeight: CoreGraphics.CGFloat) -> UIKit.UIImage
+  public static func cropImage(_ image: UIKit.UIImage, ratio: CoreGraphics.CGFloat, margin: CoreGraphics.CGFloat) -> UIKit.UIImage
+  public static func imageRotatedByDegrees(_ image: UIKit.UIImage, degrees: CoreGraphics.CGFloat) -> UIKit.UIImage
+  public static func fixedOrientation(_ image: UIKit.UIImage) -> UIKit.UIImage
+  public static func getImageV1(name: Swift.String) -> UIKit.UIImage
+  public static func getImageV1(legacyName: Swift.String, name: Swift.String) -> UIKit.UIImage
+  @objc deinit
+}
+public class IdenfyVoid : Swift.Decodable {
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class IdenfyLivenessCheckRequestBody : ObjectiveC.NSObject, Swift.Codable {
+  final public let auditTrail: [Swift.String]
+  final public let lowQualityAuditTrailImage: Swift.String
+  final public let faceMap: Swift.String
+  final public let authToken: Swift.String
+  public var sessionToken: Swift.String!
+  required public init(auditTrails: [Swift.String], lowQualityAuditTrailImage: Swift.String, faceMap: Swift.String, authToken: Swift.String)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case auditTrail
+    case faceMap
+    case sessionToken
+    case authToken
+    case lowQualityAuditTrailImage
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+    public init?(stringValue: Swift.String)
+    public var intValue: Swift.Int? {
+      get
+    }
+    public init?(intValue: Swift.Int)
+  }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension idenfycore.Status : Swift.Equatable {}
+extension idenfycore.Status : Swift.Hashable {}
+extension idenfycore.DocumentTypeEnum : Swift.Equatable {}
+extension idenfycore.DocumentTypeEnum : Swift.Hashable {}
+extension idenfycore.DocumentTypeEnum : Swift.RawRepresentable {}
+extension idenfycore.Step : Swift.Equatable {}
+extension idenfycore.Step : Swift.Hashable {}
+extension idenfycore.Step : Swift.RawRepresentable {}
+extension idenfycore.ErrorsFormatingHelper : Swift.Equatable {}
+extension idenfycore.ErrorsFormatingHelper : Swift.Hashable {}
+extension idenfycore.ErrorsFormatingHelper : Swift.RawRepresentable {}
+extension idenfycore.SkipAnalysisEnum : Swift.Equatable {}
+extension idenfycore.SkipAnalysisEnum : Swift.Hashable {}
+extension idenfycore.RequestHTTPMethod : Swift.Hashable {}
+extension idenfycore.RequestHTTPMethod : Swift.RawRepresentable {}
+extension idenfycore.IdenfyLivenessCheckRequestBody.CodingKeys : Swift.Equatable {}
+extension idenfycore.IdenfyLivenessCheckRequestBody.CodingKeys : Swift.Hashable {}
+extension idenfycore.IdenfyLivenessCheckRequestBody.CodingKeys : Swift.RawRepresentable {}

@@ -1,0 +1,11 @@
+framework module idenfycore {
+  umbrella header "idenfycore.h"
+
+  export *
+  module * { export * }
+}
+
+module idenfycore.Swift {
+    header "idenfycore-Swift.h"
+    requires objc
+}

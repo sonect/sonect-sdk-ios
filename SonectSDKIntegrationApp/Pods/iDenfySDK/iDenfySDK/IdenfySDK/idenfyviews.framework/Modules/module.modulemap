@@ -1,0 +1,11 @@
+framework module idenfyviews {
+  umbrella header "idenfyviews.h"
+
+  export *
+  module * { export * }
+}
+
+module idenfyviews.Swift {
+    header "idenfyviews-Swift.h"
+    requires objc
+}

@@ -1,6 +1,0 @@
-framework module Sonect {
-  umbrella header "Sonect.h"
-
-  export *
-  module * { export * }
-}

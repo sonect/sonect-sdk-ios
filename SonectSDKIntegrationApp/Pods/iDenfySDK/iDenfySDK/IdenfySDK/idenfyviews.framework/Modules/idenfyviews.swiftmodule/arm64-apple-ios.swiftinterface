@@ -1,0 +1,1254 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name idenfyviews
+import AVFoundation
+import AVKit
+import Foundation
+import Lottie
+import Pulsator
+import Swift
+import UIKit
+import idenfycore
+@_exported import idenfyviews
+public protocol FaceCameraViewableV2 : UIKit.UIView {
+  var idenfyUIViewFaceOval: idenfyviews.IdenfyFaceOvalV2 { get }
+  var cameraSessionsButtons: idenfyviews.CameraSessionsButtonsViewableV2 { get }
+}
+@objc public class FaceCameraViewV2 : UIKit.UIView, idenfyviews.FaceCameraViewableV2 {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc override dynamic public func layoutSubviews()
+  @objc convenience dynamic public init()
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var cameraSessionsButtons: idenfyviews.CameraSessionsButtonsViewableV2
+  public var idenfyUIViewFaceOval: idenfyviews.IdenfyFaceOvalV2
+  open func setupConstraints()
+  @objc deinit
+}
+public protocol IdentificationResultViewButtonActionsDelegate : AnyObject {
+  func errorButtonPressed()
+}
+public protocol IdentificationResultsViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.IdentificationResultViewButtonActionsDelegate? { get set }
+  var toolbar: idenfyviews.IdenfyToolbarV2Default { get }
+  var resultsTitle: UIKit.UILabel { get }
+  var resultsDescription: UIKit.UILabel { get }
+  var spinnerScrollView: UIKit.UIScrollView { get }
+  var resultStepTableView: UIKit.UITableView { get }
+  var retakeButton: UIKit.UIButton { get }
+  var scrollMask: UIKit.UIView { get }
+}
+@objc open class IdentificationResultsViewV2 : UIKit.UIView, idenfyviews.IdentificationResultsViewableV2 {
+  weak open var delegate: idenfyviews.IdentificationResultViewButtonActionsDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2Default
+  public var resultsTitle: UIKit.UILabel
+  public var resultsDescription: UIKit.UILabel
+  public var spinnerScrollView: UIKit.UIScrollView
+  public var resultStepTableView: UIKit.UITableView
+  public var retakeButton: UIKit.UIButton
+  public var scrollMask: UIKit.UIView
+  open func setupConstraints()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupRetakeButton()
+  open func setupScrollView()
+  open func setupResultsTableView()
+  @objc deinit
+}
+public protocol ResultsStepCellViewable : UIKit.UITableViewCell {
+  var cellView: UIKit.UIView { get }
+  var stepTitle: UIKit.UILabel { get }
+  var stepSpinnerImageView: UIKit.UIImageView { get }
+  var stepPulsator: UIKit.UIView { get }
+  var stepDividerImageViewTop: UIKit.UIImageView { get }
+  var stepDividerImageViewBottom: UIKit.UIImageView { get }
+}
+@objc open class ResultsStepCell : UIKit.UITableViewCell, idenfyviews.ResultsStepCellViewable {
+  final public let cellView: UIKit.UIView
+  public var stepTitle: UIKit.UILabel
+  public var stepSpinnerImageView: UIKit.UIImageView
+  public var stepPulsator: UIKit.UIView
+  public var stepDividerImageViewTop: UIKit.UIImageView
+  public var stepDividerImageViewBottom: UIKit.UIImageView
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public func setupView()
+  @objc deinit
+}
+public protocol DocumentCellViewable : UIKit.UITableViewCell {
+  var documentLabel: UIKit.UILabel { get }
+  var documentImageView: UIKit.UIImageView { get }
+  var hasBorder: Swift.Bool { get set }
+  var documentTypeEnum: idenfycore.DocumentTypeEnum! { get set }
+}
+@objc open class DocumentCell : UIKit.UITableViewCell, idenfyviews.DocumentCellViewable {
+  public var documentTypeEnum: idenfycore.DocumentTypeEnum!
+  public var hasBorder: Swift.Bool
+  public var documentLabel: UIKit.UILabel
+  public var documentImageView: UIKit.UIImageView
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  open func setupView()
+  @objc deinit
+}
+public protocol CameraResultViewV2ButtonActionsDelegate : AnyObject {
+  func confirmPhotoButtonPressedAction()
+  func retakePhotoButtonPressedAction()
+}
+public protocol CameraResultViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.CameraResultViewV2ButtonActionsDelegate? { get set }
+  var toolbar: idenfyviews.IdenfyToolbarV2CameraSession { get }
+  var photoResultTitle: UIKit.UILabel { get }
+  var photoResultDetailsCard: UIKit.UIView { get }
+  var photoResultDetailsCardTitle: UIKit.UILabel { get }
+  var photoResultDetailsCardSecond: UIKit.UIView { get }
+  var photoResultDetailsCardTitleSecond: UIKit.UILabel { get }
+  var continueButton: UIKit.UIButton { get }
+  var chooseAnotherPhotoButton: UIKit.UIButton { get }
+  var photoResultImageView: UIKit.UIImageView { get }
+}
+@objc open class CameraResultViewV2 : UIKit.UIView, idenfyviews.CameraResultViewableV2 {
+  weak open var delegate: idenfyviews.CameraResultViewV2ButtonActionsDelegate?
+  required public init(frame: CoreGraphics.CGRect, withRectangle: idenfyviews.IdenfyCameraViewType)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2CameraSession
+  public var photoResultTitle: UIKit.UILabel
+  public var poweredByIdenfyCard: UIKit.UIView
+  public var poweredByIdenfyTitle: UIKit.UILabel
+  public var photoResultDetailsCard: UIKit.UIView
+  public var photoResultDetailsCardSecond: UIKit.UIView
+  public var photoResultDetailsCardQuestionMark: UIKit.UIImageView
+  public var photoResultDetailsCardQuestionMarkSecond: UIKit.UIImageView
+  public var photoResultDetailsCardTitle: UIKit.UILabel
+  public var photoResultDetailsCardTitleSecond: UIKit.UILabel
+  public var photoResultImageView: UIKit.UIImageView
+  public var continueButton: UIKit.UIButton
+  public var chooseAnotherPhotoButton: UIKit.UIButton
+  @objc open func setupConstraints(_ withRectangle: idenfyviews.IdenfyCameraViewType)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+public struct ConstsIdenfyStrings {
+}
+public protocol LanguageSelectionButtonActionsDelegate : AnyObject {
+  func closeButtonPressed()
+}
+@objc open class IdenfyToolbarV2CloseButton : UIKit.UIView {
+  weak open var delegate: idenfyviews.LanguageSelectionButtonActionsDelegate?
+  public var toolbarView: UIKit.UIView
+  public var closeButton: UIKit.UIButton
+  public var logo: UIKit.UIImageView
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIImage {
+  public func rotateImage(radians: Swift.Float) -> UIKit.UIImage?
+  public func cropToRectFace(rect: CoreGraphics.CGRect!) -> UIKit.UIImage?
+  public func cropToRect(rect: CoreGraphics.CGRect!) -> UIKit.UIImage?
+  public func croppedInRect(rect: CoreGraphics.CGRect) -> UIKit.UIImage
+  public func rotate(_ radians: CoreGraphics.CGFloat) -> UIKit.UIImage
+}
+extension CGFloat {
+  public func pixelsToPoints() -> CoreGraphics.CGFloat
+  public static func onePixelInPoints() -> CoreGraphics.CGFloat
+}
+public protocol IdenfyRetakeAlertButtonActionsDelegate : AnyObject {
+  func alertConfirmPhotoButtonPressedAction()
+  func alertRetakePhotoButtonPressedAction()
+}
+@objc public class IdenfyRetakeAlert : UIKit.UIView, idenfyviews.Modal {
+  weak open var delegate: idenfyviews.IdenfyRetakeAlertButtonActionsDelegate?
+  public var backgroundView: UIKit.UIView
+  public var dialogView: UIKit.UIView
+  public var alertTitle: UIKit.UILabel
+  public var continueButton: UIKit.UIButton
+  public var retakeButton: UIKit.UIButton
+  convenience public init(title: Swift.String)
+  @objc deinit
+}
+@objc open class IdenfyButtonsUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyGradientButtonColorStart: UIKit.UIColor
+  public static var idenfyGradientButtonColorEnd: UIKit.UIColor
+  public static var idenfyButtonFont: UIKit.UIFont?
+  public static var idenfyButtonCorderRadius: CoreGraphics.CGFloat
+  public static var idenfyChooseAnotherPhotoButtonCornerRadius: CoreGraphics.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ManualReviewingStatusWaitingViewButtonActionsDelegate : AnyObject {
+  func stopWaitingButtonPressedAction()
+}
+public protocol ManualReviewingStatusWaitingViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.ManualReviewingStatusWaitingViewButtonActionsDelegate? { get set }
+  var idenfyToolbarV2Common: idenfyviews.IdenfyToolbarV2Default { get }
+  var idenfyManualReviewingStatusWaitingStepCompletedTitle: UIKit.UILabel { get }
+  var idenfyManualReviewingStatusWaitingStepSubmittedTitle: UIKit.UILabel { get }
+  var idenfyUILabelManualReviewingStatusApprovedCommonInformationTitle: UIKit.UILabel { get }
+  var idenfyUILabelManualReviewingStatusApprovedTimerTitle: UIKit.UILabel { get }
+  var idenfyManualReviewingStatusWaitingCommonInformationDescription: UIKit.UILabel { get }
+  var idenfyUIButtonManualReviewingStatusWaitingStopWaiting: UIKit.UIButton { get }
+  var scrollView: UIKit.UIScrollView { get }
+}
+@objc open class ManualReviewingStatusWaitingViewV2 : UIKit.UIView, idenfyviews.ManualReviewingStatusWaitingViewableV2 {
+  weak open var delegate: idenfyviews.ManualReviewingStatusWaitingViewButtonActionsDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var idenfyToolbarV2Common: idenfyviews.IdenfyToolbarV2Default
+  public var scrollView: UIKit.UIScrollView
+  public var scrollViewContentView: UIKit.UIView
+  public var idenfyViewHolderManualResultsWaitingViewStepCompleted: UIKit.UIView
+  public var idenfyManualReviewingStatusWaitingStepCompletedTitle: UIKit.UILabel
+  public var idenfyManualReviewingStatusWaitingStepCompletedTick: UIKit.UIImageView
+  public var idenfyViewHolderManualResultsWaitingViewStepSubmitted: UIKit.UIView
+  public var idenfyManualReviewingStatusWaitingStepSubmittedTitle: UIKit.UILabel
+  public var idenfyManualReviewingStatusWaitingStepSubmittedTick: UIKit.UIImageView
+  public var idenfyUILabelManualReviewingStatusApprovedCommonInformationTitle: UIKit.UILabel
+  public var idenfyUILabelManualReviewingStatusApprovedTimerTitle: UIKit.UILabel
+  public var idenfyManualReviewingStatusWaitingCommonInformationDescription: UIKit.UILabel
+  public var idenfyUIImageViewManualReviewingStatusWaitingCommonInformationViewHolder: UIKit.UIView
+  public var idenfyUIImageViewManualReviewingStatusWaitingCommonInformationIcon: UIKit.UIImageView
+  public var idenfyUIButtonManualReviewingStatusWaitingStopWaiting: UIKit.UIButton
+  @objc public func setupConstraints()
+  open func setupToolbar()
+  open func setupScrollView()
+  open func setupCompletedSteps()
+  open func setupTopTitle()
+  open func setupStopWaitingIdentificationButton()
+  open func setupClockImageView()
+  open func setupDescription()
+  @objc deinit
+}
+public protocol IdenfyToobalV2WithLanguageSelectionButtonActionsDelegate : AnyObject {
+  func lanugageSelectionButtonPressed()
+  func backButtonPressed()
+}
+@objc open class IdenfyToolbarV2WithLanguageSelection : UIKit.UIView {
+  weak open var delegate: idenfyviews.IdenfyToobalV2WithLanguageSelectionButtonActionsDelegate?
+  public var toolbarView: UIKit.UIView
+  public var backButton: UIKit.UIButton
+  public var languageSelectionButton: UIKit.UIButton
+  public var logo: UIKit.UIImageView
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class IdenfyManualReviewingStatusApprovedViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyManualReviewingStatusApprovedViewBackgroundColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusApprovedCommonInformationTitleTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusApprovedCommonInformationDescriptionTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusApprovedContinueButtonTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusApprovedCommonInformationTitleFont: UIKit.UIFont?
+  public static var idenfyManualReviewingStatusApprovedCommonInformationDescriptionFont: UIKit.UIFont?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc open class IdenfyIdentificationSuccessResultsViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyIdentificationSuccessResultsViewBackgroundColor: UIKit.UIColor
+  public static var idenfyIdentificationSuccessResultsViewTitleTextColor: UIKit.UIColor
+  public static var idenfyIdentificationSuccessResultsViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyIdentificationSuccessResultsViewIdentifiedTitleTextColor: UIKit.UIColor
+  public static var idenfyIdentificationSuccessResultsViewTitleFont: UIKit.UIFont?
+  public static var idenfyIdentificationSuccessResultsViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyIdentificaionSuccessResultsViewIdentifiedTitleFont: UIKit.UIFont?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct ConstsIdenfyOtherResources {
+}
+@objc open class IdenfyManualReviewingStatusWaitingViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyManualReviewingStatusWaitingViewBackgroundColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusWaitingCommonInformationTitleTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusWaitingCommonInformationDescriptionTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusWaitingTimerTitleTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusWaitingStopWaitingButtonTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusWaitingStepTitleColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusWaitingStepViewHolderBackgroundColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusWaitingStepViewHolderShadowColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusWaitingStepViewHolderShadowOpacity: Swift.Float
+  public static var idenfyManualReviewingStatusWaitingStepViewHolderShadowRadius: CoreGraphics.CGFloat
+  public static var idenfyManualReviewingStatusWaitingCommonInformationTitleFont: UIKit.UIFont?
+  public static var idenfyManualReviewingStatusWaitingCommonInformationDescriptionFont: UIKit.UIFont?
+  public static var idenfyManualReviewingStatusWaitingTimerFont: UIKit.UIFont?
+  public static var idenfyManualReviewingStatusWaitingStepFont: UIKit.UIFont?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@IBDesignable @objc open class IdenfyRectangleViewV2 : UIKit.UIView {
+  public var idenfyPhotoResultBackgroundColor: UIKit.UIColor
+  public var idenfyOverlayStrokeRadius: CoreGraphics.CGFloat
+  public var idenfyDocumentShapeRadius: CoreGraphics.CGFloat
+  public var ratio: CoreGraphics.CGFloat
+  public var isPreviewing: Swift.Bool
+  public var isRectangleVisibleInCamera: Swift.Bool
+  public var width: CoreGraphics.CGFloat?
+  public var height: CoreGraphics.CGFloat?
+  public var imageAssetName: Swift.String
+  convenience public init(frame: CoreGraphics.CGRect, x: CoreGraphics.CGFloat)
+  convenience public init(frame: CoreGraphics.CGRect, x: CoreGraphics.CGFloat, imageAssetName: Swift.String)
+  @objc @IBInspectable open var inspectableIdenfyTransparentCameraOverlayColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable open var inspectableIdenfyPhotoResultBackgroundColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable open var inspectableIdenfyOverlayStrokeRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable open var inspectableIdenfyDocumentShapeRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open func draw(_ rect: CoreGraphics.CGRect)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol DocumentCameraViewableV2 : UIKit.UIView {
+  var photoImageView: UIKit.UIImageView { get }
+  var cameraView: UIKit.UIView { get }
+  var rectangleView: idenfyviews.IdenfyRectangleViewV2 { get }
+  var cameraSessionsButtons: idenfyviews.CameraSessionsButtonsViewableV2 { get }
+}
+@objc open class DocumentCameraViewV2 : UIKit.UIView, idenfyviews.DocumentCameraViewableV2 {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc convenience dynamic public init()
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var cameraView: UIKit.UIView {
+    get
+    set
+  }
+  public var photoImageView: UIKit.UIImageView
+  public var rectangleView: idenfyviews.IdenfyRectangleViewV2
+  public var cameraSessionsButtons: idenfyviews.CameraSessionsButtonsViewableV2
+  @objc deinit
+}
+@objc open class IdenfyCameraPermissionViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyCameraPermissionViewBackgroundColor: UIKit.UIColor
+  public static var idenfyCameraPermissionViewTitleTextColor: UIKit.UIColor
+  public static var idenfyCameraPermissionViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyCameraPermissionViewGuidancePermissionTextColor: UIKit.UIColor
+  public static var idenfyCameraPermissionViewGoToSettingsButtonTextColor: UIKit.UIColor
+  public static var idenfyCameraPermissionViewTitleFont: UIKit.UIFont?
+  public static var idenfyCameraPermissionViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyCameraPermissionViewGuidanceDescriptionFont: UIKit.UIFont?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct ConstsIdenfyUI {
+  public static let IDENFY_TOP_DRAWER_INSTRUCTIONS_HEIGHT: CoreGraphics.CGFloat
+}
+@objc open class IdenfyDocumentSelectionViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyDocumentSelectionViewBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewTitleTextColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewDocumentTableViewBorderColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewDocumentTableViewBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewDocumentTableViewCellBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewDocumentTableViewCellBorderColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewDocumentTableViewCellTitleTextColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewDocumentTableViewCellHighlightedTextColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewDocumentTableViewCellHighlightedBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentSelectionViewTitleFont: UIKit.UIFont?
+  public static var idenfyDocumentSelectionViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyDocumentSelectionViewDocumentTypeFont: UIKit.UIFont?
+  public static var idenfyDocumentSelectionViewDocumentTypeHighlightedFont: UIKit.UIFont?
+  public static var idenfyDocumentSelectionViewDocumentTableViewBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyDocumentSelectionViewDocumentTableViewCornerRadius: CoreGraphics.CGFloat
+  public static var idenfyDocumentSelectionViewDocumentTableViewCellBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyDocumentSelectionViewDocumentTableViewCellHeight: CoreGraphics.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc open class IdenfyConfirmationViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyDocumentConfirmationViewBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewTitleTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewDescriptionHighlightedTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewBeginIdentificationButtonTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewDocumentStepTitleTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewDocumentStepTitleHighlightedTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewUploadDocumentPhotoTitleTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewDocumentStepCellNumberTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewDocumentStepCellTitleTextColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewContentMaskForegroundColor: UIKit.UIColor
+  public static var idenfyDocumentConfirmationViewUploadIconTintColor: UIKit.UIColor?
+  public static var idenfyDocumentConfirmationViewDocumentStepCircleTintColor: UIKit.UIColor?
+  public static var idenfyDocumentConfirmationViewTitleFont: UIKit.UIFont?
+  public static var idenfyDocumentConfirmationViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyDocumentConfirmationViewDescriptionHighlightedFont: UIKit.UIFont?
+  public static var idenfyDocumentConfirmationViewDocumentStepTitleFont: UIKit.UIFont?
+  public static var idenfyDocumentConfirmationViewUploadTitleFont: UIKit.UIFont?
+  public static var idenfyDocumentConfirmationViewDocumentStepNumberFont: UIKit.UIFont?
+  public static var idenfyDocumentConfirmationViewDocumentStepFont: UIKit.UIFont?
+  public static var idenfyDocumentConfirmationViewDocumentStepCellHeight: CoreGraphics.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct ConstsIdenfyFonts {
+  public static let hkgrotesk_bold: Swift.String
+  public static let hkgrotesk_regular: Swift.String
+  public static let hkgrotesk_semibold: Swift.String
+  public static let idenfyFontBoldV2: Swift.String
+  public static let idenfyFontSemiBoldV2: Swift.String
+  public static let idenfyFontRegularV2: Swift.String
+}
+public protocol Modal {
+  func show(animated: Swift.Bool)
+  func dismiss(animated: Swift.Bool)
+  var backgroundView: UIKit.UIView { get }
+  var dialogView: UIKit.UIView { get set }
+}
+extension Modal where Self : UIKit.UIView {
+  public func show(animated: Swift.Bool)
+  public func dismiss(animated: Swift.Bool)
+}
+@objc open class IdenfyFaceCameraSessionUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyFaceCameraPreviewSessionBackgroundColor: UIKit.UIColor
+  public static var idenfyFaceCameraPreviewSessionTakePhotoButtonUnFocusedTintColor: UIKit.UIColor
+  public static var idenfyFaceCameraPreviewSessionTakePhotoButtonFocusedTintColor: UIKit.UIColor
+  public static var idenfyFaceCameraPreviewSessionTakePhotoButtonUnFocusedBackgroundColor: UIKit.UIColor
+  public static var idenfyFaceCameraPreviewSessionTakePhotoButtonFocusedBackgroundColor: UIKit.UIColor
+  public static var idenfyFaceCameraPreviewSessionFaceOvalColor: UIKit.UIColor
+  public static var idenfyDocumentCameraPreviewSessionUploadPhotoButtonTintColor: UIKit.UIColor
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc open class IdenfyCountrySelectionViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyCountrySelectionViewBackgroundColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewTitleTextColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountrySearchBarBackgroundColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountrySearchBarTextColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountrySearchBarHintTextColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountryTableViewBackgroundColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountryTableViewBorderColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountryTableViewCellBackgroundColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountryTableViewCellBorderColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountryTableViewCellTextColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountryTableViewCellHighlightedTextColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountryTableViewCellHighlightedBackgroundColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewCountrySearchBarBorderColor: UIKit.UIColor
+  public static var idenfyCountrySelectionViewTitleFont: UIKit.UIFont?
+  public static var idenfyCountrySelectionViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyCountrySelectionViewSearchBarHintFont: UIKit.UIFont?
+  public static var idenfyCountrySelectionViewSearchBarFont: UIKit.UIFont?
+  public static var idenfyCountrySelectionViewCountryTableViewCellFont: UIKit.UIFont?
+  public static var idenfyCountrySelectionViewCountryTableViewHighlightedCellFont: UIKit.UIFont?
+  public static var idenfyCountrySelectionViewCountrySearchBarBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyCountrySelectionViewCountrySearchBarCorderRadius: CoreGraphics.CGFloat
+  public static var idenfyCountrySelectionViewCountryTableViewBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyCountrySelectionViewCountryTableViewCornerRadius: CoreGraphics.CGFloat
+  public static var idenfyCountrySelectionViewCountryFlagBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyCountrySelectionViewCountryTableViewCellBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyCountrySelectionViewCountryTableViewCellHeight: CoreGraphics.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum CustomCameraSessionDrawerState {
+  case expanded
+  case collapsed
+  case hidden
+  public static func == (a: idenfyviews.CustomCameraSessionDrawerState, b: idenfyviews.CustomCameraSessionDrawerState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc open class TakePhotoButtonV2 : UIKit.UIButton {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class IdenfyManualReviewingStatusFailedViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyManualReviewingStatusFailedViewBackgroundColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusFailedCommonInformationTitleTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusFailedCommonInformationDescriptionTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusFailedContinueButtonTextColor: UIKit.UIColor
+  public static var idenfyManualReviewingStatusFailedCommonInformationTitleFont: UIKit.UIFont?
+  public static var idenfyManualReviewingStatusFailedCommonInformationDescriptionFont: UIKit.UIFont?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class InstructionVideo : UIKit.UIView {
+  public var playerLayer: AVFoundation.AVPlayerLayer?
+  public var player: AVFoundation.AVPlayer?
+  public var isLoop: Swift.Bool
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public func configure(_ fileName: Swift.String, _ rect: CoreGraphics.CGRect)
+  @objc public func play()
+  @objc public func pause()
+  @objc public func stop()
+  @objc public func reachTheEndOfTheVideo(_: Foundation.Notification)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+public protocol SplashScreenV2Viewable : UIKit.UIView {
+  var splashScreenTitle: UIKit.UILabel { get }
+}
+@objc open class SplashScreenV2View : UIKit.UIView, idenfyviews.SplashScreenV2Viewable {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var idenfyLogo: UIKit.UIImageView
+  public var backgroundGradient: UIKit.UIImageView
+  public var splashScreenTitle: UIKit.UILabel
+  open func setupConstraints()
+  @objc open func setupViews()
+  @objc deinit
+}
+public protocol IssuedCountryViewButtonActionsDelegate : AnyObject {
+  func beginIdentificationButtonPressed()
+}
+public protocol IssuedCountryViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.IssuedCountryViewButtonActionsDelegate? { get set }
+  var toolbar: idenfyviews.IdenfyToolbarV2WithLanguageSelection { get }
+  var countrySelectionTitle: UIKit.UILabel { get }
+  var countrySelectionDescription: UIKit.UILabel { get }
+  var countryLabel: UIKit.UILabel { get }
+  var countryImageView: UIKit.UIImageView { get }
+  var beginIdentificationButton: UIKit.UIButton { get }
+}
+@objc open class IssuedCountryViewV2 : UIKit.UIView, idenfyviews.IssuedCountryViewableV2 {
+  weak open var delegate: idenfyviews.IssuedCountryViewButtonActionsDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2WithLanguageSelection
+  public var countrySelectionTitle: UIKit.UILabel
+  public var countrySelectionDescription: UIKit.UILabel
+  public var countryLabel: UIKit.UILabel
+  public var countryImageView: UIKit.UIImageView
+  public var countryView: UIKit.UIView
+  public var beginIdentificationButton: UIKit.UIButton
+  open func setupConstraints()
+  open func disableBeginIdentificationButton()
+  open func enableBeginIdentificationButton()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupBeginIdentificationButton()
+  open func setupIssuedCountryView()
+  @objc deinit
+}
+public protocol IdentificationSuccessResultsViewableV2 : UIKit.UIView {
+  var toolbar: idenfyviews.IdenfyToolbarV2Default { get }
+  var successResultsTitle: UIKit.UILabel { get }
+  var successResultsDescription: UIKit.UILabel { get }
+  var successResultsCenterLabel: UIKit.UILabel { get }
+}
+@objc open class IdentificationSuccessResultsViewV2 : UIKit.UIView, idenfyviews.IdentificationSuccessResultsViewableV2 {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2Default
+  public var successResultsTitle: UIKit.UILabel
+  public var successResultsDescription: UIKit.UILabel
+  public var successResultsImageView: UIKit.UIImageView
+  public var successResultsCenterLabel: UIKit.UILabel
+  open func setupConstraints()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupCenterImageView()
+  open func setupCenterTitle()
+  @objc deinit
+}
+@objc open class IdenfyPhotoResultViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyPhotoResultViewBackgroundColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewTitleTextColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewRetakePhotoButtonBackgroundColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewRetakePhotoButtonTextColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewRetakePhotoButtonBorderColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewContinueButtonTextColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewPhotoBorderColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewDetailsCardBackgroundColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewDetailsCardTitleColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewTitleColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewPoweredByIdenfyTitleColor: UIKit.UIColor
+  public static var idenfyPhotoResultViewTitleFont: UIKit.UIFont?
+  public static var idenfyPhotoResultViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyPhotoResultViewDetailsCardTitleFont: UIKit.UIFont?
+  public static var idenfyPhotoResultViewPoweredByIdenfyTitleFont: UIKit.UIFont?
+  public static var idenfyPhotoResultViewPhotoBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyPhotoResultViewPhotoCornerRadius: CoreGraphics.CGFloat
+  public static var idenfyPhotoResultViewDetailsCardCornerRadius: CoreGraphics.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct IdenfyCommonColors {
+  public static var idenfyWhite: UIKit.UIColor
+  public static var idenfyBlack: UIKit.UIColor
+  public static var idenfyDrawerBackgroundColor: UIKit.UIColor
+  public static var idenfyBackgroundColorV2: UIKit.UIColor
+  public static var idenfyMainColorV2: UIKit.UIColor
+  public static var idenfyMainDarkerColorV2: UIKit.UIColor
+  public static var idenfySecondColorV2: UIKit.UIColor
+  public static var idenfyStepSuccessColorV2: UIKit.UIColor
+  public static var idenfyStepErrorColorV2: UIKit.UIColor
+  public static var idenfyLogoTintColorV2: UIKit.UIColor
+  public static var idenfyTakePhotoButtonBackgroundFocused: UIKit.UIColor
+  public static var idenfyTakePhotoButtonIconUnFocused: UIKit.UIColor
+  public static var idenfyResultsViewSuccessStepTextColorV2: UIKit.UIColor
+  public static var idenfyResultsViewErrorStepTextColorV2: UIKit.UIColor
+  public static var idenfyGradientColor1V2: UIKit.UIColor
+  public static var idenfyGradientColor2V2: UIKit.UIColor
+  public static var idenfyPhotoResultDetailsCardBackgroundColorV2: UIKit.UIColor
+}
+@objc open class IdenfyFaceOvalV2 : UIKit.UIView {
+  @objc override dynamic open func draw(_ rect: CoreGraphics.CGRect)
+  open func drawRingFittingInsideView(rect: CoreGraphics.CGRect)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol CameraSessionDrawerDelegate : AnyObject {
+  func expandDrawerAction()
+  func collapseDrawerAction()
+  func previousInstructionButtonPressedAction()
+  func nextInstructionButtonPressedAction()
+  func backButtonPressedAction()
+}
+public enum CameraSessionInstructions {
+  case enabled
+  case disabled
+  public static func == (a: idenfyviews.CameraSessionInstructions, b: idenfyviews.CameraSessionInstructions) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol DrawerContentViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.CameraSessionDrawerDelegate? { get set }
+  var toolbar: idenfyviews.IdenfyToolbarV2CameraSession { get }
+  var descriptionLabelV2: UIKit.UILabel { get }
+  var scrollView: UIKit.UIScrollView { get }
+  var titleText: UIKit.UILabel { get }
+  var infoLabel: UIKit.UILabel { get }
+  var descriptionText: UIKit.UILabel { get }
+  var bottomControls: UIKit.UIStackView! { get }
+  var pageControl: UIKit.UIPageControl { get }
+  var expandButton: UIKit.UIButton { get }
+  var nextButton: UIKit.UIButton { get }
+  var prevButton: UIKit.UIButton { get }
+  var backImageView: UIKit.UIImageView { get }
+  func setupSlideScrollViewV2(slides: [idenfyviews.InstructionVideo]?, scrollWidth: CoreGraphics.CGFloat?)
+  func handleExpandedView(_ cameraSessionInstructions: idenfyviews.CameraSessionInstructions)
+  func handleCollapsedView(_ cameraSessionInstructions: idenfyviews.CameraSessionInstructions)
+}
+@objc open class DrawerContentViewV2 : UIKit.UIView, idenfyviews.DrawerContentViewableV2 {
+  public var bottomControls: UIKit.UIStackView!
+  public var backButton: UIKit.UIStackView?
+  weak open var delegate: idenfyviews.CameraSessionDrawerDelegate?
+  public var toolbar: idenfyviews.IdenfyToolbarV2CameraSession
+  public var descriptionLabelV2: UIKit.UILabel
+  public var drawerView: UIKit.UIView
+  public var scrollView: UIKit.UIScrollView
+  public var titleText: UIKit.UILabel
+  public var infoLabel: UIKit.UILabel
+  public var descriptionText: UIKit.UILabel
+  public var pageControl: UIKit.UIPageControl
+  public var expandButton: UIKit.UIButton
+  public var nextButton: UIKit.UIButton
+  public var prevButton: UIKit.UIButton
+  public var backTextView: UIKit.UILabel
+  public var backImageView: UIKit.UIImageView
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc convenience dynamic public init()
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  open func setupSlideScrollViewV2(slides: [idenfyviews.InstructionVideo]?, scrollWidth: CoreGraphics.CGFloat?)
+  open func handleCollapsedView(_ cameraSessionInstructions: idenfyviews.CameraSessionInstructions)
+  open func handleExpandedView(_ cameraSessionInstructions: idenfyviews.CameraSessionInstructions)
+  @objc deinit
+}
+public protocol BackButtonPressedDelegate : AnyObject {
+  func backButtonPressed()
+}
+@objc open class IdenfyToolbarV2Default : UIKit.UIView {
+  weak open var delegate: idenfyviews.BackButtonPressedDelegate?
+  public var toolbarView: UIKit.UIView
+  public var backButton: UIKit.UIButton
+  public var logo: UIKit.UIImageView
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol CameraPermissionViewButtonActionsDelegate : AnyObject {
+  func goToSettingsButtonPressed()
+}
+public protocol CameraPermissionViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.CameraPermissionViewButtonActionsDelegate? { get set }
+  var toolbar: idenfyviews.IdenfyToolbarV2Default { get }
+  var cameraPermissionTitle: UIKit.UILabel { get }
+  var cameraPermissionDescription: UIKit.UILabel { get }
+  var cameraPermissionGuidanceDescription: UIKit.UILabel { get }
+  var cameraPermissionGoToSettingsButton: UIKit.UIButton { get }
+}
+@objc open class CameraPermissionViewV2 : UIKit.UIView, idenfyviews.CameraPermissionViewableV2 {
+  weak open var delegate: idenfyviews.CameraPermissionViewButtonActionsDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2Default
+  public var cameraPermissionTitle: UIKit.UILabel
+  public var cameraPermissionDescription: UIKit.UILabel
+  public var cameraPermissionImageView: UIKit.UIImageView
+  public var cameraPermissionGuidanceDescription: UIKit.UILabel
+  public var cameraPermissionGoToSettingsButton: UIKit.UIButton
+  open func setupConstraints()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupCenterImageView()
+  open func setupCenterTitle()
+  open func setupGoToSettingsButton()
+  @objc deinit
+}
+public protocol ManualReviewingStatusApprovedViewButtonActionsDelegate : AnyObject {
+  func continueButtonPressedAction()
+}
+public protocol ManualReviewingStatusApprovedViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.ManualReviewingStatusApprovedViewButtonActionsDelegate? { get set }
+  var idenfyToolbarV2Common: idenfyviews.IdenfyToolbarV2Default { get }
+  var idenfyUILabelManualReviewingStatusApprovedCommonInformationTitle: UIKit.UILabel { get }
+  var idenfyUIButtonManualReviewingStatusApprovedContinue: UIKit.UIButton { get }
+  var idenfyUILabelManualReviewingStatusApprovedCommonInformationDescription: UIKit.UILabel { get }
+}
+@objc open class ManualReviewingStatusApprovedViewV2 : UIKit.UIView, idenfyviews.ManualReviewingStatusApprovedViewableV2 {
+  weak open var delegate: idenfyviews.ManualReviewingStatusApprovedViewButtonActionsDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var idenfyToolbarV2Common: idenfyviews.IdenfyToolbarV2Default
+  public var idenfyUILabelManualReviewingStatusApprovedCommonInformationTitle: UIKit.UILabel
+  public var idenfyUILabelManualReviewingStatusApprovedCommonInformationDescription: UIKit.UILabel
+  public var idenfyUIImageViewManualReviewingStatusApprovedCommonInformationIcon: UIKit.UIImageView
+  public var idenfyUIButtonManualReviewingStatusApprovedContinue: UIKit.UIButton
+  @objc open func setupConstraints()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupCenterImageView()
+  open func setupContinueButton()
+  @objc deinit
+}
+@objc public class CropView : UIKit.UIView {
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+}
+@objc public class LineButton : UIKit.UIButton {
+  @objc override dynamic public var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+public struct ConstsIdenfyImages {
+}
+@objc open class IdenfyIdentificationResultsViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyIdentificationResultsViewBackgroundColor: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewTitleTextColor: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewDocumentStepTitleTextColor: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewDocumentStepLoadingSpinnerAccentColor: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewRetakeButtonTextColor: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewContentMaskForegroundColor: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewSuccessStepTextColor: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewErrorStepTextColorV2: UIKit.UIColor
+  public static var idenfyIdentificationResultsViewTitleFont: UIKit.UIFont?
+  public static var idenfyIdentificationResultsViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyIdentificationResultsViewDocumentStepTitleFont: UIKit.UIFont?
+  public static var idenfyIdentificationResultsViewDocumentStepHighlightedTitleFont: UIKit.UIFont?
+  public static var idenfyIdentificationResultsViewDocumentStepLoadingSpinnerAnimationDuration: Swift.Double
+  public static var idenfyIdentificationResultsViewDocumentStepLoadingSpinnerRadius: CoreGraphics.CGFloat
+  public static var idenfyIdentificationResultsViewDocumentStepLoadingSpinnerNumberOfPulses: Swift.Int
+  public static var idenfyIdentificationResultsDividerIconStatusLoadingTintColor: UIKit.UIColor?
+  public static var idenfyIdentificationResultsDividerIconStatusErrorTintColor: UIKit.UIColor?
+  public static var idenfyIdentificationResultsDividerIconStatusSuccessTintColor: UIKit.UIColor?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol CameraSessionsButtonActionsDelegate : AnyObject {
+  func takePhotoButtonPressedAction()
+  func uploadPhotoButtonPressedAction()
+  func toggleFlashButtonPressedAction()
+  func switchLensButtonPressedAction()
+}
+public protocol CameraSessionsButtonsViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.CameraSessionsButtonActionsDelegate? { get set }
+  var idenfySwitchLensButton: UIKit.UIButton { get }
+  var idenfyToggleFlashButton: UIKit.UIButton { get }
+  var idenfyUploadPhotoButton: UIKit.UIButton { get }
+  var takePhotoButton: idenfyviews.TakePhotoButtonV2 { get }
+  var idenfyMakePhotoBackground: UIKit.UIImageView { get }
+  var idenfyUIViewContainerOfButtons: UIKit.UIView { get }
+}
+@objc public class CameraSessionsButtonsViewV2 : UIKit.UIView, idenfyviews.CameraSessionsButtonsViewableV2 {
+  weak open var delegate: idenfyviews.CameraSessionsButtonActionsDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc convenience dynamic public init()
+  @objc required convenience dynamic public init?(coder _: Foundation.NSCoder)
+  public var idenfyMakePhotoBackground: UIKit.UIImageView
+  public var idenfySwitchLensButton: UIKit.UIButton
+  public var idenfyToggleFlashButton: UIKit.UIButton
+  public var idenfyUploadPhotoButton: UIKit.UIButton
+  public var takePhotoButton: idenfyviews.TakePhotoButtonV2
+  public var containerViewForActionButtons: UIKit.UIView
+  public var containerViewForSwitchLensButton: UIKit.UIView
+  public var idenfyUIViewContainerOfButtons: UIKit.UIView
+  open func setupConstraints()
+  open func setupTakePhotoButton()
+  open func setupTakePhotoContainerView()
+  open func setupUploadPhotoImageView()
+  open func setupToggleFlashImageView()
+  open func setupUIViewContainerOfButtons()
+  @objc deinit
+}
+public protocol CropPickerViewDelegate : AnyObject {
+  func cropPickerView(_ cropPickerView: idenfyviews.CropPickerView, image: UIKit.UIImage)
+  func cropPickerView(_ cropPickerView: idenfyviews.CropPickerView, error: Swift.Error)
+}
+@objc @IBDesignable public class CropPickerView : UIKit.UIView {
+  weak public var delegate: idenfyviews.CropPickerViewDelegate?
+  @objc @IBInspectable public var image: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable public var changeImage: UIKit.UIImage? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable public var cropLineColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable public var cropCornerColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable public var scrollBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable public var imageBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable public var dimBackgroundColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable public var scrollMinimumZoomScale: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable public var scrollMaximumZoomScale: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  public var isCrop: Swift.Bool {
+    get
+    set
+  }
+  public var cropView: idenfyviews.CropView {
+    get
+    set
+  }
+  public var leftTopButton: idenfyviews.LineButton {
+    get
+    set
+  }
+  public var leftBottomButton: idenfyviews.LineButton {
+    get
+    set
+  }
+  public var rightTopButton: idenfyviews.LineButton {
+    get
+    set
+  }
+  public var rightBottomButton: idenfyviews.LineButton {
+    get
+    set
+  }
+  public func getRectangleCorners() -> [idenfyviews.LineButton]
+  public var cropLeadingConstraint: UIKit.NSLayoutConstraint?
+  public var cropTrailingConstraint: UIKit.NSLayoutConstraint?
+  public var cropTopConstraint: UIKit.NSLayoutConstraint?
+  public var cropBottomConstraint: UIKit.NSLayoutConstraint?
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public func crop(_ handler: ((Swift.Error?, UIKit.UIImage?) -> Swift.Void)? = nil)
+  @objc deinit
+}
+extension CropPickerView {
+  public func hideRectangle(_ duration: Foundation.TimeInterval = 0.4, animated: Swift.Bool)
+}
+extension CropPickerView {
+  public func dimLayerMask(_ duration: Foundation.TimeInterval = 0.4, animated: Swift.Bool)
+}
+extension CropPickerView : UIKit.UIScrollViewDelegate {
+  @objc dynamic public func scrollViewDidEndDragging(_: UIKit.UIScrollView, willDecelerate _: Swift.Bool)
+  @objc dynamic public func scrollViewWillBeginDragging(_: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewWillBeginZooming(_: UIKit.UIScrollView, with _: UIKit.UIView?)
+  @objc dynamic public func scrollViewDidEndZooming(_: UIKit.UIScrollView, with _: UIKit.UIView?, atScale _: CoreGraphics.CGFloat)
+  @objc dynamic public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func viewForZooming(in _: UIKit.UIScrollView) -> UIKit.UIView?
+}
+public protocol UploadPhotoButtonActionsDelegate : AnyObject {
+  func continueButtonPressedAction()
+  func chooseAnotherPhotoButtonPressedAction()
+}
+public protocol UploadPhotoViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.UploadPhotoButtonActionsDelegate? { get set }
+  var toolbar: idenfyviews.IdenfyToolbarV2CameraSession { get }
+  var uploadTitle: UIKit.UILabel { get }
+  var uploadDescription: UIKit.UILabel { get }
+  var cropperView: idenfyviews.CropPickerView { get }
+  var continueButton: UIKit.UIButton { get }
+  var chooseAnotherPhotoButton: UIKit.UIButton { get }
+}
+@objc open class UploadPhotoViewV2 : UIKit.UIView, idenfyviews.UploadPhotoViewableV2 {
+  weak open var delegate: idenfyviews.UploadPhotoButtonActionsDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2CameraSession
+  public var uploadTitle: UIKit.UILabel
+  public var uploadDescription: UIKit.UILabel
+  public var cropperView: idenfyviews.CropPickerView
+  public var continueButton: UIKit.UIButton
+  public var chooseAnotherPhotoButton: UIKit.UIButton
+  open func setupConstraints()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupButtons()
+  open func setupCropperView()
+  @objc deinit
+}
+extension UIView {
+  public var safeTopAnchor: UIKit.NSLayoutYAxisAnchor {
+    get
+  }
+  public var safeLeftAnchor: UIKit.NSLayoutXAxisAnchor {
+    get
+  }
+  public var safeRightAnchor: UIKit.NSLayoutXAxisAnchor {
+    get
+  }
+  public var safeBottomAnchor: UIKit.NSLayoutYAxisAnchor {
+    get
+  }
+}
+extension UIWindow {
+  public var topViewController: UIKit.UIViewController? {
+    get
+  }
+}
+@objc open class IdenfyToolbarUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyDefaultToolbarBackgroundColor: UIKit.UIColor
+  public static var idenfyDefaultToolbarShadowColor: UIKit.UIColor
+  public static var idenfyDefaultToolbarShadowOpacity: Swift.Float
+  public static var idenfyDefaultToolbarShadowRadius: CoreGraphics.CGFloat
+  public static var idenfyDefaultToolbarBackIconTintColor: UIKit.UIColor?
+  public static var idenfyDefaultToolbarLogoIconTintColor: UIKit.UIColor?
+  public static var idenfyCameraPreviewSessionToolbarBackgroundColor: UIKit.UIColor
+  public static var idenfyCameraPreviewSessionToolbarBackIconTintColor: UIKit.UIColor?
+  public static var idenfyLanguageSelectionToolbarLanguageSelectionIconTintColor: UIKit.UIColor?
+  public static var idenfyLanguageSelectionToolbarCloseIconTintColor: UIKit.UIColor?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol DocumentSelectionViewableV2 : UIKit.UIView {
+  var toolbar: idenfyviews.IdenfyToolbarV2WithLanguageSelection { get }
+  var documentSelectionTitle: UIKit.UILabel { get }
+  var documentSelectionDescription: UIKit.UILabel { get }
+  var documentTableView: UIKit.UITableView { get }
+}
+@objc open class DocumentSelectionViewV2 : UIKit.UIView, idenfyviews.DocumentSelectionViewableV2 {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2WithLanguageSelection
+  public var documentSelectionTitle: UIKit.UILabel
+  public var documentSelectionDescription: UIKit.UILabel
+  public var emptyArea: UIKit.UIView
+  public var documentTableView: UIKit.UITableView
+  open func setupConstraints()
+  open func setupDocumentTableView()
+  @objc deinit
+}
+@objc public enum IdenfyCameraViewType : Swift.Int {
+  case withRectangle
+  case withoutRectangle
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol LanguageSelectionViewableV2 : UIKit.UIView {
+  var toolbar: idenfyviews.IdenfyToolbarV2CloseButton { get }
+  var languageSelectionTitle: UIKit.UILabel { get }
+  var languageTableView: UIKit.UITableView { get }
+}
+@objc open class LanguageSelectionViewV2 : UIKit.UIView, idenfyviews.LanguageSelectionViewableV2 {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2CloseButton
+  public var languageSelectionTitle: UIKit.UILabel
+  public var languageTableView: UIKit.UITableView
+  open func setupConstraints()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupCountryTableView()
+  @objc deinit
+}
+public protocol LanguageCellViewable : UIKit.UITableViewCell {
+  var languageLabel: UIKit.UILabel { get }
+  var languageSelectedTick: UIKit.UIImageView { get }
+  var hasBorder: Swift.Bool { get set }
+}
+@objc open class LanguageCell : UIKit.UITableViewCell, idenfyviews.LanguageCellViewable {
+  public var hasBorder: Swift.Bool
+  public var languageLabel: UIKit.UILabel
+  public var languageSelectedTick: UIKit.UIImageView
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class IdenfyIssuedCountryViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyIssuedCountryViewBackgroundColor: UIKit.UIColor
+  public static var idenfyIssuedCountryViewTitleTextColor: UIKit.UIColor
+  public static var idenfyIssuedCountryViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyIssuedCountryViewCountryLabelTextColor: UIKit.UIColor
+  public static var idenfyIssuedCountryViewCountryViewBorderColor: UIKit.UIColor
+  public static var idenfyIssuedCountryViewBeginIdentificationButtonTextColor: UIKit.UIColor
+  public static var idenfyIssuedCountryViewTitleFont: UIKit.UIFont?
+  public static var idenfyIssuedCountryViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyIssuedCountryViewCountryLabelFont: UIKit.UIFont?
+  public static var idenfyIssuedCountryViewCountryViewBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyIssuedCountryViewCountryViewCorderRadius: CoreGraphics.CGFloat
+  public static var idenfyIssuedCountryViewCountryFlagBorderWidth: CoreGraphics.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc open class IdenfyDocumentCameraSessionUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyDocumentCameraPreviewSessionBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentCameraPreviewSessionBottomActionButtonsViewBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentCameraPreviewSessionTakePhotoButtonUnFocusedTintColor: UIKit.UIColor
+  public static var idenfyDocumentCameraPreviewSessionTakePhotoButtonFocusedTintColor: UIKit.UIColor
+  public static var idenfyDocumentCameraPreviewSessionTakePhotoButtonUnFocusedBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentCameraPreviewSessionTakePhotoButtonFocusedBackgroundColor: UIKit.UIColor
+  public static var idenfyDocumentCameraPreviewSessionUploadPhotoButtonTintColor: UIKit.UIColor
+  public static var idenfyDocumentCameraPreviewSessionSwitchLensButtonTintColor: UIKit.UIColor
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol CountrySelectionViewableV2 : UIKit.UIView {
+  var toolbar: idenfyviews.IdenfyToolbarV2WithLanguageSelection { get }
+  var countrySelectionTitle: UIKit.UILabel { get }
+  var countrySelectionDescription: UIKit.UILabel { get }
+  var countrySearchBarLabel: UIKit.UILabel { get }
+  var countrySearchBar: UIKit.UISearchBar { get }
+  var countryTableView: UIKit.UITableView { get }
+  var searchBarMask: UIKit.UIView { get }
+}
+@objc open class CountrySelectionViewV2 : UIKit.UIView, idenfyviews.CountrySelectionViewableV2 {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2WithLanguageSelection
+  public var countrySelectionTitle: UIKit.UILabel
+  public var countrySelectionDescription: UIKit.UILabel
+  public var searchIcon: UIKit.UIImageView
+  public var countrySearchBarLabel: UIKit.UILabel
+  public var countrySearchBar: UIKit.UISearchBar
+  public var searchBarMask: UIKit.UIView
+  public var countryTableView: UIKit.UITableView
+  open func setupConstraints()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupSearchBar()
+  open func setupCountryTableView()
+  @objc deinit
+}
+public protocol CountryCellViewable : UIKit.UITableViewCell {
+  var cellView: UIKit.UIView { get }
+  var countryLabel: UIKit.UILabel { get }
+  var countryImageView: UIKit.UIImageView { get }
+  var hasBorder: Swift.Bool { get set }
+  var loadingSpinner: Lottie.AnimationView { get }
+}
+@objc open class CountryCell : UIKit.UITableViewCell, idenfyviews.CountryCellViewable {
+  public var hasBorder: Swift.Bool
+  final public let cellView: UIKit.UIView
+  public var countryLabel: UIKit.UILabel
+  public var loadingSpinner: Lottie.AnimationView
+  public var countryImageView: UIKit.UIImageView
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol ManualReviewingStatusFailedViewButtonActionsDelegate : AnyObject {
+  func continueButtonPressedAction()
+}
+public protocol ManualReviewingStatusFailedViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.ManualReviewingStatusFailedViewButtonActionsDelegate? { get set }
+  var idenfyToolbarV2Common: idenfyviews.IdenfyToolbarV2Default { get }
+  var idenfyUILabelManualReviewingStatusFailedCommonInformationTitle: UIKit.UILabel { get }
+  var idenfyUIButtonManualReviewingStatusFailedContinue: UIKit.UIButton { get }
+  var idenfyUILabelManualReviewingStatusFailedCommonInformationDescription: UIKit.UILabel { get }
+}
+@objc open class ManualReviewingStatusFailedViewV2 : UIKit.UIView, idenfyviews.ManualReviewingStatusFailedViewableV2 {
+  weak public var delegate: idenfyviews.ManualReviewingStatusFailedViewButtonActionsDelegate?
+  public var idenfyToolbarV2Common: idenfyviews.IdenfyToolbarV2Default
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var idenfyUILabelManualReviewingStatusFailedCommonInformationTitle: UIKit.UILabel
+  public var idenfyUILabelManualReviewingStatusFailedCommonInformationDescription: UIKit.UILabel
+  public var idenfyUIImageViewManualReviewingStatusFailedCommonInformationIcon: UIKit.UIImageView
+  public var idenfyUIButtonManualReviewingStatusFailedContinue: UIKit.UIButton
+  @objc open func setupConstraints()
+  open func setupToolbar()
+  open func setupTopTitle()
+  open func setupCenterImageView()
+  open func setupContinueButton()
+  @objc deinit
+}
+@objc open class IdenfyDrawerUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyDrawerExpandButtonTintColor: UIKit.UIColor
+  public static var idenfyDrawerTitleTextColor: UIKit.UIColor
+  public static var idenfyDrawerDescriptionTextColor: UIKit.UIColor
+  public static var idenfyDrawerCurrentInstructionTitleTextColor: UIKit.UIColor
+  public static var idenfyDrawerCurrentInstructionDescriptionTextColor: UIKit.UIColor
+  public static var idenfyDrawerInstructionControlsTintColor: UIKit.UIColor
+  public static var idenfyDrawerCurrentInstructionIndicatorColor: UIKit.UIColor
+  public static var idenfyDrawerNextInstructionButtonColor: UIKit.UIColor
+  public static var idenfyDrawerPreviousInstructionButtonColor: UIKit.UIColor
+  public static var idenfyDrawerGradientBackgroundTopColor: UIKit.UIColor
+  public static var idenfyDrawerGradientBackgroundBottomColor: UIKit.UIColor
+  public static var idenfyDrawerTitleFont: UIKit.UIFont?
+  public static var idenfyDrawerDescriptionFont: UIKit.UIFont?
+  public static var idenfyDrawerCurrentInstructionTitleFont: UIKit.UIFont?
+  public static var idenfyDrawerCurrentInstructionDescriptionFont: UIKit.UIFont?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc open class IdenfyToolbarV2CameraSession : UIKit.UIView {
+  weak open var delegate: idenfyviews.BackButtonPressedDelegate?
+  public var toolbarView: UIKit.UIView
+  public var backButton: UIKit.UIButton
+  public var logo: UIKit.UIImageView
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  @objc deinit
+}
+@objc open class IdenfySplashScreenViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfySplashScreenViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfySplashScreenViewDescriptionFont: UIKit.UIFont?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc open class IdenfyLanguageSelectionViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyLanguageSelectionViewBackgroundColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewTitleTextColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewLanguageTableViewBackgroundColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewLanguageTableViewBorderColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewLanguageTableViewCellBackgroundColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewLanguageTableViewCellBorderColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewLanguageTableViewCellTextColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewLanguageTableViewCellHighlightedTextColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewLanguageTableViewCellHighlightedBackgroundColor: UIKit.UIColor
+  public static var idenfyLanguageSelectionViewTitleFont: UIKit.UIFont?
+  public static var idenfyLanguageSelectionViewLanguageTableViewCellFont: UIKit.UIFont?
+  public static var idenfyLanguageSelectionViewLanguageTableViewHighlightedCellFont: UIKit.UIFont?
+  public static var idenfyLanguageSelectionViewLanguageTableViewBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyLanguageSelectionViewLanguageTableViewCornerRadius: CoreGraphics.CGFloat
+  public static var idenfyLanguageSelectionViewLanguageTableViewCellBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyLanguageSelectionViewLanguageTableViewCellHeight: CoreGraphics.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ConfirmationViewButtonActionsDelegate : AnyObject {
+  func beginIdentificationButtonPressed()
+}
+public protocol ConfirmationViewableV2 : UIKit.UIView {
+  var delegate: idenfyviews.ConfirmationViewButtonActionsDelegate? { get set }
+  var toolbar: idenfyviews.IdenfyToolbarV2Default { get }
+  var confirmationTitle: UIKit.UILabel { get }
+  var confirmationDescription: UIKit.UILabel { get }
+  var documentTypeImageView: UIKit.UIImageView { get }
+  var documentStepTitle: UIKit.UILabel { get }
+  var documentStepTableView: UIKit.UITableView { get }
+  var uploadImageView: UIKit.UIImageView { get }
+  var middleContentScrollView: UIKit.UIScrollView { get }
+  var uploadTitle: UIKit.UILabel { get }
+  var beginIdentificationButton: UIKit.UIButton { get }
+  var scrollMask: UIKit.UIView { get }
+}
+@objc open class ConfirmationViewV2 : UIKit.UIView, idenfyviews.ConfirmationViewableV2 {
+  weak open var delegate: idenfyviews.ConfirmationViewButtonActionsDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  public var toolbar: idenfyviews.IdenfyToolbarV2Default
+  public var confirmationTitle: UIKit.UILabel
+  public var confirmationDescription: UIKit.UILabel
+  public var documentTypeCircle: UIKit.UIImageView
+  public var documentTypeImageView: UIKit.UIImageView
+  public var documentStepTitle: UIKit.UILabel
+  public var documentStepTableView: UIKit.UITableView
+  public var uploadImageView: UIKit.UIImageView
+  public var uploadTitle: UIKit.UILabel
+  public var beginIdentificationButton: UIKit.UIButton
+  public var middleContentScrollView: UIKit.UIScrollView
+  public var scrollMask: UIKit.UIView
+  open func setupConstraints()
+  @objc deinit
+}
+public protocol DocumentStepCellViewable : UIKit.UITableViewCell {
+  var cellView: UIKit.UIView { get }
+  var documentStepNumber: UIKit.UILabel { get }
+  var documentStepLabel: UIKit.UILabel { get }
+  var documentStepCircle: UIKit.UIImageView { get }
+}
+@objc open class DocumentStepCell : UIKit.UITableViewCell, idenfyviews.DocumentStepCellViewable {
+  final public let cellView: UIKit.UIView
+  public var documentStepNumber: UIKit.UILabel
+  public var documentStepLabel: UIKit.UILabel
+  public var documentStepCircle: UIKit.UIImageView
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder _: Foundation.NSCoder)
+  open func setupView()
+  @objc deinit
+}
+@objc open class IdenfyUploadPhotoViewUISettingsV2 : ObjectiveC.NSObject {
+  public static var idenfyUploadPhotoViewBackgroundColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewTitleTextColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewDescriptionTextColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewCroppingBorderColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewCroppingBackgroundColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewCroppingBackgroundDimColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewChooseAnotherPhotoButtonTextColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewChooseAnotherPhotoButtonBackgroundColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewChooseAnotherPhotoButtonBorderColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewContinuePhotoButtonTextColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewCroppingRectangleGridColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewCroppingRectangleCornerColor: UIKit.UIColor
+  public static var idenfyUploadPhotoViewTitleFont: UIKit.UIFont?
+  public static var idenfyUploadPhotoViewDescriptionFont: UIKit.UIFont?
+  public static var idenfyUploadPhotoViewCroppingViewBorderWidth: CoreGraphics.CGFloat
+  public static var idenfyUploadPhotoViewCroppingViewCornerRadius: CoreGraphics.CGFloat
+  public static var idenfyUploadPhotoViewCroppingRectangleCornerRadius: CoreGraphics.CGFloat
+  public static var idenfyUploadPhotoViewCroppingViewMinimumZoomScale: CoreGraphics.CGFloat
+  public static var idenfyUploadPhotoViewCroppingViewMaximumZoomScale: CoreGraphics.CGFloat
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class IdenfyUIAlertController : UIKit.UIAlertController {
+  public static func build(title: Swift.String, message: Swift.String, positiveButtonTitle: Swift.String, negativeButtonTitle: Swift.String, positiveButtonAction: @escaping (UIKit.UIAlertAction) -> Swift.Void) -> UIKit.UIAlertController
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension idenfyviews.CustomCameraSessionDrawerState : Swift.Equatable {}
+extension idenfyviews.CustomCameraSessionDrawerState : Swift.Hashable {}
+extension idenfyviews.CameraSessionInstructions : Swift.Equatable {}
+extension idenfyviews.CameraSessionInstructions : Swift.Hashable {}
+extension idenfyviews.IdenfyCameraViewType : Swift.Equatable {}
+extension idenfyviews.IdenfyCameraViewType : Swift.Hashable {}
+extension idenfyviews.IdenfyCameraViewType : Swift.RawRepresentable {}

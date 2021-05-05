@@ -1,0 +1,11 @@
+framework module Sonect {
+  umbrella header "Sonect.h"
+
+  export *
+  module * { export * }
+}
+
+module Sonect.Swift {
+    header "Sonect-Swift.h"
+    requires objc
+}

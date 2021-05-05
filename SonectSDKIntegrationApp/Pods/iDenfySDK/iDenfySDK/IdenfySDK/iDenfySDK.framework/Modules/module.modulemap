@@ -1,0 +1,11 @@
+framework module iDenfySDK {
+  umbrella header "iDenfySDK.h"
+
+  export *
+  module * { export * }
+}
+
+module iDenfySDK.Swift {
+    header "iDenfySDK-Swift.h"
+    requires objc
+}

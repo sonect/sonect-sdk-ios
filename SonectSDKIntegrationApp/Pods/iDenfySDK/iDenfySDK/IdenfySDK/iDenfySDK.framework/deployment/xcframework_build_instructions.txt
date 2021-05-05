@@ -1,0 +1,28 @@
+Create three directories in a selected directory: /devices, /simulators, /output
+
+Build frameworks on a device and copy to devices directory
+Build frameworks on a simulator and copy to simulators directory
+
+Ensure that your are in the directories root location.
+
+Then create xcframeworks with the following instructions:
+
+xcodebuild -create-xcframework \
+    -framework devices/iDenfySDK.framework \
+   -framework simulators/iDenfySDK.framework \
+  -output output/iDenfySDK.xcframework
+
+xcodebuild -create-xcframework \
+    -framework devices/IdenfyLiveness.framework \
+   -framework simulators/IdenfyLiveness.framework \
+  -output output/IdenfyLiveness.xcframework
+
+xcodebuild -create-xcframework \
+    -framework devices/idenfycore.framework \
+   -framework simulators/idenfycore.framework \
+  -output output/idenfycore.xcframework
+
+xcodebuild -create-xcframework \
+    -framework devices/idenfyviews.framework \
+   -framework simulators/idenfyviews.framework \
+  -output output/idenfyviews.xcframework
