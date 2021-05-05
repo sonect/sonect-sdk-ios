@@ -16,7 +16,6 @@
 		043372F823FD6C1800034D01 /* SonectConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043372F723FD6C1800034D01 /* SonectConfiguration.plist */; };
 		048992EF240CF98F00D43F13 /* BankConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */; };
 		048992F0240CF98F00D43F13 /* BankConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */; };
-		78DF6BB2B18F3F4C72D3F6ED /* Pods_SonectSDKIntegrationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B540A5CB76802BBF0BDE71 /* Pods_SonectSDKIntegrationApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,7 +43,6 @@
 		043372F723FD6C1800034D01 /* SonectConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = SonectConfiguration.plist; sourceTree = SOURCE_ROOT; };
 		048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankConfirmationViewController.swift; sourceTree = "<group>"; };
 		048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankConfirmationViewController.xib; sourceTree = "<group>"; };
-		62B540A5CB76802BBF0BDE71 /* Pods_SonectSDKIntegrationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonectSDKIntegrationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		932F8E0E16BF8ACEABDC4054 /* Pods-SonectSDKIntegrationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonectSDKIntegrationApp.release.xcconfig"; path = "Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp.release.xcconfig"; sourceTree = "<group>"; };
 		94B7D140956292615B1F6F2D /* Pods-SonectSDKIntegrationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonectSDKIntegrationApp.debug.xcconfig"; path = "Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78DF6BB2B18F3F4C72D3F6ED /* Pods_SonectSDKIntegrationApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				043372DC23FD692C00034D01 /* SonectSDKIntegrationApp */,
-				043372F123FD6B2B00034D01 /* Frameworks */,
 				043372DB23FD692C00034D01 /* Products */,
 				96454BC7E661B4F6214BCE85 /* Pods */,
 			);
@@ -93,14 +89,6 @@
 				043372EB23FD692D00034D01 /* Info.plist */,
 			);
 			path = SonectSDKIntegrationApp;
-			sourceTree = "<group>";
-		};
-		043372F123FD6B2B00034D01 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				62B540A5CB76802BBF0BDE71 /* Pods_SonectSDKIntegrationApp.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		048992EC240CF97300D43F13 /* Bank */ = {
