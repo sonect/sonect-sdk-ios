@@ -14,16 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSUInteger day;
 @property (nonatomic, copy, readonly) NSString *time;
-
+@property (nonatomic, readonly) NSDate *date; // without day
 - (instancetype)initWithDay:(NSUInteger)day andTime:(NSString *)time;
 
 @end
 
 @interface SNCPeriod: NSObject <NSSecureCoding>
 
-@property (nonatomic, copy, readonly) SNCDayTime *open;
-@property (nonatomic, copy, readonly) SNCDayTime *close;
-@property (nonatomic, readonly) BOOL isClosed;
+@property (nonatomic, strong) SNCDayTime *open;
+@property (nonatomic, strong) SNCDayTime *close;
+@property (nonatomic, getter=isClosed) BOOL closed;
+@property (nonatomic, readonly) NSUInteger day;
 
 - (instancetype)initWithOpeningTime:(SNCDayTime *)openingTime andClosingTime:(SNCDayTime *)closingTime;
 
@@ -36,7 +37,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Periods of open time. IMPORTANT: periods day should be in range 0 - 6!
 @property (nonatomic, copy, readonly) NSArray<SNCPeriod*> *periods;
-
++ (instancetype)defaultOpeningHours;
++ (SNCDayTime *)defaultOpeningTimeForWeekdayIndex:(NSUInteger)weekdayIndex;
++ (SNCDayTime *)defaultClosingTimeForWeekdayIndex:(NSUInteger)weekdayIndex;
 - (instancetype)initWithPeriods:(NSArray<SNCPeriod*> *)periods;
 
 @end

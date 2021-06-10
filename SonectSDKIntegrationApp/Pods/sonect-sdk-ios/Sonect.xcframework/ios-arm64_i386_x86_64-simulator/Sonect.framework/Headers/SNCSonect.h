@@ -56,8 +56,8 @@ SNC_SWIFT_NAME(Sonect)
 @property (class, nullable) SNCUI *ui;
 
 /**
-The Event handler.
-The current Event handler that are passed through SDK
+ The Event handler.
+ The current Event handler that are passed through SDK 
 */
 @property(class, weak, nullable) id <SNCSonectEventHandler> eventHandler;
 
