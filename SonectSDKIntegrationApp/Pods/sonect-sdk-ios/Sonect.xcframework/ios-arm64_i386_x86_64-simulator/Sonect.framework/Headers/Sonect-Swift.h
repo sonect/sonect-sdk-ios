@@ -266,6 +266,16 @@ SWIFT_CLASS("_TtC6Sonect24OnboardingEmailEntryView")
 @end
 
 
+SWIFT_CLASS("_TtC6Sonect16SNCATMStatusView")
+@interface SNCATMStatusView : UIView
+@property (nonatomic, strong) UIColor * _Nullable strokeColor;
+@property (nonatomic, strong) UIColor * _Nullable fillColor;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -540,6 +550,16 @@ SWIFT_CLASS("_TtC6Sonect24OnboardingEmailEntryView")
 @end
 
 
+SWIFT_CLASS("_TtC6Sonect16SNCATMStatusView")
+@interface SNCATMStatusView : UIView
+@property (nonatomic, strong) UIColor * _Nullable strokeColor;
+@property (nonatomic, strong) UIColor * _Nullable fillColor;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -811,6 +831,16 @@ SWIFT_PROTOCOL("_TtP6Sonect21NameEntryViewDelegate_")
 
 SWIFT_CLASS("_TtC6Sonect24OnboardingEmailEntryView")
 @interface OnboardingEmailEntryView : NameEntryView
+@end
+
+
+SWIFT_CLASS("_TtC6Sonect16SNCATMStatusView")
+@interface SNCATMStatusView : UIView
+@property (nonatomic, strong) UIColor * _Nullable strokeColor;
+@property (nonatomic, strong) UIColor * _Nullable fillColor;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 

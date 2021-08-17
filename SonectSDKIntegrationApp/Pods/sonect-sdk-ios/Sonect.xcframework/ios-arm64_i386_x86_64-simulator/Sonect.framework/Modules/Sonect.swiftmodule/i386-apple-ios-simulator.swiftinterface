@@ -23,7 +23,7 @@ import UIKit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-@objc public protocol NameEntryViewDelegate : AnyObject, ObjectiveC.NSObjectProtocol {
+@objc public protocol NameEntryViewDelegate : ObjectiveC.NSObjectProtocol {
   @objc func nameEntryViewDidBecomeUnverified(_ view: Sonect.NameEntryView)
   @objc func nameEntryView(_ view: Sonect.NameEntryView, didFinishEntering name: Swift.String)
   @objc func nameEntryView(_ view: Sonect.NameEntryView, didChange name: Swift.String)
@@ -63,3 +63,15 @@ import UIKit
   @objc deinit
 }
 infix operator ==^ : ComparisonPrecedence
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SNCATMStatusView : UIKit.UIView {
+  @objc public var strokeColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc public var fillColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}

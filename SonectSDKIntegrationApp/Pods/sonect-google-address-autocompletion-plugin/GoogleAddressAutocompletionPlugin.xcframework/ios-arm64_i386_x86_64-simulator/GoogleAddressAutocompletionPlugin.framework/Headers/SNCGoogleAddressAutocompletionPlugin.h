@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SNCGoogleAddressAutocompletionPlugin : NSObject <SNCAddressAutocompletionPlugin>
 #pragma clang diagnostic pop
 
+@property (nonatomic, getter = isDebuggingEnabled) BOOL debuggingEnabled;
+
 - (instancetype)initWithApiKey:(NSString *)apiKey;
 
 @end

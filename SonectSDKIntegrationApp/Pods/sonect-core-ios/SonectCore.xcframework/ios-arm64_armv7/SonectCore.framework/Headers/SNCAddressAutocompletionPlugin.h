@@ -40,6 +40,9 @@ SNC_SWIFT_NAME(ShopDetails)
 @property (copy, readonly) SNCOpeningHours *openingHours;
 @property (copy, readonly) NSArray <NSString*> *types;
 @property (copy, nullable, readonly) UIImage *shopImage;
+@property (nonatomic, nullable, copy) NSString *vicinity;
+@property (nonatomic, nullable, copy) NSString *placeId;
+@property (nonatomic, nullable, copy) NSString *photoReference;
 @end
 
 SNC_SWIFT_NAME(ShopCandidate)
@@ -55,6 +58,11 @@ SNC_SWIFT_NAME(ShopSearch)
 @property (readonly) NSArray <id<SNCShopCandidate>> *candidates;
 @end
 
+SNC_SWIFT_NAME(NearbySearch)
+@protocol SNCNearbySearch <NSObject>
+@property (readonly) NSArray <id<SNCShopDetails>> *results;
+@end
+
 SNC_SWIFT_NAME(AddressAutocompletion)
 @protocol SNCAddressAutocompletion <NSObject>
 @property (readonly) NSArray <id<SNCAddressPrediction>> *predictions;
@@ -64,6 +72,8 @@ typedef void(^SNCAddressDetailsResultHandler)(id<SNCAddressDetails> _Nullable ad
 typedef void(^SNCAddressAutocompletionResultHandler)(id<SNCAddressAutocompletion> _Nullable autocompleteAddress, NSError * _Nullable error) SNC_SWIFT_NAME(AddressAutocompletionResultHandler);
 typedef void(^SNCShopSearchResultHandler)(id<SNCShopSearch> _Nullable shopSearch, NSError * _Nullable error) SNC_SWIFT_NAME(ShopSearchResultHandler);
 typedef void(^SNCShopDetailsResultHandler)(id<SNCShopDetails> _Nullable shopDetails, NSError * _Nullable error) SNC_SWIFT_NAME(ShopDetailsResultHandler);
+typedef void(^SNCNearbySearchResultHandler)(id<SNCNearbySearch> _Nullable, NSError * _Nullable error);
+typedef void(^SNCImageLoadCompletionHandler)(UIImage * _Nullable, NSError * _Nullable);
 
 SNC_SWIFT_NAME(AddressDetails)
 @protocol SNCAddressAutocompletionPlugin <NSObject>
@@ -82,6 +92,14 @@ SNC_SWIFT_NAME(AddressDetails)
 - (void)shopDetailsForShopId:(NSString *)shopId
            completionHandler:(SNCShopDetailsResultHandler)compleionHandler;
 
+- (void)placesForSearchTerm:(NSString *)searchTerm
+                   latitude:(double)lat
+                  longitude:(double)lon
+          completionHandler:(SNCNearbySearchResultHandler)completionHandler;
+
+- (void)photoFromReference:(NSString *)photoReference
+                  maxWidth:(double)maxWidth
+         completionHandler:(SNCImageLoadCompletionHandler)completionHandler;
 @end
 
 NS_ASSUME_NONNULL_END

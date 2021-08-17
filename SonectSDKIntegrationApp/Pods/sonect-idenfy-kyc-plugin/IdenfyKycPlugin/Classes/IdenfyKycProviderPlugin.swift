@@ -39,6 +39,7 @@ class IdenfyKycResult: NSObject, SNCKycCheckResult {
             case .REVIEWING:
                 status = .pending
             case .DENIED: fallthrough
+            case .UNKNOWN: fallthrough
             case .SUSPECTED:
                 status = .failure
                 error = NSError(domain: "ch.sonect.idenfyKycPlugin",
@@ -63,41 +64,22 @@ public class IdenfyKycProviderPlugin: NSObject, SNCKycProviderPlugin {
     private var idenfyViewController: UIViewController?
     
     public func startKycCheck(_ presentingViewController: UIViewController, configuration: [AnyHashable : Any], handler: @escaping SNCKycCheckResultHandler) {
-        let countryCode = configuration["countryCode"] as! String
-        let token = configuration["token"] as! String
+        guard let token = configuration["token"] as? String else {
+            fatalError("Missing tokrn in configuration parameters.")
+        }
         
-        let idenfyUISettings = IdenfyUIBuilder()
-            .withCustomDocumentBorderColor(borderColor: .clear)
+        let idenfyUISettings = IdenfyUIBuilderV2()
+            .withInstructions(true)
             .build()
-        
-        let identificationSessionSettings = IdentificationSessionUISettings()
-        identificationSessionSettings.overridesStoryboard = true
-        identificationSessionSettings.idenfyPhotoResultBackgroundColor = blackColor
-        identificationSessionSettings.idenfyTransparentCameraOverlayColor = blackColor
-        identificationSessionSettings.idenfyFaceResultsInformationTitleColor = whiteColor
-        identificationSessionSettings.idenfyFaceSessionCameraInformationTitleColor = whiteColor
-        identificationSessionSettings.idenfyDocumentsCameraSessionInformationTitleColor = whiteColor
-        identificationSessionSettings.idenfyDocumentsResultsInformationTitleColor = whiteColor
-        idenfyUISettings.setIdentificationSessionUISettings(identificationSessionUISettings: identificationSessionSettings)
-        
-        let idenfyIdentificationResults = IdenfyIdentificationResultsSettings()
-        idenfyIdentificationResults.isSuccessResultsViewVisible = false
-        idenfyIdentificationResults.isErrorResultsViewVisible = false
-        idenfyIdentificationResults.isRetryErrorResultsViewVisible = false
-        idenfyIdentificationResults.isRetryingIdentificationAvailable = false
-        idenfyIdentificationResults.isAutoDismissOnSuccessEvent = false
-        idenfyIdentificationResults.isAutoDismissOnErrorEvent = false
-        idenfyIdentificationResults.isAutoDismissOnUserExitEvent = false
-        
-        let idenfySettings = IdenfyBuilder()
-            .withCustomIdentificationResultsSettings(idenfyIdentificationResults)
-            .withUISettings(idenfyUISettings)
-            .withCustomLocalStoryboard(true)
-            .withIssuingCountry(countryCode)
+                 
+        let idenfySettings = IdenfyBuilderV2()
+            .withUISettingsV2(idenfyUISettings)
+            .withDocumentIssuingCountrySkipped()
             .withAuthToken(token)
             .build()
         
-        let idenfyController = IdenfyController(idenfySettings: idenfySettings)
+        let idenfyController = IdenfyController.shared
+        idenfyController.initializeIdenfySDKV2WithManual(idenfySettingsV2: idenfySettings)
         let idenfyViewController = idenfyController.instantiateNavigationController()
         
         idenfyController.handleIDenfyCallbacks(
