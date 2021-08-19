@@ -1,6 +1,0 @@
-framework module GoogleAddressAutocompletionPlugin {
-  umbrella header "GoogleAddressAutocompletionPlugin.h"
-
-  export *
-  module * { export * }
-}

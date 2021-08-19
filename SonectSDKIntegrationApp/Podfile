@@ -8,7 +8,5 @@ target 'SonectSDKIntegrationApp' do
 
   # Pods for SonectSDKIntegrationApp
   pod 'sonect-sdk-ios'
-  pod 'sonect-idenfy-kyc-plugin'
-  pod 'sonect-google-address-autocompletion-plugin'
   
 end

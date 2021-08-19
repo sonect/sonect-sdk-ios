@@ -175,37 +175,11 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ZIPFoundation/ZIPFoundation.framework"
-  install_framework "${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/iDenfySDK.framework"
-  install_framework "${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/idenfycore.framework"
-  install_framework "${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/idenfyviews.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/sonect-idenfy-kyc-plugin/sonect_idenfy_kyc_plugin.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/SonectCore/SonectCore.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAddressAutocompletionPlugin/GoogleAddressAutocompletionPlugin.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/Sonect/Sonect.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ZIPFoundation/ZIPFoundation.framework"
-  install_framework "${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/iDenfySDK.framework"
-  install_framework "${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/idenfycore.framework"
-  install_framework "${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/idenfyviews.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/sonect-idenfy-kyc-plugin/sonect_idenfy_kyc_plugin.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/SonectCore/SonectCore.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAddressAutocompletionPlugin/GoogleAddressAutocompletionPlugin.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/Sonect/Sonect.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

@@ -16,7 +16,7 @@
 		043372F823FD6C1800034D01 /* SonectConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043372F723FD6C1800034D01 /* SonectConfiguration.plist */; };
 		048992EF240CF98F00D43F13 /* BankConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */; };
 		048992F0240CF98F00D43F13 /* BankConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */; };
-		F5EF8BE11B8D777B0E7E5B45 /* Pods_SonectSDKIntegrationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADDC5974C4B4F04CE7C9D03 /* Pods_SonectSDKIntegrationApp.framework */; };
+		2C8A5A163460755D0FF769E7 /* Pods_SonectSDKIntegrationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6B9D0EB074579642BB15CF /* Pods_SonectSDKIntegrationApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,9 +44,9 @@
 		043372F723FD6C1800034D01 /* SonectConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = SonectConfiguration.plist; sourceTree = SOURCE_ROOT; };
 		048992ED240CF98F00D43F13 /* BankConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankConfirmationViewController.swift; sourceTree = "<group>"; };
 		048992EE240CF98F00D43F13 /* BankConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankConfirmationViewController.xib; sourceTree = "<group>"; };
-		6ADDC5974C4B4F04CE7C9D03 /* Pods_SonectSDKIntegrationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonectSDKIntegrationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		932F8E0E16BF8ACEABDC4054 /* Pods-SonectSDKIntegrationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonectSDKIntegrationApp.release.xcconfig"; path = "Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp.release.xcconfig"; sourceTree = "<group>"; };
-		94B7D140956292615B1F6F2D /* Pods-SonectSDKIntegrationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonectSDKIntegrationApp.debug.xcconfig"; path = "Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp.debug.xcconfig"; sourceTree = "<group>"; };
+		0F6B9D0EB074579642BB15CF /* Pods_SonectSDKIntegrationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonectSDKIntegrationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B141A848FE1055322050D3C /* Pods-SonectSDKIntegrationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonectSDKIntegrationApp.release.xcconfig"; path = "Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp.release.xcconfig"; sourceTree = "<group>"; };
+		5D16CC73789AD2DF73E0B3D4 /* Pods-SonectSDKIntegrationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonectSDKIntegrationApp.debug.xcconfig"; path = "Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5EF8BE11B8D777B0E7E5B45 /* Pods_SonectSDKIntegrationApp.framework in Frameworks */,
+				2C8A5A163460755D0FF769E7 /* Pods_SonectSDKIntegrationApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,7 @@
 				043372DC23FD692C00034D01 /* SonectSDKIntegrationApp */,
 				043372DB23FD692C00034D01 /* Products */,
 				96454BC7E661B4F6214BCE85 /* Pods */,
-				F32DDFD49E161E1DFC023939 /* Frameworks */,
+				6BF3C0532D2C1823813A1946 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,21 +104,21 @@
 			path = Bank;
 			sourceTree = "<group>";
 		};
+		6BF3C0532D2C1823813A1946 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F6B9D0EB074579642BB15CF /* Pods_SonectSDKIntegrationApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96454BC7E661B4F6214BCE85 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				94B7D140956292615B1F6F2D /* Pods-SonectSDKIntegrationApp.debug.xcconfig */,
-				932F8E0E16BF8ACEABDC4054 /* Pods-SonectSDKIntegrationApp.release.xcconfig */,
+				5D16CC73789AD2DF73E0B3D4 /* Pods-SonectSDKIntegrationApp.debug.xcconfig */,
+				3B141A848FE1055322050D3C /* Pods-SonectSDKIntegrationApp.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		F32DDFD49E161E1DFC023939 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6ADDC5974C4B4F04CE7C9D03 /* Pods_SonectSDKIntegrationApp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,12 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 043372EE23FD692D00034D01 /* Build configuration list for PBXNativeTarget "SonectSDKIntegrationApp" */;
 			buildPhases = (
-				1312E268C5FE678F5EAF674E /* [CP] Check Pods Manifest.lock */,
+				A93EFACAE564B83A3C527320 /* [CP] Check Pods Manifest.lock */,
 				043372D623FD692C00034D01 /* Sources */,
 				043372D723FD692C00034D01 /* Frameworks */,
 				043372D823FD692C00034D01 /* Resources */,
 				043372F623FD6B4600034D01 /* Embed Frameworks */,
-				7ED61BBEC02ABE820987363E /* [CP] Embed Pods Frameworks */,
+				233E0782BCDB9473C420327E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,7 +193,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1312E268C5FE678F5EAF674E /* [CP] Check Pods Manifest.lock */ = {
+		233E0782BCDB9473C420327E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A93EFACAE564B83A3C527320 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,23 +230,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7ED61BBEC02ABE820987363E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -384,7 +384,7 @@
 		};
 		043372EF23FD692D00034D01 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94B7D140956292615B1F6F2D /* Pods-SonectSDKIntegrationApp.debug.xcconfig */;
+			baseConfigurationReference = 5D16CC73789AD2DF73E0B3D4 /* Pods-SonectSDKIntegrationApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -409,7 +409,7 @@
 		};
 		043372F023FD692D00034D01 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 932F8E0E16BF8ACEABDC4054 /* Pods-SonectSDKIntegrationApp.release.xcconfig */;
+			baseConfigurationReference = 3B141A848FE1055322050D3C /* Pods-SonectSDKIntegrationApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

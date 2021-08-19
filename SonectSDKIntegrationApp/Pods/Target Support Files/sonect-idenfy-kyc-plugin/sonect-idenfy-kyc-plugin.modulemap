@@ -1,6 +1,0 @@
-framework module sonect_idenfy_kyc_plugin {
-  umbrella header "sonect-idenfy-kyc-plugin-umbrella.h"
-
-  export *
-  module * { export * }
-}

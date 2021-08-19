@@ -1,16 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-SonectSDKIntegrationApp/Pods-SonectSDKIntegrationApp-frameworks.sh
-${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework
-${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework
-${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework
-${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework
-${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework
-${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework
-${BUILT_PRODUCTS_DIR}/ZIPFoundation/ZIPFoundation.framework
-${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/iDenfySDK.framework
-${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/idenfycore.framework
-${PODS_ROOT}/iDenfySDK/iDenfySDK/IdenfySDK/idenfyviews.framework
-${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
-${BUILT_PRODUCTS_DIR}/sonect-idenfy-kyc-plugin/sonect_idenfy_kyc_plugin.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/SonectCore/SonectCore.framework/SonectCore
-${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAddressAutocompletionPlugin/GoogleAddressAutocompletionPlugin.framework/GoogleAddressAutocompletionPlugin
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/Sonect/Sonect.framework/Sonect
