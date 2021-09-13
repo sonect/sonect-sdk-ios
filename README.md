@@ -30,7 +30,7 @@ let configuration = SNCConfiguration.default()
 
 SNCSonect.present(with: credentials,
          configuration: configuration,
-            presenting: self)
+            presenting: viewController)
 ```
 
 ### Obj-C
@@ -44,7 +44,7 @@ SNCConfiguration *configuration = [SNCConfiguration defaultConfiguration];
 
 [SNCSonect presentWithCredentials:credentials
                     configuration:configuration
-         presentingViewController:self.viewController];
+         presentingViewController:viewController];
 ```
 
 ## Configuration file
