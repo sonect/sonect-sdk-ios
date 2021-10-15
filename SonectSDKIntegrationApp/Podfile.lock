@@ -31,7 +31,7 @@ PODS:
   - sonect-idenfy-kyc-plugin (2.0.0):
     - iDenfySDK (~> 6.3.0)
     - sonect-core-ios
-  - sonect-sdk-ios (4.3.6):
+  - sonect-sdk-ios (4.5.0):
     - sonect-core-ios (~> 1.4.5)
   - ZIPFoundation (0.9.11)
 
@@ -68,7 +68,7 @@ SPEC CHECKSUMS:
   sonect-core-ios: cd02d778d93b80d52525d1b2fcc99cc28a1773cd
   sonect-google-address-autocompletion-plugin: 3d319e9cb20aca478c6d1dc6d0c724dac6e80ad0
   sonect-idenfy-kyc-plugin: 4140f5d3db61479f0ac0894bac349aeee6d303b6
-  sonect-sdk-ios: 5c4cf5736543967f046269232f90b57d5feef318
+  sonect-sdk-ios: 2b79edb8b22427c8cd0aa34310f77359f19ad629
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
 PODFILE CHECKSUM: c5357e9d95921cfd5e875c30e58b14395e3dbdb6
