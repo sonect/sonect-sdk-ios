@@ -21,7 +21,7 @@ let package = Package(
         .binaryTarget(
             name: "SonectSDK",
             url: "https://github.com/sonect/sonect-sdk-ios/releases/download/4.8.3/SonectSDK_Cocoapods.framework.zip",
-            checksum: "7069b8c85f2fc0e869074f74a67b26a752985ad42310ef0087758a2b371260bb"
+            checksum: "da8e0149fb2c556a83c0feca77e48c1ee1eb0a44b31928c0fe5d6869f2f56d8a"
         )
     ]
 )
